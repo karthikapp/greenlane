@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  /*color: #f2f2f2;*/
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  /*background-color: #4CAF50;*/
+  color: white;
+}
+
+
+*{
+  box-sizing: border-box;
+}
+
+
+
+*{
+  box-sizing: border-box;
+}
+
+body, html {
+   font-family: 'Roboto Slab', serif;
+    margin: 0;
+  width: 100%;
+height: 100%;
+    padding: 0;
+}
+
+body {
+  background-color: #D2DBDD;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture-card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 grey;
+  text-align: center;
+}
+
+.text-box {
+  padding: 10px;
+}
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+.box {
+  width:100px;
+  height:100px;
+  border:1px solid grey;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+  background-image: url(http://lorempixel.com/output/food-q-c-100-100-10.jpg);
+  position: relative;
+}
+
+.overlay {
+  position: relative;
+}
+
+.overlay:before{
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: none;
+  z-index:0;background-color: red;
+
+}
+
+
+
+.overlay:hover:before{
+  display: block;
+}
+
+
+
+.green:before{
+  background-color: #37A773;
+  border: 0px;
+  opacity: .5;
+  border-radius: 10px 10px;
+}
+
+
+
+.box * {
+    position: relative;
+    /* hack */
+}
+
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.content, 
+.inner-border { 
+  position: absolute; 
+  left: 0; 
+  overflow-x: hidden; 
+  overflow-y: scroll; 
+} 
+.inner-border::-webkit-scrollbar { 
+  display: none; 
+}
