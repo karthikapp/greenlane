@@ -62,7 +62,7 @@ z-index:10;">
 		<br>
 		<ul class="menu">
 			<a href="#" style="font-family: sfui;letter-spacing: 3px;">Impact</a>
-			<a href="#" style="font-family: sfui;letter-spacing: 3px;">About Us</a>
+			<a href="/aboutus" style="font-family: sfui;letter-spacing: 3px;">About Us</a>
 			<a href="#" style="font-family: sfui;letter-spacing: 3px;">Curators</a>
 
 			<label for="chk" class="hide-menu-btn">
@@ -93,13 +93,13 @@ z-index:10;">
 					</p>
 				</div>
 				<br>
-				<button class="ui facebook button">
+				<button class="ui facebook button" (click)="socialSignIn('facebook')">
 					<i class="fab fa-facebook-f"></i>
 					&nbsp; &nbsp; Login using Facebook
 				</button>
 				<br>
 				<br>
-				<button class="ui google plus button">
+				<button class="ui google plus button" (click)="socialSignIn('google')"> 
 					<i class="fab fa-google"></i>
 					&nbsp; &nbsp; Login using Google
 				</button>
@@ -110,10 +110,10 @@ z-index:10;">
 				<br>
 				<br>
 				<br>
-					<br>
-					<br>
+				<br>
+				<br>
 				<div style="position:absolute;
-				bottom:20px;
+				bottom:5px;
 				right:20px;width: 50%;">
 				<div class="ui grid" style="width: 100%;">
 						<div class="six wide column">
