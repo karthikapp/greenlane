@@ -1,0 +1,1055 @@
+<div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
+  <div class="section">
+    <div style="background: url(assets/images/hero.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  };height: 100vh;">
+
+  <div style="background-color: rgba(0,0,0,0.4);height: 100vh;">
+    <div class="header" style="padding-right: 20px;padding-left: 20px;">
+      <a class="logo"><img src="assets/images/logo_white.png" style="height: 30px;"></a>
+      <input type="checkbox" id="chk">
+      <label for="chk" class="show-menu-btn" style="color: white;">
+        <i class="fas fa-bars" style="font-size: 25px;"></i>
+      </label>
+      <br>
+      <br>
+
+      <ul class="menu">
+        <a href="/aboutus" style="font-family: sfui;letter-spacing: 3px;" class="uk-button uk-button-text">About Us</a>
+        <a href="/login" style="font-family: sfui;letter-spacing: 3px;" class="uk-button uk-button-text">Login/Register</a>
+
+        <label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times" style="font-size: 25px;"></i>
+        </label>
+      </ul>
+    </div>
+
+<!--     <div id="modal-example" uk-modal style="align-self: center;">
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Headline</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="button">Save</button>
+        </p>
+    </div>
+  </div> -->
+
+  <div class="content">
+    <div class="center">
+      <br>
+      <br>
+      <br>
+      <div class="center">
+        <div style="max-height: 30px;" align="center">
+          <img src="assets/images/icon.png" style="max-height: 90px;max-width: 90px !important;">
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div align="center">
+        <h1 style="color: white;font-family: Helvetica;font-weight: bold;font-size: 5vw;background: -webkit-linear-gradient(#11998e, #38ef7d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;" align="center">Live Consciously
+      </h1>
+      <!-- <a class="btn btn-1">Hover me</a> -->
+    </div>
+    <div align="center" style="width: 100%;">
+<!--                 <h1 style="color: white;font-family: sfui;font-weight: bold;font-size: 14pt;">
+</h1> -->
+<br>
+
+<ngx-typed-js [strings]="['You always have a choice to make and what you choose is what you become. ','Evolve and Learn']" [shuffle]="true" [typeSpeed]="40" [loop]="true">
+ <span class="typing" style="color: white;font-family: 'courier-std', sans-serif;font-size: 2.5vw;line-height: 1em;"></span>
+</ngx-typed-js>
+<br>
+<br>
+<button class="uk-button uk-button-default uk-button-medium" style="padding: 10px; border-radius: 10px;color: white;font-family: 'courier-std', sans-serif;font-size: 10pt;"> &nbsp;&nbsp; Start Watching &nbsp; &nbsp;</button>
+
+<!--                 <br>
+                <br>
+                <div align="center">
+                    <p style="color: white;font-family: sfui;text-align: center;">
+                        Save your playlist, progress and earn badges. 
+                    </p>
+                </div>
+                <br>
+                <button class="ui facebook button" (click)="signInWithFacebook()">
+                    <i class="fab fa-facebook-f"></i>
+                    &nbsp; &nbsp; Login using Facebook
+                </button>
+                <br>
+                <br>
+                <button class="ui google plus button" (click)="signInWithGoogle()"> 
+                    <i class="fab fa-google"></i>
+                    &nbsp; &nbsp; Login using Google
+                </button>
+                <br>
+                <br> -->
+  <!--               <a style="color: white;font-family: sfui;text-align: center;" href="/interests"> Browse without sign up
+  </a> -->
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+<!-- <div class="section">
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: fade;max-height: 100vh; animation: push;autoplay: true;autoplay-interval: 600;">
+        <ul class="uk-slideshow-items" style="height: 100vh;">
+         <li>
+
+           <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
+            <img src="https://wallpapershome.com/images/wallpapers/iphone-8-wallpaper-3840x2160-4k-15475.jpg" alt="" uk-cover>
+        </div>
+
+        <div class="uk-overlay uk-overlay-primary uk-position-right uk-text-center uk-transition-slide-right uk-width-large" style="background-image: linear-gradient(to top, #202D71 0%, #202D71 100%);padding: 30px;">
+           <img src="assets/images/logo_white.png" style=" position: absolute;
+           top: 8px;
+           right: 20px;height: 40px;">
+           <br>
+           <h3 class="uk-margin-remove" style="font-family: Helvetica;font-weight: bold;font-size: 4vw;" align="left">Eco Living</h3>
+           <br>
+           <p class="uk-margin-remove" style="font-family: Helvetica;font-weight: 100;" align="left">Chinese and U.S. officials are struggling to agree on the schedule for a planned meeting this month to continue trade talks after Washington rejected Beijing’s request to delay tariffs that took effect over the weekend, according to people familiar with the discussions.</p>
+           <br>
+           <div align="left">
+            <div class="uk-flex">
+                <div > <span class="uk-margin-small-right uk-icon " uk-icon="icon:play-circle;ratio: 1.5"></span></div>
+                <div style="align-self: center;font-weight: lighter;">Browse Playlist</div>
+            </div>
+
+
+        </div>
+
+    </div>
+</li>
+
+</ul>
+
+<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous" style="padding: 10px;"></a>
+<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next" style="padding: 10px;"></a>
+
+</div>
+</div> -->
+
+<div class="section" style="padding: 0px;margin: 0px;background-color: #3fcf78;">
+  <div>
+    <div class="ui grid">
+      <div class="mobile only row" style="margin: 20px;">
+        <h1 style="font-family: 'courier-std' ;padding-left: 15px;margin-left: 15px;font-size: 18pt;background-color: white;color: black;" > <span class="uk-margin-small-right uk-icon" uk-icon="album" style="color: black;"></span> Browse Categories &nbsp;</h1>
+        <p style="font-family: 'courier-std' ;padding-left: 10px;margin: 5px;color: black;"> Swipe through categories and click to start watching.</p>
+
+
+
+        <div class="slide" align="center" style="padding: 2px !important; display: flex;
+        align-items: center;
+        justify-content: center;" >
+        <div>
+          <div class="card">
+            <div class="image">
+              <img src="assets/images/eco living.jpg" width="100%">
+              <div class="padded-multiline" style="position: absolute;">
+                <h3 style="font-family: courier-std;"> &nbsp; <strong>Eco Living</strong></h3>
+              </div>
+              <!-- <div class="bottom-left" style="color: black;">Business of the Future</div> -->
+              <div class="top-left" style="color: white;">01</div>
+              <div class="vl"></div>
+            </div>
+            <div class="text">
+              <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+              <p style="font-family: courier-std, monospace;color: white;" align="left">
+                <br>The climate crisis is real! To combat this complex problem, we all need to contribute by lowering our own carbon footprint and making greener choices. Explore how we can incorporate some of natures beautiful design systems into our lives.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="slide" align="center" style="padding: 2px; display: flex;
+        align-items: center;
+        justify-content: center;">
+        <div class="card">
+          <div class="image">
+            <img src="assets/images/clean foods.png" width="100%">
+            <div class="padded-multiline">
+              <h3 style="font-family: courier-std;"> &nbsp; <strong>Clean Foods</strong></h3>
+            </div>
+            <!-- <div class="bottom-left" style="color: black;">Business of the Future</div> -->
+            <div class="top-left" style="color: white;">02</div>
+            <div class="vl"></div>
+          </div>
+          <div class="text">
+            <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+            <p style="font-family: courier-std, monospace;color: white;" align="left">
+              <br>Whether you eat to live, or live to eat it you can’t deny that food is our life force. Animals have used plants as medicine since the beginning of time. Dive head first into this extraordinary world where plants and people quite simply just meant for each other.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="slide" align="center" style="padding: 2px; display: flex;
+      align-items: center;
+      justify-content: center;">
+      <div class="card">
+        <div class="image">
+          <img src="assets/images/farm to fork.jpg" width="100%">
+          <div class="padded-multiline">
+            <h3 style="font-family: courier-std;"> &nbsp;  <strong>Farm to Fork</strong></h3>
+          </div>
+          <!-- <div class="bottom-left" style="color: black;">Business of the Future</div> -->
+          <div class="top-left" style="color: white;">03</div>
+          <div class="vl"></div>
+        </div>
+        <div class="text">
+          <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+          <p style="font-family: courier-std, monospace;color: white;" align="left">
+            <br>Do you know who grows your food? How it was grown? Did it travel from miles away to reach your plate? Let’s start asking ourselves these questions. Let’s start seeking answers. Maybe together, we can start to save the world one bite at a time.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="slide" align="center" style="padding: 2px; display: flex;
+      align-items: center;
+      justify-content: center;">
+      <div class="card">
+        <div class="image">
+          <img src="assets/images/holistic wellness.png" width="100%">
+          <div class="padded-multiline">
+            <h3 style="font-family: courier-std;"> &nbsp;  <strong>Holistic Wellness</strong></h3>
+          </div>
+          <!-- <div class="bottom-left" style="color: black;">Business of the Future</div> -->
+          <div class="top-left" style="color: white;">04</div>
+          <div class="vl"></div>
+        </div>
+        <div class="text">
+          <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+          <p style="font-family: courier-std, monospace;color: white;">
+            <br>Integrated wellness is a lifestyle that focuses on cultivating good food & sleep habits, and practices like yoga & meditation to reduce stress levels. Let's explore ‘shifts' in our lifestyle to achieve our health goals.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide" align="center" style="padding: 2px; display: flex;
+    align-items: center;
+    justify-content: center;">
+    <div class="card card-min-width">
+      <div class="image">
+        <img src="assets/images/adrenaline and fitness.jpg" width="100%">
+        <div class="padded-multiline">
+          <h3 style="font-family: courier-std;"> &nbsp;  <strong>Adrenaline and Fitness</strong></h3>
+        </div>
+        <!-- <div class="bottom-left" style="color: black;">Business of the Future</div> -->
+        <div class="top-left" style="color: white;padding-bottom: 2px;">05</div>
+        <div class="vl"></div>
+      </div>
+      <div class="text">
+        <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+        <p style="font-family: courier-std, monospace;color: white;">
+          <br>Dancing on waves, gliding through the wind, flying through the sky, breathing underwater - we can do anything. Let’s play in a world that longs to be celebrated. Explore natural techniques to keep your mind and body in top form.
+        </p>
+      </div>
+    </div> 
+  </div>
+
+  <div class="slide" align="center" style="padding: 2px; display: flex;
+  align-items: center;
+  justify-content: center;">
+  <div class="card">
+    <div class="image">
+      <img src="assets/images/slow fashion alt.jpg" width="100%">
+      <div class="padded-multiline">
+        <h3 style="font-family: courier-std;"> &nbsp;  <strong>Slow Fashion</strong></h3>
+      </div>
+      <!-- <div class="bottom-left" style="color: black;">Business of the Future</div> -->
+      <div class="top-left" style="color: white;padding-bottom: 2px;">06</div>
+      <div class="vl"></div>
+    </div>
+    <div class="text">
+      <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+      <p style="font-family: courier-std, monospace;color: white;">
+        <br>We produce 10 billion garments each year! Do we really need so much? Let’s mend before we throw, let’s swap before we’re bored and buy clothes that last. Support  labels who prioritise the people who make our garments and the environment.
+      </p>
+    </div>
+  </div> 
+</div>
+
+
+</div>
+
+<div class="tablet computer only row">
+  <div class="sixteen wide tablet sixteen wide computer column" style="padding: 0px;background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);height: 100vh;">
+
+    <div>
+      <div class="css-slider-wrapper">
+
+        <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
+        <input type="radio" name="slider" class="slide-radio2" id="slider_2">
+        <input type="radio" name="slider" class="slide-radio3" id="slider_3">
+        <input type="radio" name="slider" class="slide-radio4" id="slider_4">
+
+
+        <div class="slider-pagination">
+
+          <label for="slider_1" class="page1"></label> 
+          <label for="slider_2" class="page2"></label>
+          <label for="slider_3" class="page3"></label>
+          <label for="slider_4" class="page4"></label>
+        </div>
+
+        <div class="next control">
+          <label for="slider_1" class="numb1"><i class="fa fa-arrow-circle-right"></i></label>
+          <label for="slider_2" class="numb2"><i class="fa fa-arrow-circle-right"></i></label>
+          <label for="slider_3" class="numb3"><i class="fa fa-arrow-circle-right"></i></label>
+          <label for="slider_4" class="numb4"><i class="fa fa-arrow-circle-right"></i></label>
+        </div>
+        <div class="previous control">
+          <label for="slider_1" class="numb1"><i class="fa fa-arrow-circle-left"></i></label>
+          <label for="slider_2" class="numb2"><i class="fa fa-arrow-circle-left"></i></label>
+          <label for="slider_3" class="numb3"><i class="fa fa-arrow-circle-left"></i></label>
+          <label for="slider_4" class="numb4"><i class="fa fa-arrow-circle-left"></i></label>
+        </div>
+
+
+        <div class="slider slide1" style="padding: 0px;">
+
+          <div class="ui grid" style="width: 100vw;">
+            <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('assets/images/slow fashion alt.jpg');background-color: rgba(0,0,0,0.4);">
+              <div style="bottom: 40%;position: absolute;">
+               <img src="assets/images/icon-white.png" style="height: 40px;">
+             </div>
+             <div class="bottom-left-text" style="color: white;font-weight: 900;font-family: 'Helvetica';font-size: 44pt;bottom: 30%;">
+              Slow Fashion
+            </div>
+            <div style="color: white;font-weight: 900;font-family: 'Helvetica';bottom: 15%;position: absolute;width: 100%;">
+              <div class="row" style="width: 100%;">
+                <div class="eight column row" align="left">
+                  <div class="column">
+                    <img src="https://icon-library.net/images/white-play-icon-png/white-play-icon-png-8.jpg" style="height: 60px;">
+                  </div>
+                  <div class="column">
+                    <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      Start Watching
+                    </p>
+                  </div>
+                  <div class="column">
+                  </div>
+                  <div class="column">
+                  </div>
+                  <div class="column">
+                  </div>
+                  <div class="column">
+                  </div>
+                  <div class="column">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="four wide column" style="background-color: #202D71;height: 100vh;">
+           <div style="top: 5%;position: absolute;right: 5%;">
+             <img src="assets/images/icon-white.png" style="height: 40px;">
+           </div>
+           <p style="top:15%;position: absolute;font-family: courier-std;font-size: 14pt;color: white;width: 80%;" align="left" >
+            Fast fashion is the largest polluting industry in the world, after oil. How fast will we realise that what we really need to do is slow down? Supporting labels that advocate fair trade, ethical production, organic sourcing, and innovation in the fashion industry are choices you can make today that will change our world tomorrow. Let’s mend before we throw, let’s swap before we’re bored, let’s change what we can while we’re still here.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="slider slide2">
+      <div class="ui grid" style="width: 100vw;">
+        <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('assets/images/clean foods.png');background-color: rgba(0,0,0,0.4);">
+          <div style="bottom: 40%;position: absolute;">
+           <img src="assets/images/icon-white.png" style="height: 40px;">
+         </div>
+         <div class="bottom-left-text" style="color: white;font-weight: 900;font-family: 'Helvetica';font-size: 44pt;bottom: 30%;">
+          Clean Foods
+        </div>
+        <div style="color: white;font-weight: 900;font-family: 'Helvetica';bottom: 15%;position: absolute;width: 100%;">
+          <div class="row" style="width: 100%;">
+            <div class="eight column row" align="left">
+              <div class="column">
+                <img src="https://icon-library.net/images/white-play-icon-png/white-play-icon-png-8.jpg" style="height: 60px;">
+              </div>
+              <div class="column">
+                <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                  Start Watching
+                </p>
+              </div>
+              <div class="column">
+              </div>
+              <div class="column">
+              </div>
+              <div class="column">
+              </div>
+              <div class="column">
+              </div>
+              <div class="column">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="four wide column" style="background-color: #202D71;height: 100vh;">
+       <div style="top: 5%;position: absolute;right: 5%;">
+         <img src="assets/images/icon-white.png" style="height: 40px;">
+       </div>
+       <p style="top:15%;position: absolute;font-family: courier-std;font-size: 14pt;color: white;width: 80%;" align="left" >
+        Whether you eat to live, or live to eat it you can’t deny that food is our life force. The truth is that for the most part, we have disconnected ourselves from this source of life. Do you know who grows your food? How it was grown? Did it travel from miles away to reach your plate, or have you known it since it was just a tiny seed? Let’s start asking ourselves these questions. Let’s start seeking answers. Maybe together, we can start to save the world one bite at a time.
+      </p>
+    </div>
+  </div>
+  <div>
+
+  </div>
+</div>
+
+
+
+
+<div class="slider slide3">
+  <div class="ui grid" style="width: 100vw;">
+    <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('assets/images/holistic wellness.png');background-color: rgba(0,0,0,0.4);">
+      <div style="bottom: 40%;position: absolute;">
+       <img src="assets/images/icon-white.png" style="height: 40px;">
+     </div>
+     <div class="bottom-left-text" style="color: white;font-weight: 900;font-family: 'Helvetica';font-size: 44pt;bottom: 30%;">
+      Holistic Wellness
+    </div>
+    <div style="color: white;font-weight: 900;font-family: 'Helvetica';bottom: 15%;position: absolute;width: 100%;">
+      <div class="row" style="width: 100%;">
+        <div class="eight column row" align="left">
+          <div class="column">
+            <img src="https://icon-library.net/images/white-play-icon-png/white-play-icon-png-8.jpg" style="height: 60px;">
+          </div>
+          <div class="column">
+            <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+              Start Watching
+            </p>
+          </div>
+          <div class="column">
+          </div>
+          <div class="column">
+          </div>
+          <div class="column">
+          </div>
+          <div class="column">
+          </div>
+          <div class="column">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="four wide column" style="background-color: #202D71;height: 100vh;">
+   <div style="top: 5%;position: absolute;right: 5%;">
+     <img src="assets/images/icon-white.png" style="height: 40px;">
+   </div>
+   <p style="top:15%;position: absolute;font-family: courier-std;font-size: 14pt;color: white;width: 80%;" align="left" >
+    Dancing on waves, gliding through the wind, flying through the sky, breathing underwater - we can do anything. Let’s play in a world that longs to be celebrated. Explore natural techniques to keep your mind and body in top form.
+  </p>
+</div>
+</div>
+
+</div>
+
+
+
+<div class="slider slide4">
+ <div class="ui grid" style="width: 100vw;">
+  <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('assets/images/eco living.jpg');background-color: rgba(0,0,0,0.4);">
+    <div style="bottom: 40%;position: absolute;">
+     <img src="assets/images/icon-white.png" style="height: 40px;">
+   </div>
+   <div class="bottom-left-text" style="color: white;font-weight: 900;font-family: 'Helvetica';font-size: 44pt;bottom: 30%;">
+    Eco Living
+  </div>
+  <div style="color: white;font-weight: 900;font-family: 'Helvetica';bottom: 15%;position: absolute;width: 100%;">
+    <div class="row" style="width: 100%;">
+      <div class="eight column row" align="left">
+        <div class="column">
+          <img src="https://icon-library.net/images/white-play-icon-png/white-play-icon-png-8.jpg" style="height: 60px;">
+        </div>
+        <div class="column">
+          <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+            Start Watching
+          </p>
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
+        <div class="column">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<div class="four wide column" style="background-color: #202D71;height: 100vh;">
+ <div style="top: 5%;position: absolute;right: 5%;">
+   <img src="assets/images/icon-white.png" style="height: 40px;">
+ </div>
+ <p style="top:15%;position: absolute;font-family: courier-std;font-size: 14pt;color: white;width: 80%;" align="left" >
+   The climate crisis is real ! To combat this complex problem, we all need to contribute by lowering our own carbon footprint and making greener choices.
+ </p>
+</div>
+</div>
+<div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="section" style="background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+background-blend-mode: multiply;padding: 0px;margin: 0px;">
+<div>
+  <div class="ui grid">
+    <div class="two column mobile only row" style="padding: 0px;margin: 15px;width:100vw;height: 100vh;">
+      <div style="width: 50vw;height: 33.3vh; background-image: url('assets/images/farm to fork.jpg'); border-style: solid;
+      border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+      <div class="top-left-text-mob" style="color: white;line-height: 0.9em;">Farm to Fork</div>
+
+      <div class="top-left-text" style="color: white; margin-top:-50px;
+      margin-left:0px;font-family: courier-std;font-size: 14pt;">03</div>
+      <div class="bottom-left-text-mob">
+        <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Kiri Meili </strong></h3>
+      </div>
+
+      <div class="bottomright">
+       <img src="assets/images/kiri.png" width="100%">
+     </div>
+     <div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Ananas</div>
+
+
+   </div>
+
+
+   <div style="background-color: blue;width: 50vw;height: 33.3vh;background-image: url('assets/images/nature.jpg');border-style: solid;
+   border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+   <div class="top-left-text-mob" style="color: white;">Nature</div>
+
+   <div class="top-left-text" style="color: white; margin-top:-50px;
+   margin-left:0px;font-family: courier-std;font-size: 14pt;">08</div>
+   <div class="bottom-left-text-mob">
+    <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Umeed Mistry</strong></h3>
+  </div>
+
+  <div class="bottomright">
+   <img src="assets/images/umeed.png" width="100%">
+ </div>
+ <div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Earth Co-Lab</div>
+</div>
+
+
+
+<div style="background-color: green;width: 50vw;height: 33.3vh;background-image: url('assets/images/eco living.jpg');border-style: solid;
+border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+<div class="top-left-text-mob" style="color: white;">Eco Living</div>
+
+<div class="top-left-text" style="color: white; margin-top:-50px;
+margin-left:0px;font-family: courier-std;font-size: 14pt;">01</div>
+<div class="bottom-left-text-mob">
+  <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Jill Ferguson</strong></h3>
+</div>
+
+<div class="bottomright">
+ <img src="assets/images/jill.png" width="100%">
+</div>
+<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Vaayu Vision</div>
+</div>
+
+
+<div style="background-color: black;width: 50vw;height: 33.3vh;background-image: url('assets/images/culture.jpg');border-style: solid;
+border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+<div class="top-left-text-mob" style="color: white;">Cutlure</div>
+
+<div class="top-left-text" style="color: white; margin-top:-50px;
+margin-left:0px;font-family: courier-std;font-size: 14pt;">07</div>
+<div class="bottom-left-text-mob">
+  <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Anchal Kaushal</strong></h3>
+</div>
+
+<div class="bottomright">
+ <img src="assets/images/anchal.png" width="100%">
+</div>
+<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Borderless </div>
+</div>
+
+<div style="background-color: purple;width: 50vw;height: 33.3vh;background-image: url('assets/images/holistic wellness.png');border-style: solid;
+border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+<div class="top-left-text-mob" style="color: white;">Holistic Wellness</div>
+
+<div class="top-left-text" style="color: white; margin-top:-50px;
+margin-left:0px;font-family: courier-std;font-size: 14pt;">04</div>
+<div class="bottom-left-text-mob">
+  <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Luke Coutinho</strong></h3>
+</div>
+
+<div class="bottomright">
+ <img src="assets/images/luke.png" width="100%">
+</div>
+<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Reset</div>
+</div>
+
+<div style="background-color: red;width: 50vw;height: 33.3vh;background-image: url('assets/images/slow fashion alt.jpg');border-style: solid;
+border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+<div class="top-left-text-mob" style="color: white;">Slow Fashion</div>
+
+<div class="top-left-text" style="color: white; margin-top:-50px;
+margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
+<div class="bottom-left-text-mob">
+  <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Darshana Gajare</strong></h3>
+</div>
+
+<div class="bottomright">
+ <img src="assets/images/darshana.png" width="100%">
+</div>
+<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Fairtrunk</div>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+<div class=" ui stackable column tablet computer only row" style="padding: 0px;margin: 15px;width:100vw;">
+  <div style="width: 33.4vw;height: 50vh; background-image: url('assets/images/farm to fork.jpg'); border-style: solid;
+  border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+  <div class="top-left-text" style="color: white;">Farm to Fork</div>
+
+  <div class="top-left-text" style="color: white; margin-top:-50px;
+  margin-left:0px;font-family: courier-std;font-size: 14pt;">03</div>
+  <div class="padded-multiline-new">
+    <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Keiri Meili</strong></h3>
+  </div>
+
+  <div class="bottomright">
+   <img src="assets/images/kiri.png" width="100%">
+ </div>
+ <div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;"> Ananas </div>
+
+
+</div>
+
+<div style="background-color: blue;width: 33.3vw;height: 50vh;background-image: url('assets/images/nature.jpg');border-style: solid;
+border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+<div class="top-left-text" style="color: white;">Nature</div>
+
+<div class="top-left-text" style="color: white; margin-top:-50px;
+margin-left:0px;font-family: courier-std;font-size: 14pt;">08</div>
+<div class="padded-multiline-new">
+  <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Umeed Mistry</strong></h3>
+</div>
+
+<div class="bottomright">
+ <img src="assets/images/umeed.png" width="100%">
+</div>
+<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;"> Earth Co-Lab </div>
+</div>
+
+
+<div style="background-color: green;width: 33.4vw;height: 50vh;background-image: url('assets/images/eco living.jpg');border-style: solid;
+border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+<div class="top-left-text" style="color: white;">Eco Living</div>
+
+<div class="top-left-text" style="color: white; margin-top:-50px;
+margin-left:0px;font-family: courier-std;font-size: 14pt;">01</div>
+<div class="padded-multiline-new">
+  <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Jill Ferguson</strong></h3>
+</div>
+
+<div class="bottomright">
+ <img src="assets/images/jill.png" width="100%">
+</div>
+<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;"> Vaayu Vision </div>
+</div>
+
+
+<div style="background-color: black;width: 33.4vw;height: 50vh;background-image: url('assets/images/culture.jpg');border-style: solid;
+border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+<div class="top-left-text" style="color: white;">Culture</div>
+
+<div class="top-left-text" style="color: white; margin-top:-50px;
+margin-left:0px;font-family: courier-std;font-size: 14pt;">07</div>
+<div class="padded-multiline-new">
+  <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Anchal Kaushal</strong></h3>
+</div>
+
+<div class="bottomright">
+ <img src="assets/images/anchal.png" width="100%">
+</div>
+<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;"> Borderless </div>
+</div>
+
+<div style="background-color: purple;width: 33.3vw;height: 50vh;background-image: url('assets/images/holistic wellness.png');border-style: solid;
+border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+<div class="top-left-text" style="color: white;">Holistic Wellness</div>
+
+<div class="top-left-text" style="color: white; margin-top:-50px;
+margin-left:0px;font-family: courier-std;font-size: 14pt;">04</div>
+<div class="padded-multiline-new">
+  <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Luke Coutinho</strong></h3>
+</div>
+
+<div class="bottomright">
+ <img src="assets/images/luke.png" width="100%">
+</div>
+<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;"> Reset</div>
+</div>
+
+<div style="background-color: red;width: 33.4vw;height: 50vh;background-image: url('assets/images/slow fashion alt.jpg');border-style: solid;
+border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+<div class="top-left-text" style="color: white;">Slow Fashion</div>
+
+<div class="top-left-text" style="color: white; margin-top:-50px;
+margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
+<div class="padded-multiline-new">
+  <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Darshana Gajare</strong></h3>
+</div>
+
+<div class="bottomright">
+ <img src="assets/images/darshana.png" width="100%">
+</div>
+<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;"> Fairtrunk </div>
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+<div class="section" style="padding: 0px;margin: 0px;">
+  <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+    <div class="resp-container">
+      <iframe
+      src="https://www.youtube.com/embed/ijjbnjBtqwU"
+      frameborder="0"
+      allowfullscreen
+      style="padding: 20px;width:100%;height: 100%;"></iframe>
+    </div>
+    <div align="left">
+      <h1 style="font-family: Helvetica;align-self: left;font-weight: bold;padding: 10px;8vw;" class="band-text">You're Here to Learn and Evolve</h1>
+
+
+      <div class="band-text" style="padding: 40px;font-size: 16pt;font-weight: 100;width: 100%;">
+        <p> Top videos and podcasts and personalised to your interests.</p>
+        <br>
+
+        <p>Hand-picked experiences to help you live a cleaner, greener life.</p>
+        <br>
+
+        <p>Save your progress and continue learning where you left off.</p>
+      </div>
+      <div style="padding: 10px;" align="center">
+        <button class="uk-button uk-button-primary" style="padding: 15px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%); border-radius: 10px 10px;font-family: 'Helvetica';text-transform: uppercase;font-weight: bold;letter-spacing: 2px;font-weight: 400;"> Signup for Free</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding: 0px;margin: 0px;">
+  <div style=" background-image: linear-gradient(to top, #00D36E 0%, #5a55ae 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);height: 100vh;">
+    <div>
+      <div>
+        <img src="assets/images/gradient.png" style="width: 100vw;height: 100vh">
+        <div class="centered" style="color: white;">
+          <h1 style="font-family: 'Helvetica'; font-weight: bold;color: white" align="center">
+            Stay Fresh
+          </h1>
+          <br>
+          <h3 style="background-color: white;color: black;font-family:'courier-std';margin: auto; line-height: 1.2; text-align: right !important;margin-left: 5%;font-size: 12pt;" class="padded-multi-line-tag" > We track powerful stories by inspiring creators across the internet. Get a weekly email update tredning videos, podcasts and experiences that help you lead a cleaner, greener life.</h3>
+          <br>
+          <br>
+
+          <div class="ui segment" style="padding: 5px;">
+            <div class="ui grid">
+              <div class="sixteen wide column" align="center">
+                <div class="ui input" style="width: 100%;">
+                  <input type="email" placeholder="Please share your Email" style="padding: 5px;font-family:'courier-std';width: 100% !important;height: 40px;" [(ngModel)]="email">
+                </div>
+              </div>
+            </div>
+            <div style="padding: 10px;" align="center">
+              <button class="uk-button uk-button-primary" style="padding: 10px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%); border-radius: 10px 10px;font-family: 'Helvetica';text-transform: uppercase;font-weight: bold;letter-spacing: 2px;font-weight: 400;" (click)="addsubscriber(email)"> Subscribe</button>
+            </div>
+          </div>
+        </div>
+        <div class="bottom" style="width: 100vw;padding: 10px;">
+          <div class="ui four column grid">
+            <div class="row" >
+              <div class="column">
+               <img src="assets/images/logo_white.png" style="
+               top: 8px;
+               left: 20px;max-height: 40px;">
+             </div>
+             <div class="column" align="center" style="padding: 0px;">
+
+              <a href="" style="color: white;font-family: 'Helvetica';font-size: 12pt;" >About Us</a>
+              &nbsp;
+              <a href="" style="color: white;font-family: 'Helvetica';font-size: 12pt;">Collaborate</a>
+            </div>
+            <div class="column" align="center" style="padding-right: 40px;">
+              <i class="instagram icon" style="color: white;font-size: 14pt;padding-left: 40px;"></i>
+              <i class="facebook icon" style="color: white;font-size: 14pt;padding-left: 40px;"></i>
+              <i class="medium m icon" style="color: white;font-size: 14pt;padding-left: 40px;"></i>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+<!--     <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+        <div class="resp-container">
+            <iframe
+            src="https://www.youtube.com/embed/iHhcHTlGtRs"
+            frameborder="0"
+            allowfullscreen
+            style="padding: 20px;width:560px;height:100%;"></iframe>
+        </div>
+        <div align="left">
+          <h1 style="font-family: Helvetica;align-self: left;font-weight: bold;padding: 10px;8vw;" class="band-text">You're Here to Learn and Evolve</h1>
+          <br>
+          <br>
+          <div class="band-text" style="padding: 10px;font-size: 16pt;font-weight: 100;width: 80%;">
+              <p> Top videos and podcasts and personalised to your interests.</p>
+              <br>
+
+              <p>Hand-picked experiences to help you live a cleaner, greener life.</p>
+              <br>
+
+              <p>Save your progress and continue learning where you left off.</p>
+          </div>
+          <br>
+          <div style="padding: 10px;">
+            <button class="uk-button uk-button-primary" style="padding: 10px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);">  Primary </button>
+        </div>
+
+    </div>
+  </div> -->
+
+</div>
+</div>
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+
+<div style=" background: url('assets/images/forest.jpeg') no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;height: 100vh;
+z-index:10;">
+
+<div style="background-color: rgba(0,0,0,0.7);height: 100vh;">
+    <div class="header" style="padding-right: 20px;">
+
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn" style="color: white;">
+            <i class="fas fa-bars" style="font-size: 25px;"></i>
+        </label>
+        <br>
+        <ul class="menu">
+            <a href="#" style="font-family: sfui;letter-spacing: 3px;">Impact</a>
+            <a href="/aboutus" style="font-family: sfui;letter-spacing: 3px;">About Us</a>
+            <a href="#" style="font-family: sfui;letter-spacing: 3px;">Curators</a>
+
+            <label for="chk" class="hide-menu-btn">
+                <i class="fas fa-times" style="font-size: 25px;"></i>
+            </label>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="center">
+            <div style="height: 300px;">
+                <img src="assets/images/logo-new.png" style="max-height: 260px;">
+            </div>
+            <br>
+            <div align="center">
+                <h1 style="color: #889F2D;font-family: sfui;font-weight: bold;font-size: 16pt;">Sustainable Living' platform for millennials
+                </h1>
+            </div>
+            <br>
+            <div align="center" style="width: 100%;">
+                <h1 style="color: white;font-family: sfui;font-weight: bold;font-size: 14pt;">Greenlane TV is a lifestyle internet channel that helps conscious consumers discover and engage with responsible brands.
+                </h1>
+                <br>
+                <br>
+                <div align="center">
+                    <p style="color: white;font-family: sfui;text-align: center;">
+                        Save your playlist, progress and earn badges. 
+                    </p>
+                </div>
+                <br>
+                <button class="ui facebook button" (click)="signInWithFacebook()">
+                    <i class="fab fa-facebook-f"></i>
+                    &nbsp; &nbsp; Login using Facebook
+                </button>
+                <br>
+                <br>
+                <button class="ui google plus button" (click)="signInWithGoogle()"> 
+                    <i class="fab fa-google"></i>
+                    &nbsp; &nbsp; Login using Google
+                </button>
+                <br>
+                <br>
+                <a style="color: white;font-family: sfui;text-align: center;" href="/interests"> Browse without sign up
+                </a>
+                <div style="position:absolute;
+                bottom:5px;
+                right:20px;width: 50%;">
+                <div class="ui grid" style="width: 100%;">
+                        <div class="six wide column">
+                    
+                    </div>
+                        <div class="four wide column">
+                        <p style="color: white;font-family: sfui;"> Follow us on :</p>
+                    </div>
+                    <div class="two wide column">
+                        <i class="fab fa-facebook-f" style="color: white;font-size: 16pt;"></i>
+                    </div>
+                    <div class="two wide column">
+                        <i class="fab fa-instagram" style="color: white;font-size: 16pt;"></i>
+                    </div>
+                
+                    <div class="two wide column">
+                        <i class="fab fa-twitter" style="color: white;font-size: 16pt;"></i>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: push" style="margin: 40px;">
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
+                <img src="assets/images/Nature.png" alt="" uk-cover>
+            </div>
+        </li>
+        <li>
+            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-top-right">
+                <img src="assets/images/Eco Living.png" alt="" uk-cover>
+            </div>
+        </li>
+        <li>
+            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-bottom-left">
+                <img src="assets/images/Businesses of the Future.png" alt="" uk-cover>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous" style="padding: 20px;"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next" style="padding: 20px;"></a>
+
+</div>
+
+
+<div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Default</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-primary uk-card-body">
+            <h3 class="uk-card-title">Primary</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    <div>
+        <div class="uk-card uk-card-secondary uk-card-body">
+            <h3 class="uk-card-title">Secondary</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+    </div>
+  </div> --> 

@@ -1,20 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { AngularFirestore } from '@angular/fire/firestore';  
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { InterestsComponent } from './interests/interests.component';
 import { InterestsKarComponent } from './interests-kar/interests-kar.component';
-import {
-    SocialLoginModule,
-    AuthServiceConfig,
-    GoogleLoginProvider,
-    FacebookLoginProvider,
-} from "angular-6-social-login";
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider} from "angular-6-social-login";
 import { AboutusComponent } from './aboutus/aboutus.component';
- 
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { CoreModule } from './core/core.module'
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AuthService } from './services/auth.service';
+import { FrameComponent } from './frame/frame.component';
+import { SafePipe } from './safe.pipe';
+import { NewHomeComponent } from './new-home/new-home.component'
+import { AngularFullpageModule } from '@fullpage/angular-fullpage';
+import { NgxTypedJsModule } from 'ngx-typed-js';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LazyLoadScriptService } from './lazy-load-script.service';
+import { HttpClientModule } from '@angular/common/http';
+import { EmbedVideo } from 'ngx-embed-video';
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { IntrestsEditComponent } from './intrests-edit/intrests-edit.component';
+import * as firebase from 'firebase';
+import 'firebase/firestore';
+import { IframeinterestsComponent } from './iframeinterests/iframeinterests.component';
+import { FormsModule } from '@angular/forms';
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -40,17 +56,34 @@ export function getAuthServiceConfigs() {
     NotfoundComponent,
     InterestsComponent,
     InterestsKarComponent,
-    AboutusComponent
+    AboutusComponent,
+    FrameComponent,
+    SafePipe,
+    NewHomeComponent,
+    LoginComponent,
+    IntrestsEditComponent,
+    IframeinterestsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SocialLoginModule
+    SocialLoginModule,
+    FormsModule,
+    CoreModule,
+    AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
+    NgxTypedJsModule,
+    AngularFireDatabaseModule,
+    AngularFullpageModule,
+    AngularFireAuthModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule, EmbedVideo.forRoot()
   ],
-  providers: [{
+  providers: [AuthService,{
+      
       provide: AuthServiceConfig,
       useFactory: getAuthServiceConfigs
-    }],
+    },LazyLoadScriptService,AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

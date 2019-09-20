@@ -1,0 +1,425 @@
+
+
+
+<div class="ui centered grid">
+	<div class="mobile only row">
+		<div class="sixteen wide column" style="background: url(assets/images/hero.png) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	};height: 100vh;padding:0px;margin: 0px;">
+		<div align="center">
+				<br>
+				<br>
+
+				<div class="ui segment" style="width: 90%;">
+					<div style="top: 15%;align-items: center;left: 10%;" >
+						<img src="assets/images/logo-new.png" style="height: 80px;"> 
+						<h2 style="align-self: center;font-family: 'Helvetica';font-weight: bold;padding: 0px;margin: 1px;">Welcome to Greenlane!</h2>
+						<h2 style="align-self: center;font-family: 'Helvetica';font-weight: bold;padding: 0px;margin: 1px;">Sign In to get access</h2>
+						<br>
+						<p style="align-self: center;font-family: 'Helvetica';font-weight: 100;padding: 0px;margin: 1px;"> Sign In to your account by filling the information below
+						</p>
+						<p style="align-self: center;font-family: 'Helvetica';font-weight: bold;padding: 0px;margin: 1px;">
+						</p>
+						<ul uk-tab style="font-family: 'Helvetica';font-weight: 400;border-color: black !important;">
+							<li class="uk-active"><a href="#" style="text-transform: capitalize;" (click)="onloginclick()">Login</a></li>
+							<li><a href="#" style="text-transform: capitalize;" (click)="onregisterclick()">Register</a></li>
+						</ul>
+						<div *ngIf="showlogin">
+							<form class="ui form" [formGroup]="LoginForm" novalidate>
+								<div class="field">
+									<input type="email" formControlName="email" placeholder="Email" style="border-color: green;font-family: 'courier-std';color: green;" [(ngModel)]="email">
+								</div>
+								<div *ngIf="LoginForm.controls['email'].invalid && (LoginForm.controls['email'].dirty || LoginForm.controls['email'].touched)" class="alert alert-danger">
+									<div *ngIf="LoginForm.controls['email'].errors.required">
+										Email is required.
+									</div>
+								</div>
+								<div class="field">
+									<input type="password" formControlName="password" placeholder="Password" style="border-color: green;font-family: 'courier-std';color: green;" [(ngModel)]="password">
+								</div>
+								<div *ngIf="LoginForm.controls['password'].invalid && (LoginForm.controls['password'].dirty || LoginForm.controls['password'].touched)" class="alert alert-danger">
+									<div *ngIf="LoginForm.controls['password'].errors.required">
+										Password is required.
+									</div>
+									<div *ngIf="LoginForm.controls['password'].errors?.minlength">
+										Password must be minimum 8 charectors long, Please enter a new password.
+									</div>
+									<div *ngIf="LoginForm.controls['password'].errors?.maxlength">
+										Password must be Maximum of 24 charectors long, Please enter a new password.
+									</div>
+								</div>
+								<div align="center">
+
+									<button class="uk-button" style="padding: 10px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%); border-radius: 10px 10px;font-family: 'Helvetica';text-transform: capitalize;font-weight: 200;color: white;padding-right: 40px;padding-left: 40px;text-transform: uppercase;letter-spacing: 2px;"  [disabled]="LoginForm.pristine || LoginForm.invalid" (click)="login_with_email_password(email,password)"> <div uk-spinner *ngIf="show_loading_login"></div> &nbsp; Login</button>
+								</div>
+								<br>
+								<br>
+								<hr style="display: block;
+								margin-top: 0.5em;
+								margin-bottom: 0.5em;
+								margin-left: auto;
+								margin-right: auto;
+								border-style: inset;
+								border-width: 1px;">
+								<div align="center">
+									<!-- <p style="padding: 20px;font-family: 'Helvetica';font-weight: 100;"> Login Using </p> -->
+
+								</div>
+								<br>
+
+
+								<div class="ui grid" style="margin: 0px;padding:0px;width: 100%;">
+									<div class="eight wide column" align="center" style="padding: 5px;">
+										<button class="ui black basic button" (click)="signInWithFacebook()" style="width: 100%;padding: 10px;"> 
+
+											<i class="facebook icon" style="color: #3b5998;font-size: 14pt;"></i>
+											&nbsp; Sign in with Facebook
+										</button>
+									</div>
+									<div class="eight wide column" align="center" style="padding: 5px;">
+										<button class="ui black basic button" (click)="signInWithGoogle()" style="width: 100%;padding: 10px;"> 
+											<img src="assets/images/google.png" style="height: 16px;">
+											&nbsp;  Sign in with Google
+										</button>
+									</div>
+
+								</div>
+								<!-- <button class="ui button" type="submit">Submit</button> -->
+							</form>
+
+
+						</div>
+						<div *ngIf="showregister">
+
+
+							<form class="ui form" [formGroup]="RegisterForm" novalidate>
+								<div class="ui grid" style="padding-bottom: 12px;">
+									<div class="eight wide column">
+										<div class="field">
+											<input type="text" formControlName="firstname" placeholder="First Name" style="border-color: green;font-family: 'courier-std';color: green;" [(ngModel)]="firstname">
+										</div>
+										<div *ngIf="RegisterForm.controls['firstname'].invalid && (RegisterForm.controls['firstname'].dirty || RegisterForm.controls['firstname'].touched)" class="alert alert-danger">
+											<div *ngIf="RegisterForm.controls['firstname'].errors.required">
+												First Name is required.
+											</div>
+										</div>
+									</div>
+									<div class="eight wide column">
+										<div class="field">
+											<input type="text" formControlName="secondname" placeholder="Last Name" style="border-color: green;font-family: 'courier-std';color: green;" [(ngModel)]="secondname">
+										</div>
+										<div *ngIf="RegisterForm.controls['secondname'].invalid && (RegisterForm.controls['secondname'].dirty || RegisterForm.controls['secondname'].touched)" class="alert alert-danger">
+											<div *ngIf="RegisterForm.controls['secondname'].errors.required">
+												Last Name is required.
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="field">
+									<input type="email" formControlName="email" placeholder="Email" style="border-color: green;font-family: 'courier-std';color: green;" [(ngModel)]="email">
+								</div>
+								<div *ngIf="RegisterForm.controls['email'].invalid && (RegisterForm.controls['email'].dirty || RegisterForm.controls['email'].touched)" class="alert alert-danger">
+									<div *ngIf="RegisterForm.controls['email'].errors.required">
+										Email is required.
+									</div>
+								</div>
+
+								<div class="field">
+									<input type="password" formControlName="password" placeholder="Password" style="border-color: green;font-family: 'courier-std';color: green;" [(ngModel)]="password">
+								</div>
+								<div *ngIf="RegisterForm.controls['password'].invalid && (RegisterForm.controls['password'].dirty || RegisterForm.controls['password'].touched)" class="alert alert-danger">
+									<div *ngIf="RegisterForm.controls['password'].errors.required">
+										Password is required.
+									</div>
+									<div *ngIf="RegisterForm.controls['password'].errors?.minlength">
+										Password must be minimum 8 charectors long, Please enter a new password.
+									</div>
+									<div *ngIf="RegisterForm.controls['password'].errors?.maxlength">
+										Password must be Maximum of 24 charectors long, Please enter a new password.
+									</div>
+								</div>
+								<div *ngIf="user_already_exists">
+									<p style="font-family: 'Helvetica';color: red;"><i class="exclamation circle icon"></i> &nbsp; {{error_message}}</p>
+									<br>
+								</div>
+								<div align="center">
+									<button class="uk-button" style="padding: 10px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%); border-radius: 10px 10px;font-family: 'Helvetica';text-transform: uppercase;font-weight: 200;color: white;padding-right: 40px;padding-left: 40px;letter-spacing: 2px;"  [disabled]="RegisterForm.pristine || RegisterForm.invalid" (click)="register_with_email_password(firstname, secondname,email,password)"> <div uk-spinner *ngIf="show_loading_register"></div> Register</button>
+								</div>
+								<br>
+								<br>
+								<hr style="display: block;
+								margin-top: 0.5em;
+								margin-bottom: 0.5em;
+								margin-left: auto;
+								margin-right: auto;
+								border-style: inset;
+								border-width: 1px;">
+								<div align="center">
+									<!-- <p style="padding: 20px;font-family: 'Helvetica';font-weight: 100;"> Login Using </p> -->
+
+								</div>
+								<br>
+
+
+								<div class="ui grid" style="margin: 0px;padding:0px;width: 100%;">
+									<div class="eight wide column" align="center" style="padding: 5px;">
+										<button class="ui black basic button" (click)="signInWithGoogle()" style="width: 100%;padding: 10px;"> 
+
+											<i class="facebook icon" style="color: #3b5998;font-size: 14pt;"></i>
+											&nbsp; Signin with Facebook
+										</button>
+									</div>
+									<div class="eight wide column" align="center" style="padding: 5px;">
+										<button class="ui black basic button" (click)="signInWithGoogle()" style="width: 100%;padding: 10px;"> 
+											<img src="assets/images/google.png" style="height: 16px;">
+											&nbsp;  Signin with Google
+										</button>
+									</div>
+
+								</div>
+								<!-- <button class="ui button" type="submit">Submit</button> -->
+							</form>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+			
+
+
+
+</div>
+	</div>
+	<div class="tablet computer only row">
+
+		<div class="eight wide tablet eight wide computer column" style="padding: 0px;background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);">
+			<div align="center">
+				<br>
+				<br>
+				<br>
+				<div class="ui segment" style="width: 90%;">
+					<div style="top: 15%;align-items: center;left: 10%;" >
+						<h2 style="align-self: center;font-family: 'Helvetica';font-weight: bold;padding: 0px;margin: 1px;">Welcome to Greenlane!</h2>
+						<h2 style="align-self: center;font-family: 'Helvetica';font-weight: bold;padding: 0px;margin: 1px;">Sign In to get access</h2>
+						<br>
+						<p style="align-self: center;font-family: 'Helvetica';font-weight: 100;padding: 0px;margin: 1px;"> Sign In to your account by filling the information below
+						</p>
+						<p style="align-self: center;font-family: 'Helvetica';font-weight: bold;padding: 0px;margin: 1px;">
+						</p>
+						<ul uk-tab style="font-family: 'Helvetica';font-weight: 400;border-color: black !important;">
+							<li class="uk-active"><a href="#" style="text-transform: capitalize;" (click)="onloginclick()">Login</a></li>
+							<li><a href="#" style="text-transform: capitalize;" (click)="onregisterclick()">Register</a></li>
+						</ul>
+						<div *ngIf="showlogin">
+							<form class="ui form" [formGroup]="LoginForm" novalidate>
+								<div class="field">
+									<input type="email" formControlName="email" placeholder="Email" style="border-color: green;font-family: 'courier-std';color: green;" [(ngModel)]="email">
+								</div>
+								<div *ngIf="LoginForm.controls['email'].invalid && (LoginForm.controls['email'].dirty || LoginForm.controls['email'].touched)" class="alert alert-danger">
+									<div *ngIf="LoginForm.controls['email'].errors.required">
+										Email is required.
+									</div>
+								</div>
+								<div class="field">
+									<input type="password" formControlName="password" placeholder="Password" style="border-color: green;font-family: 'courier-std';color: green;" [(ngModel)]="password">
+								</div>
+								<div *ngIf="LoginForm.controls['password'].invalid && (LoginForm.controls['password'].dirty || LoginForm.controls['password'].touched)" class="alert alert-danger">
+									<div *ngIf="LoginForm.controls['password'].errors.required">
+										Password is required.
+									</div>
+									<div *ngIf="LoginForm.controls['password'].errors?.minlength">
+										Password must be minimum 8 charectors long, Please enter a new password.
+									</div>
+									<div *ngIf="LoginForm.controls['password'].errors?.maxlength">
+										Password must be Maximum of 24 charectors long, Please enter a new password.
+									</div>
+								</div>
+								<div align="center">
+
+									<button class="uk-button" style="padding: 10px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%); border-radius: 10px 10px;font-family: 'Helvetica';text-transform: capitalize;font-weight: 200;color: white;padding-right: 40px;padding-left: 40px;text-transform: uppercase;letter-spacing: 2px;"  [disabled]="LoginForm.pristine || LoginForm.invalid" (click)="login_with_email_password(email,password)"> <div uk-spinner *ngIf="show_loading_login"></div>Login</button>
+								</div>
+								<br>
+								<br>
+								<hr style="display: block;
+								margin-top: 0.5em;
+								margin-bottom: 0.5em;
+								margin-left: auto;
+								margin-right: auto;
+								border-style: inset;
+								border-width: 1px;">
+								<div align="center">
+									<!-- <p style="padding: 20px;font-family: 'Helvetica';font-weight: 100;"> Login Using </p> -->
+
+								</div>
+								<br>
+
+
+								<div class="ui grid" style="margin: 0px;padding:0px;width: 100%;">
+									<div class="eight wide column" align="center" style="padding: 5px;">
+										<button class="ui black basic button" (click)="signInWithFacebook()" style="width: 100%;padding: 10px;"> 
+
+											<i class="facebook icon" style="color: #3b5998;font-size: 14pt;"></i>
+											&nbsp; Sign in with Facebook
+										</button>
+									</div>
+									<div class="eight wide column" align="center" style="padding: 5px;">
+										<button class="ui black basic button" (click)="signInWithGoogle()" style="width: 100%;padding: 10px;"> 
+											<img src="assets/images/google.png" style="height: 16px;">
+											&nbsp;  Sign in with Google
+										</button>
+									</div>
+
+								</div>
+								<!-- <button class="ui button" type="submit">Submit</button> -->
+							</form>
+
+
+						</div>
+						<div *ngIf="showregister">
+
+
+							<form class="ui form" [formGroup]="RegisterForm" novalidate>
+								<div class="ui grid" style="padding-bottom: 12px;">
+									<div class="eight wide column">
+										<div class="field">
+											<input type="text" formControlName="firstname" placeholder="First Name" style="border-color: green;font-family: 'courier-std';color: green;" [(ngModel)]="firstname">
+										</div>
+										<div *ngIf="RegisterForm.controls['firstname'].invalid && (RegisterForm.controls['firstname'].dirty || RegisterForm.controls['firstname'].touched)" class="alert alert-danger">
+											<div *ngIf="RegisterForm.controls['firstname'].errors.required">
+												First Name is required.
+											</div>
+										</div>
+									</div>
+									<div class="eight wide column">
+										<div class="field">
+											<input type="text" formControlName="secondname" placeholder="Last Name" style="border-color: green;font-family: 'courier-std';color: green;" [(ngModel)]="secondname">
+										</div>
+										<div *ngIf="RegisterForm.controls['secondname'].invalid && (RegisterForm.controls['secondname'].dirty || RegisterForm.controls['secondname'].touched)" class="alert alert-danger">
+											<div *ngIf="RegisterForm.controls['secondname'].errors.required">
+												Last Name is required.
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="field">
+									<input type="email" formControlName="email" placeholder="Email" style="border-color: green;font-family: 'courier-std';color: green;" [(ngModel)]="email">
+								</div>
+								<div *ngIf="RegisterForm.controls['email'].invalid && (RegisterForm.controls['email'].dirty || RegisterForm.controls['email'].touched)" class="alert alert-danger">
+									<div *ngIf="RegisterForm.controls['email'].errors.required">
+										Email is required.
+									</div>
+								</div>
+
+								<div class="field">
+									<input type="password" formControlName="password" placeholder="Password" style="border-color: green;font-family: 'courier-std';color: green;" [(ngModel)]="password">
+								</div>
+								<div *ngIf="RegisterForm.controls['password'].invalid && (RegisterForm.controls['password'].dirty || RegisterForm.controls['password'].touched)" class="alert alert-danger">
+									<div *ngIf="RegisterForm.controls['password'].errors.required">
+										Password is required.
+									</div>
+									<div *ngIf="RegisterForm.controls['password'].errors?.minlength">
+										Password must be minimum 8 charectors long, Please enter a new password.
+									</div>
+									<div *ngIf="RegisterForm.controls['password'].errors?.maxlength">
+										Password must be Maximum of 24 charectors long, Please enter a new password.
+									</div>
+								</div>
+								<div *ngIf="user_already_exists">
+									<p style="font-family: 'Helvetica';color: red;"><i class="exclamation circle icon"></i> &nbsp; {{error_message}}</p>
+									<br>
+								</div>
+								<div align="center">
+									<button class="uk-button" style="padding: 10px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%); border-radius: 10px 10px;font-family: 'Helvetica';text-transform: uppercase;font-weight: 200;color: white;padding-right: 40px;padding-left: 40px;letter-spacing: 2px;"  [disabled]="RegisterForm.pristine || RegisterForm.invalid" (click)="register_with_email_password(firstname, secondname,email,password)"> <div uk-spinner *ngIf="show_loading_register"></div> Register</button>
+								</div>
+								<br>
+								<br>
+								<hr style="display: block;
+								margin-top: 0.5em;
+								margin-bottom: 0.5em;
+								margin-left: auto;
+								margin-right: auto;
+								border-style: inset;
+								border-width: 1px;">
+								<div align="center">
+									<!-- <p style="padding: 20px;font-family: 'Helvetica';font-weight: 100;"> Login Using </p> -->
+
+								</div>
+								<br>
+
+
+								<div class="ui grid" style="margin: 0px;padding:0px;width: 100%;">
+									<div class="eight wide column" align="center" style="padding: 5px;">
+										<button class="ui black basic button" (click)="signInWithGoogle()" style="width: 100%;padding: 10px;"> 
+
+											<i class="facebook icon" style="color: #3b5998;font-size: 14pt;"></i>
+											&nbsp; Register with Facebook
+										</button>
+									</div>
+									<div class="eight wide column" align="center" style="padding: 5px;">
+										<button class="ui black basic button" (click)="signInWithGoogle()" style="width: 100%;padding: 10px;"> 
+											<img src="assets/images/google.png" style="height: 16px;">
+											&nbsp;  Register with Google
+										</button>
+									</div>
+
+								</div>
+								<!-- <button class="ui button" type="submit">Submit</button> -->
+							</form>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+
+		</div>
+		<div class="eight wide tablet eight wide computer column" style="background: url(assets/images/hero.png) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	};height: 100vh;padding:0px;margin: 0px;">
+
+
+
+	<div>
+		<div style="background-color: rgba(0,0,0,0.4);height: 100vh;width: 100%;">
+			<img src="assets/images/logo_white.png" style="top: 20%;position: absolute;height: 65px;left: 10%;">
+			<p style="top: 30%;position: absolute;left: 10%;font-family: Helvetica;font-weight: 700;font-size: 1.3vw;background: -webkit-linear-gradient(#38ef7d, #38ef7d);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;">Sustainable living platform for millenial</p>
+			<p style="color: white;top: 35%;position: absolute;left: 10%;font-family: Helvetica;font-size: 1.3vw;width: 70%;font-weight: 100;">GreenlaneTV is a lifestyle internet channel that helps conscious consumers discover and engage with responsible brands.</p>
+			<div style="bottom: 3%;position: absolute;right: 5%;color: white;font-family: 'Helvetica';">
+				<div class="ui grid">
+					<div class="four wide column">
+						<i class="instagram icon" style="color: white;font-size: 14pt;"></i>
+					</div>
+					<div class="four wide column">
+						<i class="facebook icon" style="color: white;font-size: 14pt;"></i>
+					</div>
+					<div class="four wide column">
+						<i class="medium m icon" style="color: white;font-size: 14pt;"></i>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<div>
+
+
+		</div>
+
+	</div>
+</div>
+
+</div>

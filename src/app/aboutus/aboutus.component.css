@@ -28,7 +28,7 @@
 .footer {
 display: block;
 height: 150px;
-background: url('https://uploads-ssl.webflow.com/5c4def2c7c1ca40a4705b074/5c4def2c7c1ca42a3b05b0fe_forest-top.jpg') no-repeat center center fixed; 
+background: url('/assets/images/hero.png') no-repeat center center fixed; 
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
@@ -129,6 +129,63 @@ z-index:10;
     right: 0;
   }
 }
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.padded-multi {
+  display: inline;
+  background: white;
+  font-size: 8ve;
+  box-shadow: 10px 0 0 white, -10px 0 0 white;
+}
+
+.padded-multiline { 
+  position: absolute;
+  /*font-family: 'courier-std';*/
+  bottom: 10%;
+  left: 0px;
+  line-height: 1.3; 
+  padding: 2px 0;
+  color: white; 
+  /*border-left: 20px solid #fff;*/
+  width: 90%;
+  border-left: 0px  solid #fff;
+  margin: 0px auto;
+
+}
+.padded-multi-line-tag {
+  display: inline;
+  background: white;
+  width: 80%;
+  box-shadow: 10px 0 0 white, -10px 0 0 white;
+}
+
+.padded-multiline h3 { 
+ /* font-size: 20pt;*/
+  width:60%;
+  /*background-color: #fff;*/
+  padding: 0px 0;
+  color: black; 
+  /*display: inline;*/
+  margin: 0; 
+}
+.bottom { 
+           position:absolute;                  
+           bottom:0;                          
+                                  
+          } 
+
 
 
 

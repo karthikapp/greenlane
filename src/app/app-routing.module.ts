@@ -5,6 +5,12 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { InterestsComponent } from './interests/interests.component';
 import { InterestsKarComponent } from './interests-kar/interests-kar.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { FrameComponent } from './frame/frame.component'
+import { NewHomeComponent } from './new-home/new-home.component'
+import { LoginComponent } from './login/login.component';
+import { IntrestsEditComponent } from './intrests-edit/intrests-edit.component';
+import { IframeinterestsComponent } from './iframeinterests/iframeinterests.component';
+
 const routes: Routes = 
 [
 
@@ -28,10 +34,37 @@ const routes: Routes =
 
 },
 
+{
+  path: 'frame',
+  component: FrameComponent,
+
+},
+{
+  path: 'newhome',
+  component: NewHomeComponent,
+
+},
+{
+  path: 'login',
+  component: LoginComponent,
+
+},
+{
+  path: 'interests_new',
+  component: IntrestsEditComponent,
+
+},
+{
+  path: 'iframe_with_interests',
+  component: IframeinterestsComponent,
+
+}
+,
 { path: '',
-redirectTo: '/home',
+redirectTo: '/newhome',
 pathMatch: 'full'
 },
+
 { path: '**', component: NotfoundComponent }
 ];
 

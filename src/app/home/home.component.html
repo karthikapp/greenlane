@@ -45,6 +45,8 @@ z-index:10;">
 <!--   <main class="mdl-layout__content" style="background-color: rgba(0,0,0,0.7);">
   </main>
 </div> -->
+
+
 <div style=" background: url('assets/images/forest.jpeg') no-repeat center center fixed; 
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -93,13 +95,13 @@ z-index:10;">
 					</p>
 				</div>
 				<br>
-				<button class="ui facebook button" (click)="socialSignIn('facebook')">
+				<button class="ui facebook button" (click)="signInWithFacebook()">
 					<i class="fab fa-facebook-f"></i>
 					&nbsp; &nbsp; Login using Facebook
 				</button>
 				<br>
 				<br>
-				<button class="ui google plus button" (click)="socialSignIn('google')"> 
+				<button class="ui google plus button" (click)="signInWithGoogle()"> 
 					<i class="fab fa-google"></i>
 					&nbsp; &nbsp; Login using Google
 				</button>
