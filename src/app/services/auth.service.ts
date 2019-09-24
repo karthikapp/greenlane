@@ -4,7 +4,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
-import * as CryptoJS from 'crypto-js';  
+
 
 
 @Injectable({
@@ -20,9 +20,7 @@ export class AuthService {
   }
 
 
-  convertstring(stringval){
-    
-  }
+
 
   goToiframewithinterests(email) {
     this.router.navigate(['/iframe_with_interests', {'email':email}]);
@@ -39,6 +37,15 @@ export class AuthService {
       data.forEach(el => {
         this.firestore.collection('users').doc(el.id).update({'interests': interests})
         this.goToiframewithinterests(email)
+      })
+    })
+  }
+   update_interests(email, interests)
+  {
+    this.firestore.collection('users', ref => ref.where('email', '==', email)).get().subscribe((data)=> {
+      data.forEach(el => {
+        this.firestore.collection('users').doc(el.id).update({'interests': interests})
+       
       })
     })
   }

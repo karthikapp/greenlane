@@ -1,3 +1,99 @@
-<p>
-  iframeinterests works!
-</p>
+<!-- This is a button toggling the modal -->
+<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar style="color: #202D71;background-color: #3fcf78">
+	<div class="uk-navbar-left" style="padding: 8px;margin: 10px;">
+		<ul class="uk-navbar-nav">
+			<li class="uk-active">
+				<span class="uk-margin-small-right uk-icon" uk-icon="icon: album; ratio: 2" uk-toggle="target: #my-id">	</span>
+			</li>
+		</ul>
+
+	</div>
+</nav>
+
+
+<!-- This is the modal -->
+<div id="my-id" uk-modal style="z-index: 2;">
+	<div class="uk-modal-dialog uk-modal-body invisible-scrollbar" style="border-radius: 10px;height: 80vh;
+	overflow: auto;">
+	<div>
+
+		<span class="uk-margin-small-right uk-icon" uk-icon="icon: album;ratio: 2;" style="color: #3fcf78;"></span>
+		<br>
+		<br>
+		<div>
+			<h4 style="font-family: 'Helvetica'; font-weight: 400;">Now Playing</h4>
+			<div style="width: 200px;height: 120px;border-radius: 10px;position: relative;">
+				<img src="{{this.now_playing?.category_image}}" style=" width: 100%; /* or any custom size */
+				height: 100%; 
+				border-radius: 10px;">
+
+				<p style="position: absolute;
+				top:25%;
+				left: 50%;
+				transform: translate(-50%, -50%);font-family: 'Helvetica'; color: white;font-weight: bold;font-size: 12pt;">{{this.now_playing?.category_name}}</p>
+				<img src="https://media2.giphy.com/media/MCIFuk65BSptm/source.gif" style="position: absolute; position: absolute;
+				bottom: 8px;
+				left: 16px;height: 20px;">
+			</div>
+
+
+			<h4 style="font-family: 'Helvetica'; font-weight: 400;">Upcoming Playlists</h4>
+			<div>
+				<div class="ui middle aligned divided list invisible-scrollbar" style="height: 100px;
+				overflow: auto;">
+				<div *ngFor="let category of user_interested_categories_except_playlist" class="item">
+					<div class="right floated content">
+						<div class="ui mini button" style="background-color: #3fcf78;color: white;" (click)="change_now_playing(category.category_tag)">Play</div>
+					</div>
+					<img class="ui avatar image" src="{{category?.category_image}}">
+					<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;">
+						{{category?.category_name}}
+					</div>
+				</div>
+				
+			
+	
+			</div>
+
+
+			<h4 style="font-family: 'Helvetica'; font-weight: 400;">Explore</h4>
+			<div class="ui middle aligned divided list invisible-scrollbar" style="height: 100px;
+			overflow: auto;">
+			<div *ngFor="let other_category of user_other_categories" class="item">
+				<div class="right floated content">
+					<div class="ui mini button" style="background-color: #202D71;color: white;" (click)="add_interest(other_category.category_tag)">Add</div>
+				</div>
+				<img class="ui avatar image" src="{{other_category?.category_image}}">
+				<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;">
+					{{other_category?.category_name}}
+				</div>
+			</div>
+	
+
+	
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+</div>
+</div>
+
+ <button class="uk-modal-close-default" type="button" uk-close></button>
+</div>
+</div>
+
+<div align="center" style="padding: 40px;">
+
+
+
+<div *ngIf="iframe_url !== ''" [innerHTML]="iframe_url | safe: 'html'"></div>
+
+<br>
+
+<div #myDiv></div>

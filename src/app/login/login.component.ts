@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
 import { AuthService } from '../services/auth.service'
 import { Router } from '@angular/router';
-
+import * as CryptoJS from 'crypto-js';  
 
 @Component({
 	selector: 'app-login',
@@ -101,6 +101,20 @@ export class LoginComponent implements OnInit {
 		})
 		.catch((err) => console.log(err));
 	}
+
+
+
+	 encryptstring(email)
+	 {
+    var encrypted = CryptoJS.AES.encrypt(email, "password").toString();
+    console.log("encryoted", encrypted)
+ 
+     // var decrypted = CryptoJS.AES.decrypt(encrypted, "password").toString(CryptoJS.enc.Utf8);
+     // console.log("decrypted",decrypted)
+  }
+
+
+
 	signInWithFacebook() {
 		this.auth.signInWithFacebook()
 		.then((res) => { 
@@ -154,6 +168,7 @@ export class LoginComponent implements OnInit {
 			console.log("signinresponse",signinresponse)
 			this.show_loading_login = true
 			this.auth.query_user_email(email).valueChanges().subscribe((user:any) => {
+				
 				if (user[0].interests === undefined)
 				{
 					this.goTointrests(user[0])
@@ -183,6 +198,7 @@ export class LoginComponent implements OnInit {
 	}
 
 	goToiframewithinterests(email) {
+		
 		this.router.navigate(['/iframe_with_interests', {'identifier':email}]);
 	}
 	register_with_email_password(firstname, lastname, email,password)
