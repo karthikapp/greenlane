@@ -1,5 +1,5 @@
 <div fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
-  <div class="section" style="height: 100vh;">
+  <div class="section" style="height: 100vh;z-index: 1">
     <div style="background: url(https://greenlanetvdemo.imgix.net/hero.png?auto=compress&h=700) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -9,7 +9,7 @@
 
   <div style="background-color: rgba(0,0,0,0.4);height: 100vh;">
     <div class="header" style="padding-right: 40px;padding-left: 40px;padding-top: 30px;">
-      <a class="logo"><img src="https://greenlanetvdemo.imgix.net/logo_white.png" style="height: 30px;"></a>
+      <a class="logo"><img src="https://greenlanetvdemo.imgix.net/logo_white.png" style="height: 36px;"></a>
       <input type="checkbox" id="chk">
       <label for="chk" class="show-menu-btn" style="color: white;">
         <i class="fas fa-bars" style="font-size: 25px;"></i>
@@ -18,8 +18,8 @@
       <br>
 
       <ul class="menu" style="z-index: 1;">
-        <a href="/aboutus" style="font-family: sfui;letter-spacing: 3px;" class="uk-button uk-button-text">About Us</a>
-        <a href="/login" style="font-family: sfui;letter-spacing: 3px;" class="uk-button uk-button-text">Login/Register</a>
+        <a href="/aboutus" style="font-family: Helvetica;letter-spacing: 3px;" class="uk-button uk-button-text">About Us</a>
+        <a href="/login" style="font-family: Helvetica;letter-spacing: 3px;" class="uk-button uk-button-text">Signup</a>
 
         <label for="chk" class="hide-menu-btn">
           <i class="fas fa-times" style="font-size: 25px;"></i>
@@ -31,9 +31,11 @@
       <div class="center">
         <br>
         <br>
-        <br>
-        <br>
+
         <div align="center">
+          <div style="height: 50px;">
+          <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="max-width: 10%;height: auto;display:block">
+        </div><br><br>
           <h1 style="color: white;font-family: Helvetica;font-weight: bold;font-size: 5vw;" align="center">Live Consciously
           </h1>
           <!-- <a class="btn btn-1">Hover me</a> -->
@@ -44,7 +46,7 @@
 <br>
 <br>
 
-<ngx-typed-js [strings]="['You always have a choice to make and what you choose is what you become. ','Be the change you want to see in the world']" [shuffle]="true" [typeSpeed]="40" [loop]="true">
+<ngx-typed-js [strings]="['You always have a choice to make and what you choose is who you become. ','Be the change you want to see in the world']" [shuffle]="true" [typeSpeed]="40" [loop]="true">
  <span class="typing typed-text" style="color: white;font-family: 'courier-std', sans-serif;line-height: 1.2em; height: 200px;"></span>
 </ngx-typed-js>
 <br>
@@ -56,21 +58,21 @@ margin-left: -37.5%;bottom: 25%;">
 <div class="ui centered grid">
   <div class="mobile only row">
    <div  style="margin: 10px;">
-    <button class="massive ui button" style="color: white;background-color: #3fcf78;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 3px;font-weight: 400;white-space: normal !important ;
+    <a href="/frame" class="massive ui button" style="color: white;background-color: #3fcf78;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 3px;font-weight: 400;white-space: normal !important ;
     ;font-size: 8pt;"> &nbsp;&nbsp; Start Watching &nbsp; &nbsp;
-  </button>
+  </a>
 </div>
 
 <div  style="margin: 10px;">
   <button class="massive ui button" style="color: white;background-color: #202D71;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 3px;font-weight: 400;
-  ;font-size: 8pt;"> &nbsp;&nbsp; Login / Register &nbsp; &nbsp;
+  ;font-size: 8pt;"> &nbsp;&nbsp; Signup &nbsp; &nbsp;
 </button>
 </div>
 </div>
 
 <div class="computer tablet only row">
   <div class="row">
-    <a class="ui button" style="padding:20px;color: white;background-color: #3fcf78;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 3px;font-weight: 400;
+    <a href="/frame" class="ui button" style="padding:20px;color: white;background-color: #3fcf78;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 3px;font-weight: 400;
     ;font-size: 10pt;" > &nbsp;&nbsp; Start Watching &nbsp; &nbsp;</a>
   </div>
 </div>
@@ -90,7 +92,7 @@ margin-left: -37.5%;bottom: 25%;">
 <!-- background-color: #3fcf78; -->
 <div class="section" style="padding: 0px;margin: 0px;background-color: #3fcf78;">
 
-  <div class="ui grid" style="height: 100vh !important;">
+  <div class="ui grid" style="height: 100vh !important;padding-top: 0px !important;">
     <div class="mobile only row" style="margin: 20px; background-color: #3fcf78;">
       <h1 style="font-family: 'courier-std' ;padding-left: 15px;margin-left: 15px;font-size: 16pt;background-color: white;color: black;" > <span class="uk-margin-small-right uk-icon" uk-icon="album" style="color: black;"></span> Browse Categories &nbsp;</h1>
       <p style="font-family: 'courier-std' ;padding-left: 10px;margin: 5px;color: black;"> Swipe through categories and click to start watching.</p>
@@ -112,7 +114,7 @@ margin-left: -37.5%;bottom: 25%;">
             <div class="vl"></div>
           </div>
           <div class="text">
-            <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+            <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
             <p style="font-family: courier-std, monospace;color: white;" align="left">
               <br>The climate crisis is real! To combat this complex problem, we all need to contribute by lowering our own carbon footprint and making greener choices. Explore how we can incorporate some of natures beautiful design systems into our lives.</p>
             </div>
@@ -127,7 +129,7 @@ margin-left: -37.5%;bottom: 25%;">
       <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">02/15</p>
       <div class="card">
         <div class="image">
-          <img src="https://greenlanetvdemo.imgix.net/clean+foods.png?auto=compress&h=400&exp=-5" width="100%">
+          <img src="https://greenlanetvdemo.imgix.net/clean+foods.jpg?auto=compress&h=400&exp=-5" width="100%">
           <div class="padded-multiline">
             <h3 style="font-family: courier-std;"> &nbsp; <strong>Clean Foods</strong></h3>
           </div>
@@ -136,7 +138,7 @@ margin-left: -37.5%;bottom: 25%;">
           <div class="vl"></div>
         </div>
         <div class="text">
-          <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+          <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
           <p style="font-family: courier-std, monospace;color: white;" align="left">
             <br>Whether you eat to live, or live to eat it you can’t deny that food is our life force. Animals have used plants as medicine since the beginning of time. Dive head first into this extraordinary world where plants and people quite simply just meant for each other.
           </p>
@@ -162,7 +164,7 @@ margin-left: -37.5%;bottom: 25%;">
         <div class="vl"></div>
       </div>
       <div class="text">
-        <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+        <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
         <p style="font-family: courier-std, monospace;color: white;" align="left">
           <br>Do you know who grows your food? How it was grown? Did it travel from miles away to reach your plate? Let’s start asking ourselves these questions. Let’s start seeking answers. Maybe together, we can start to save the world one bite at a time.</p>
         </div>
@@ -176,7 +178,7 @@ margin-left: -37.5%;bottom: 25%;">
     <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">04/15</p>
     <div class="card">
       <div class="image">
-        <img src="https://greenlanetvdemo.imgix.net/holistic+wellness.png?auto=compress&h=400&exp=-5" width="100%">
+        <img src="https://greenlanetvdemo.imgix.net/holistic+wellness.jpg?auto=compress&h=400&exp=-5" width="100%">
         <div class="padded-multiline">
           <h3 style="font-family: courier-std;"> &nbsp;  <strong>Holistic Wellness</strong></h3>
         </div>
@@ -185,7 +187,7 @@ margin-left: -37.5%;bottom: 25%;">
         <div class="vl"></div>
       </div>
       <div class="text">
-        <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+        <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
         <p style="font-family: courier-std, monospace;color: white;" align="left">
           <br>Integrated wellness is a lifestyle that focuses on cultivating good food & sleep habits, and practices like yoga & meditation to reduce stress levels. Let's explore ‘shifts' in our lifestyle to achieve our health goals.
         </p>
@@ -208,7 +210,7 @@ margin-left: -37.5%;bottom: 25%;">
       <div class="vl"></div>
     </div>
     <div class="text">
-      <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+      <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
       <p style="font-family: courier-std, monospace;color: white;" align="left">
         <br>Dancing on waves, gliding through the wind, flying through the sky, breathing underwater - we can do anything. Let’s play in a world that longs to be celebrated. Explore natural techniques to keep your mind and body in top form.
       </p>
@@ -222,7 +224,7 @@ justify-content: center;">
 <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">06/15</p>
 <div class="card">
   <div class="image">
-    <img src="https://greenlanetvdemo.imgix.net/slow+fashion+alt.jpg?auto=compress&h=400&exp=-5" width="100%">
+    <img src="https://greenlanetvdemo.imgix.net/slow+fashion.jpg?auto=compress&h=400&exp=-5" width="100%">
     <div class="padded-multiline">
       <h3 style="font-family: courier-std;"> &nbsp;  <strong>Slow Fashion</strong></h3>
     </div>
@@ -231,7 +233,7 @@ justify-content: center;">
     <div class="vl"></div>
   </div>
   <div class="text">
-    <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+    <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
     <p style="font-family: courier-std, monospace;color: white;" align="left">
       <br>We produce 10 billion garments each year! Do we really need so much? Let’s mend before we throw, let’s swap before we’re bored and buy clothes that last. Support  labels who prioritise the people who make our garments and the environment.
     </p>
@@ -255,7 +257,7 @@ justify-content: center;">
     <div class="vl"></div>
   </div>
   <div class="text">
-    <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+    <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
     <p style="font-family: courier-std, monospace;color: white;" align="left">
       <br>We want to showcase that conscious choices makes for a far more authentic experience for the traveller. By choosing to make the smallest changes in your approach to travel, we believe the planet and you stand to benefit!
     </p>
@@ -278,7 +280,7 @@ justify-content: center;">
     <div class="vl"></div>
   </div>
   <div class="text">
-    <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+    <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
     <p style="font-family: courier-std, monospace;color: white;" align="left">
       <br>This channel celebrates the extraordinary diversity of life that exists on planet earth, and serves as inspiration to make better, smarter choices. After all, it’s our home
     </p>
@@ -302,7 +304,7 @@ justify-content: center;">
     <div class="vl"></div>
   </div>
   <div class="text">
-    <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+    <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
     <p style="font-family: courier-std, monospace;color: white;" align="left">
       <br>Folklore and traditions have essentially advocated well-being for ourselves and the environment. Let's learn from ancient communities across the world and inculcate their top practices into our lives.
     </p>
@@ -316,7 +318,7 @@ justify-content: center;">
 <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">10/15</p>
 <div class="card">
   <div class="image">
-    <img src="https://greenlanetvdemo.imgix.net/people+alt.jpg?auto=compress&h=400&exp=-5" width="100%">
+    <img src="https://greenlanetvdemo.imgix.net/people.jpg?auto=compress&h=400&exp=-5" width="100%">
     <div class="padded-multiline">
       <h3 style="font-family: courier-std;"> &nbsp;  <strong>People</strong></h3>
     </div>
@@ -325,7 +327,7 @@ justify-content: center;">
     <div class="vl"></div>
   </div>
   <div class="text">
-    <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+    <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
     <p style="font-family: courier-std, monospace;color: white;" align="left">
       <br>The human experience is one of splendid glory. There is so much to learn, experience and discover. Serving as an ode to the people who strive to make our planet a better place to live in, this channel will share their unique human experience.
     </p>
@@ -348,7 +350,7 @@ justify-content: center;">
     <div class="vl"></div>
   </div>
   <div class="text">
-    <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+    <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
     <p style="font-family: courier-std, monospace;color: white;" align="left">
       <br>In a world where we can work from anywhere, let's understand how we can use technology & AI to make sustainable & regenerative lifestyle practices more accessible.
     </p>
@@ -371,7 +373,7 @@ justify-content: center;">
     <div class="vl"></div>
   </div>
   <div class="text">
-    <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+    <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
     <p style="font-family: courier-std, monospace;color: white;" align="left">
       <br>From increasing energy efficiency to constant innovation to decrease our carbon footprint while managing our resources better - businesses must take the lead in our fight for a greener, cleaner tomorrow.
     </p>
@@ -394,7 +396,7 @@ justify-content: center;">
     <div class="vl"></div>
   </div>
   <div class="text">
-    <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+    <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
     <p style="font-family: courier-std, monospace;color: white;" align="left">
       <br>In the time its taken to argue that climate change is a pollution problem, it has in fact become so much more than just that. What we need is something that can help us catch up on the time we’ve lost. Let's combine policy and design
     </p>
@@ -409,7 +411,7 @@ justify-content: center;">
 <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">14/15</p>
 <div class="card card-min=width">
   <div class="image" style="max-height: 300px;">
-    <img src="https://greenlanetvdemo.imgix.net/entertainment+and+art.png?auto=compress&h=400&exp=-5" width="100%">
+    <img src="https://greenlanetvdemo.imgix.net/entertainment+and+art.jpg?auto=compress&h=400&exp=-5" width="100%">
     <div class="padded-multiline">
       <h3 style="font-family: courier-std;"> &nbsp;  <strong>Entertainment & Arts</strong></h3>
     </div>
@@ -418,7 +420,7 @@ justify-content: center;">
     <div class="vl"></div>
   </div>
   <div class="text">
-    <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+    <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
     <p style="font-family: courier-std, monospace;color: white;" align="left">
       <br>Art has always stood to challenge the narrative, provoke thought, question choices and engage communities. We want to celebrate art and artists brave enough to envision a new global paradigm that honours and respects our planet, and all that it encompasses.
     </p>
@@ -433,7 +435,7 @@ justify-content: center;">
 <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">15/15</p>
 <div class="card card-min=width">
   <div class="image" style="max-height: 300px;">
-    <img src="https://greenlanetvdemo.imgix.net/spiritual+sciences.png?auto=compress&h=400&exp=-5" width="100%">
+    <img src="https://greenlanetvdemo.imgix.net/spiritual+sciences.jpg?auto=compress&h=400&exp=-5" width="100%">
     <div class="padded-multiline">
       <h3 style="font-family: courier-std;"> &nbsp;  <strong> Spiritual Sciences</strong></h3>
     </div>
@@ -442,7 +444,7 @@ justify-content: center;">
     <div class="vl"></div>
   </div>
   <div class="text">
-    <div class="fab"><img src="assets/images/icon-white.png" style="height: 70%"></div>
+    <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
     <p style="font-family: courier-std, monospace;color: white;" align="left">
       <br>Who are we ? What is consciousness?  Science is continuously evolving, and this channel is dedicated to expanding our knowledge base of the world’s most magical life forms.
     </p>
@@ -452,11 +454,11 @@ justify-content: center;">
 
 </div>
 
-<div class="tablet computer only row">
-  <div class="sixteen wide tablet sixteen wide computer column" style="padding: 0px;background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);height: 100vh;">
+<div class="tablet computer only row" style="height: 100vh;">
+  <div class="sixteen wide tablet sixteen wide computer column" style="padding-top: 0px !important ;background-color: #202D71;height: 100vh;">
 
     <div>
-      <div class="css-slider-wrapper">
+      <div class="css-slider-wrapper" style="height: 100vh;">
 
         <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
         <input type="radio" name="slider" class="slide-radio2" id="slider_2">
@@ -529,9 +531,8 @@ justify-content: center;">
 
 
         <div class="slider slide1" style="padding: 0px;">
-
           <div class="ui grid" style="width: 100vw;">
-            <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/eco+living.jpg?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
+            <div class="twelve wide column" style="position: relative;height: 100vh;width: 70%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/eco+living.jpg?auto=compress&h=700&exp=-10');background-color: #202D71">
            <!--    <div style="bottom: 40%;position: absolute;">
                <img src="assets/images/icon-white.png" style="height: 40px;">
              </div> -->
@@ -571,7 +572,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
             The climate crisis is real! To combat this complex problem, we all need to contribute by lowering our own carbon footprint and making greener choices. Explore how we can incorporate some of natures beautiful design systems into our lives.
@@ -587,7 +588,7 @@ justify-content: center;">
 
     <div class="slider slide2">
       <div class="ui grid" style="width: 100vw;">
-        <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/clean+foods.png?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
+        <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/clean+foods.jpg?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
            <!--    <div style="bottom: 40%;position: absolute;">
                <img src="assets/images/icon-white.png" style="height: 40px;">
              </div> -->
@@ -627,7 +628,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
             Whether you eat to live, or live to eat it you can’t deny that food is our life force. Animals have used plants as medicine since the beginning of time. Dive head first into this extraordinary world where plants and people quite simply just meant for each other.
@@ -683,7 +684,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
             Do you know who grows your food? How it was grown? Did it travel from miles away to reach your plate? Let’s start asking ourselves these questions. Let’s start seeking answers. Maybe together, we can start to save the world one bite at a time.
@@ -696,7 +697,7 @@ justify-content: center;">
 
     <div class="slider slide4">
       <div class="ui grid" style="width: 100vw;">
-        <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/holistic+wellness.png?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
+        <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/holistic+wellness.jpg?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
            <!--    <div style="bottom: 40%;position: absolute;">
                <img src="assets/images/icon-white.png" style="height: 40px;">
              </div> -->
@@ -736,7 +737,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
             Integrated wellness is a lifestyle that focuses on cultivating good food & sleep habits, and practices like yoga & meditation to reduce stress levels. Let's explore ‘shifts' in our lifestyle to achieve our health goals
@@ -789,7 +790,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
              Dancing on waves, gliding through the wind, flying through the sky, breathing underwater - we can do anything. Let’s play in a world that longs to be celebrated. Explore natural techniques to keep your mind and body in top form.
@@ -801,7 +802,7 @@ justify-content: center;">
 
      <div class="slider slide6">
       <div class="ui grid" style="width: 100vw;">
-        <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/slow+fashion+alt.jpg?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
+        <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/slow+fashion.jpg?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
            <!--    <div style="bottom: 40%;position: absolute;">
                <img src="assets/images/icon-white.png" style="height: 40px;">
              </div> -->
@@ -841,7 +842,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
              We produce 10 billion garments each year! Do we really need so much? Let’s mend before we throw, let’s swap before we’re bored and buy clothes that last. Support  labels who prioritise the people who make our garments and the environment.
@@ -894,7 +895,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
              We want to showcase that conscious choices makes for a far more authentic experience for the traveller. By choosing to make the smallest changes in your approach to travel, we believe the planet and you stand to benefit!
@@ -948,7 +949,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
              This channel celebrates the extraordinary diversity of life that exists on planet earth, and serves as inspiration to make better, smarter choices. After all, it’s our home
@@ -1001,7 +1002,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
              Folklore and traditions have essentially advocated well-being for ourselves and the environment. Let's learn from ancient communities across the world and inculcate their top practices into our lives.
@@ -1054,7 +1055,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
              The human experience is one of splendid glory. There is so much to learn, experience and discover. Serving as an ode to the people who strive to make our planet a better place to live in, this channel will share their unique human experience.
@@ -1107,7 +1108,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
              In a world where we can work from anywhere, let's understand how we can use technology & AI to make sustainable & regenerative lifestyle practices more accessible.
@@ -1161,7 +1162,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
              From increasing energy efficiency to constant innovation to decrease our carbon footprint while managing our resources better - businesses must take the lead in our fight for a greener, cleaner tomorrow.
@@ -1214,7 +1215,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
              In the time its taken to argue that climate change is a pollution problem, it has in fact become so much more than just that. What we need is something that can help us catch up on the time we’ve lost. Let's combine policy and design for a better tomorrow.
@@ -1227,7 +1228,7 @@ justify-content: center;">
 
      <div class="slider slide14">
       <div class="ui grid" style="width: 100vw;">
-        <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/entertainment+and+art.png?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
+        <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/entertainment+and+art.jpg?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
            <!--    <div style="bottom: 40%;position: absolute;">    
                <img src="assets/images/icon-white.png" style="height: 40px;">
              </div> -->
@@ -1267,7 +1268,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
              Art has always stood to challenge the narrative, provoke thought, question choices and engage communities. We want to celebrate art and artists brave enough to envision a new global paradigm that honours and respects our planet, and all that it encompasses.
@@ -1280,7 +1281,7 @@ justify-content: center;">
 
         <div class="slider slide15">
       <div class="ui grid" style="width: 100vw;">
-        <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/spiritual+sciences.png?auto=compress&h=700&exp=-10?ar=0.85:1&fit=crop');background-color: rgba(0,0,0,0.4);">
+        <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/spiritual+sciences.jpg?auto=compress&h=700&exp=-10?ar=0.85:1&fit=crop');background-color: rgba(0,0,0,0.4);">
            <!--    <div style="bottom: 40%;position: absolute;">    
                <img src="assets/images/icon-white.png" style="height: 40px;">
              </div> -->
@@ -1320,7 +1321,7 @@ justify-content: center;">
           </div>
           <div class="four wide column" style="background-color: #202D71;height: 100vh;">
            <div style="top: 5%;position: absolute;right: 15%;">
-             <img src="assets/images/icon-white.png" style="height: 40px;">
+             <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
            </div>
            <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
            Who are we ? What is consciousness?  Science is continuously evolving, and this channel is dedicated to expanding our knowledge base of the world’s most magical life forms
@@ -1362,6 +1363,8 @@ background-blend-mode: multiply;padding: 0px;margin: 0px;">
        <img src="https://greenlanetvdemo.imgix.net/kiri.png?auto=compress" width="100%">
      </div>
      <div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Ananas</div>
+      <div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding: 2px;"> Curator:
+  </div>
 
 
    </div>
@@ -1381,6 +1384,8 @@ background-blend-mode: multiply;padding: 0px;margin: 0px;">
    <img src="https://greenlanetvdemo.imgix.net/umeed.png?auto=compress" width="100%">
  </div>
  <div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Earth Co-Lab</div>
+    <div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding: 2px;"> Curator:
+  </div>
 </div>
 
 
@@ -1399,6 +1404,8 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">01</div>
  <img src="https://greenlanetvdemo.imgix.net/jill.png?auto=compress" width="100%">
 </div>
 <div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Vaayu Vision</div>
+   <div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding: 2px;"> Curator:
+  </div>
 </div>
 
 
@@ -1416,6 +1423,8 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">07</div>
  <img src="https://greenlanetvdemo.imgix.net/anchal.png?auto=compress" width="100%">
 </div>
 <div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Borderless </div>
+   <div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding: 2px;"> Curator:
+  </div>
 </div>
 
 <div style="background-color: purple;width: 50vw;height: 33.3vh;background-image: url('https://greenlanetvdemo.imgix.net/holistic+wellness.png?auto=compress&h=300&exp=-5');border-style: solid;
@@ -1432,6 +1441,8 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">04</div>
  <img src="https://greenlanetvdemo.imgix.net/luke.png?auto=compress" width="100%">
 </div>
 <div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Reset</div>
+   <div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding: 2px;"> Curator:
+  </div>
 </div>
 
 <div style="background-color: red;width: 50vw;height: 33.3vh;background-image: url('https://greenlanetvdemo.imgix.net/slow+fashion+alt.jpg?auto=compress&h=300&exp=-5');border-style: solid;
@@ -1448,6 +1459,8 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
  <img src="https://greenlanetvdemo.imgix.net/darshana.png?auto=compress" width="100%">
 </div>
 <div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Fairtrunk</div>
+   <div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding: 2px;"> Curator:
+  </div>
 </div>
 
 
@@ -1465,7 +1478,7 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
   <div class="top-left-text" style="color: white;">Farm to Fork</div>
 
   <div class="top-left-text" style="color: white; margin-top:-50px;
-  margin-left:0px;font-family: courier-std;font-size: 14pt;">03</div>
+  margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">03</div>
   <div class="padded-multiline-new">
     <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Keiri Meili</strong></h3>
   </div>
@@ -1473,7 +1486,9 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
   <div class="bottomright">
    <img src="https://greenlanetvdemo.imgix.net/kiri.png?auto=compress" width="100%">
  </div>
- <div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;"> Ananas </div>
+ <div class="bottom-left-text" style="background-color: white;color: black;padding: 1px;"> Ananas </div>
+  <div class="bottom-left-text-upper" style="background-color: white;color: black;padding: 2px;"> Curator:
+  </div>
 
 
 </div>
@@ -1483,7 +1498,7 @@ border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;backg
 <div class="top-left-text" style="color: white;">Nature</div>
 
 <div class="top-left-text" style="color: white; margin-top:-50px;
-margin-left:0px;font-family: courier-std;font-size: 14pt;">08</div>
+margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">08</div>
 <div class="padded-multiline-new">
   <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Umeed Mistry</strong></h3>
 </div>
@@ -1491,7 +1506,9 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">08</div>
 <div class="bottomright">
  <img src="https://greenlanetvdemo.imgix.net/umeed.png?auto=compress&h=400" width="100%">
 </div>
-<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;"> Earth Co-Lab </div>
+<div class="bottom-left-text" style="background-color: white;color: black;padding: 1px;"> Earth Co-Lab </div>
+  <div class="bottom-left-text-upper" style="background-color: white;color: black;padding: 2px;"> Curator:
+  </div>
 </div>
 
 
@@ -1500,7 +1517,7 @@ border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;backg
 <div class="top-left-text" style="color: white;">Eco Living</div>
 
 <div class="top-left-text" style="color: white; margin-top:-50px;
-margin-left:0px;font-family: courier-std;font-size: 14pt;">01</div>
+margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">01</div>
 <div class="padded-multiline-new">
   <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Jill Ferguson</strong></h3>
 </div>
@@ -1508,7 +1525,9 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">01</div>
 <div class="bottomright">
  <img src="https://greenlanetvdemo.imgix.net/jill.png?auto=compress" width="100%">
 </div>
-<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;"> Vaayu Vision </div>
+<div class="bottom-left-text" style="background-color: white;color: black;padding: 1px;"> Vaayu Vision </div>
+  <div class="bottom-left-text-upper" style="background-color: white;color: black;padding: 2px;"> Curator:
+  </div>
 </div>
 
 
@@ -1517,7 +1536,7 @@ border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;backg
 <div class="top-left-text" style="color: white;">Culture</div>
 
 <div class="top-left-text" style="color: white; margin-top:-50px;
-margin-left:0px;font-family: courier-std;font-size: 14pt;">07</div>
+margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">07</div>
 <div class="padded-multiline-new">
   <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Anchal Kaushal</strong></h3>
 </div>
@@ -1525,7 +1544,9 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">07</div>
 <div class="bottomright">
  <img src="https://greenlanetvdemo.imgix.net/anchal.png?auto=compress" width="100%">
 </div>
-<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;"> Borderless </div>
+<div class="bottom-left-text" style="background-color: white;color: black;padding: 1px;"> Borderless </div>
+  <div class="bottom-left-text-upper" style="background-color: white;color: black;padding: 2px;"> Curator:
+  </div>
 </div>
 
 <div style="background-color: purple;width: 33.3vw;height: 50vh;background-image: url('https://greenlanetvdemo.imgix.net/holistic+wellness.png?auto=compress&h=400&exp=-5');border-style: solid;
@@ -1533,7 +1554,7 @@ border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;backg
 <div class="top-left-text" style="color: white;">Holistic Wellness</div>
 
 <div class="top-left-text" style="color: white; margin-top:-50px;
-margin-left:0px;font-family: courier-std;font-size: 14pt;">04</div>
+margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">04</div>
 <div class="padded-multiline-new">
   <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Luke Coutinho</strong></h3>
 </div>
@@ -1541,7 +1562,9 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">04</div>
 <div class="bottomright">
  <img src="https://greenlanetvdemo.imgix.net/luke.png?auto=compress" width="100%">
 </div>
-<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;"> Reset</div>
+<div class="bottom-left-text" style="background-color: white;color: black;padding: 1px;"> Reset</div>
+  <div class="bottom-left-text-upper" style="background-color: white;color: black;padding: 2px;"> Curator:
+  </div>
 </div>
 
 <div style="background-color: red;width: 33.4vw;height: 50vh;background-image: url('https://greenlanetvdemo.imgix.net/slow+fashion alt.jpg?auto=compress&h=400&exp=-5');border-style: solid;
@@ -1549,7 +1572,7 @@ border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;backg
 <div class="top-left-text" style="color: white;">Slow Fashion</div>
 
 <div class="top-left-text" style="color: white; margin-top:-50px;
-margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
+margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">14</div>
 <div class="padded-multiline-new">
   <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Darshana Gajare</strong></h3>
 </div>
@@ -1557,7 +1580,9 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
 <div class="bottomright">
  <img src="https://greenlanetvdemo.imgix.net/darshana.png?auto=compress" width="100%">
 </div>
-<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;"> Fairtrunk </div>
+<div class="bottom-left-text" style="background-color: white;color: black;padding: 1px;"> Fairtrunk </div>
+  <div class="bottom-left-text-upper" style="background-color: white;color: black;padding: 2px;"> Curator:
+  </div>
 </div>
 
 
@@ -1577,20 +1602,21 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
 
 
 
-<div class="section" style="padding: 0px;margin: 0px;">
+<div class="section" style="padding: 10px;margin: 0px;">
   <div class="uk-child-width-expand@s uk-text-center" uk-grid>
-    <div class="resp-container">
+    <div class="resp-container" style="padding: 10px;">
+      <br>
       <iframe
       src="https://www.youtube.com/embed/ijjbnjBtqwU"
       frameborder="0"
       allowfullscreen
-      style="padding: 20px;width:500px;height: 100%;"></iframe>
+      style="padding: 0px;width:100%;height: 300px;"></iframe>
     </div>
     <div align="left">
       <h1 style="font-family: Helvetica;align-self: left;font-weight: bold;padding: 10px;8vw;" class="band-text">You're Here to Learn and Evolve</h1>
 
 
-      <div class="band-text" style="padding: 40px;font-size: 16pt;font-weight: 100;width: 100%;">
+      <div class="band-text" style="padding: 20px;font-size: 16pt;font-weight: 100;width: 100%;">
         <p> Top videos and podcasts and personalised to your interests.</p>
         <br>
 
@@ -1599,7 +1625,7 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
 
         <p>Save your progress and continue learning where you left off.</p>
       </div>
-      <div style="padding: 10px;" align="center">
+      <div style="padding: 10px;" align="left">
         <button class="uk-button uk-button-primary" style="padding: 15px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%); border-radius: 10px 10px;font-family: 'Helvetica';text-transform: uppercase;font-weight: bold;letter-spacing: 2px;font-weight: 400;"> Signup for Free</button>
       </div>
     </div>
@@ -1610,7 +1636,7 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
   <div style=" background-image: linear-gradient(to top, #00D36E 0%, #5a55ae 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c978 100%);height: 100vh;">
     <div>
       <div>
-        <img src="assets/images/gradient.png" style="width: 100vw;height: 100vh">
+        <img src="https://greenlanetvdemo.imgix.net/gradient.png?auto=compress" style="width: 100vw;height: 100vh">
         <div class="centered" style="color: white;">
           <h1 style="font-family: 'Helvetica'; font-weight: bold;color: white" align="center">
             Stay Fresh
@@ -1620,11 +1646,11 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
           <br>
           <br>
 
-          <div class="ui segment" style="padding: 5px;">
+          <div class="" style="padding: 5px;background-color: color|transparent|initial|inherit !important;">
             <div class="ui grid">
               <div class="sixteen wide column" align="center">
-                <div class="ui input" style="width: 100%;">
-                  <input type="email" placeholder="Please share your Email" style="padding: 5px;font-family:'courier-std';width: 100% !important;height: 40px;" [(ngModel)]="email">
+                <div class="ui input" style="width: 60%;">
+                  <input type="email" placeholder="Please share your Email" style="padding: 5px;font-family:'courier-std';width: 60% !important;height: 40px;" [(ngModel)]="email">
                 </div>
               </div>
             </div>
@@ -1633,11 +1659,11 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
             </div>
           </div>
         </div>
-        <div class="bottom" style="width: 100vw;padding: 10px;">
+        <div class="bottom" style="width: 100vw;padding: 30px;">
           <div class="ui four column grid">
             <div class="row" >
               <div class="column">
-               <img src="assets/images/logo_white.png" style="
+               <img src="https://greenlanetvdemo.imgix.net/logo_white.png?auto=compress" style="
                top: 8px;
                left: 20px;max-height: 40px;">
              </div>
@@ -1648,9 +1674,9 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
               <a href="" style="color: white;font-family: 'Helvetica';font-size: 12pt;">Collaborate</a>
             </div>
             <div class="column" align="center" style="padding-right: 40px;">
-              <i class="instagram icon" style="color: white;font-size: 14pt;padding-left: 40px;"></i>
-              <i class="facebook icon" style="color: white;font-size: 14pt;padding-left: 40px;"></i>
-              <i class="medium m icon" style="color: white;font-size: 14pt;padding-left: 40px;"></i>
+              <i class="instagram icon" style="color: white;font-size: 14pt;padding-left: 20px;"></i>
+              <i class="facebook icon" style="color: white;font-size: 14pt;padding-left: 20px;"></i>
+              <i class="medium m icon" style="color: white;font-size: 14pt;padding-left: 20px;"></i>
             </div>
           </div>
         </div>
@@ -1658,198 +1684,8 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
     </div>
   </div>
 </div>
-<!--     <div class="uk-child-width-expand@s uk-text-center" uk-grid>
-        <div class="resp-container">
-            <iframe
-            src="https://www.youtube.com/embed/iHhcHTlGtRs"
-            frameborder="0"
-            allowfullscreen
-            style="padding: 20px;width:560px;height:100%;"></iframe>
-        </div>
-        <div align="left">
-          <h1 style="font-family: Helvetica;align-self: left;font-weight: bold;padding: 10px;8vw;" class="band-text">You're Here to Learn and Evolve</h1>
-          <br>
-          <br>
-          <div class="band-text" style="padding: 10px;font-size: 16pt;font-weight: 100;width: 80%;">
-              <p> Top videos and podcasts and personalised to your interests.</p>
-              <br>
 
-              <p>Hand-picked experiences to help you live a cleaner, greener life.</p>
-              <br>
-
-              <p>Save your progress and continue learning where you left off.</p>
-          </div>
-          <br>
-          <div style="padding: 10px;">
-            <button class="uk-button uk-button-primary" style="padding: 10px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);">  Primary </button>
-        </div>
-
-    </div>
-  </div> -->
 
 </div>
 </div>
 
-
-
-
-
-
-
-<!-- 
-
-
-
-
-
-<div style=" background: url('assets/images/forest.jpeg') no-repeat center center fixed; 
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;height: 100vh;
-z-index:10;">
-
-<div style="background-color: rgba(0,0,0,0.7);height: 100vh;">
-    <div class="header" style="padding-right: 20px;">
-
-        <input type="checkbox" id="chk">
-        <label for="chk" class="show-menu-btn" style="color: white;">
-            <i class="fas fa-bars" style="font-size: 25px;"></i>
-        </label>
-        <br>
-        <ul class="menu">
-            <a href="#" style="font-family: sfui;letter-spacing: 3px;">Impact</a>
-            <a href="/aboutus" style="font-family: sfui;letter-spacing: 3px;">About Us</a>
-            <a href="#" style="font-family: sfui;letter-spacing: 3px;">Curators</a>
-
-            <label for="chk" class="hide-menu-btn">
-                <i class="fas fa-times" style="font-size: 25px;"></i>
-            </label>
-        </ul>
-    </div>
-    <div class="content">
-        <div class="center">
-            <div style="height: 300px;">
-                <img src="assets/images/logo-new.png" style="max-height: 260px;">
-            </div>
-            <br>
-            <div align="center">
-                <h1 style="color: #889F2D;font-family: sfui;font-weight: bold;font-size: 16pt;">Sustainable Living' platform for millennials
-                </h1>
-            </div>
-            <br>
-            <div align="center" style="width: 100%;">
-                <h1 style="color: white;font-family: sfui;font-weight: bold;font-size: 14pt;">Greenlane TV is a lifestyle internet channel that helps conscious consumers discover and engage with responsible brands.
-                </h1>
-                <br>
-                <br>
-                <div align="center">
-                    <p style="color: white;font-family: sfui;text-align: center;">
-                        Save your playlist, progress and earn badges. 
-                    </p>
-                </div>
-                <br>
-                <button class="ui facebook button" (click)="signInWithFacebook()">
-                    <i class="fab fa-facebook-f"></i>
-                    &nbsp; &nbsp; Login using Facebook
-                </button>
-                <br>
-                <br>
-                <button class="ui google plus button" (click)="signInWithGoogle()"> 
-                    <i class="fab fa-google"></i>
-                    &nbsp; &nbsp; Login using Google
-                </button>
-                <br>
-                <br>
-                <a style="color: white;font-family: sfui;text-align: center;" href="/interests"> Browse without sign up
-                </a>
-                <div style="position:absolute;
-                bottom:5px;
-                right:20px;width: 50%;">
-                <div class="ui grid" style="width: 100%;">
-                        <div class="six wide column">
-                    
-                    </div>
-                        <div class="four wide column">
-                        <p style="color: white;font-family: sfui;"> Follow us on :</p>
-                    </div>
-                    <div class="two wide column">
-                        <i class="fab fa-facebook-f" style="color: white;font-size: 16pt;"></i>
-                    </div>
-                    <div class="two wide column">
-                        <i class="fab fa-instagram" style="color: white;font-size: 16pt;"></i>
-                    </div>
-                
-                    <div class="two wide column">
-                        <i class="fab fa-twitter" style="color: white;font-size: 16pt;"></i>
-                    </div>
-                </div>
-
-            </div>
-            <br>
-            <br>
-        </div>
-    </div>
-</div>
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: push" style="margin: 40px;">
-
-    <ul class="uk-slideshow-items">
-        <li>
-            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-                <img src="assets/images/Nature.png" alt="" uk-cover>
-            </div>
-        </li>
-        <li>
-            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-top-right">
-                <img src="assets/images/Eco Living.png" alt="" uk-cover>
-            </div>
-        </li>
-        <li>
-            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-bottom-left">
-                <img src="assets/images/Businesses of the Future.png" alt="" uk-cover>
-            </div>
-        </li>
-    </ul>
-
-    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous" style="padding: 20px;"></a>
-    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next" style="padding: 20px;"></a>
-
-</div>
-
-
-<div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
-    <div>
-        <div class="uk-card uk-card-default uk-card-body">
-            <h3 class="uk-card-title">Default</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-primary uk-card-body">
-            <h3 class="uk-card-title">Primary</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </div>
-    </div>
-    <div>
-        <div class="uk-card uk-card-secondary uk-card-body">
-            <h3 class="uk-card-title">Secondary</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </div>
-    </div>
-  </div> --> 

@@ -20,79 +20,79 @@ export class IntrestsEditComponent implements OnInit {
   	[
   	{
   		"category_name":'Businesses of the Future',
-  		"category_image":'assets/images/businesses of the future.jpg',
+  		"category_image":'https://greenlanetvdemo.imgix.net/businesses+of+the+future.jpg?auto=compress&h=400',
   		"category_tag":'business_of_the_future'
   	},
   		{
   		"category_name":'Slow Fashion',
-  		"category_image":'assets/images/slow fashion alt.jpg',
+  		"category_image":'https://greenlanetvdemo.imgix.net/slow+fashion.jpg?auto=compress&h=400',
   		"category_tag":'slow_fashion'
   	},
   		{
   		"category_name":'Adrenaline and Fitness',
-  		"category_image":'assets/images/adrenaline and fitness.jpg',
+  		"category_image":'https://greenlanetvdemo.imgix.net/adrenaline+and+fitness.jpg?auto=compress&h=400',
   		"category_tag":'adrenaline_and_fitness'
   	},
   		{
   		"category_name":'Clean Foods',
-  		"category_image":'assets/images/clean foods.png',
+  		"category_image":'https://greenlanetvdemo.imgix.net/clean+foods.png?auto=compress&h=400',
   		"category_tag":'clean_foods'
   	}
   	,
   		{
   		"category_name":'Culture',
-  		"category_image":'assets/images/culture.jpg',
+  		"category_image":'https://greenlanetvdemo.imgix.net/culture.jpg?auto=compress&h=400',
   		"category_tag":'culture'
   	},
   		{
   		"category_name":'Eco Living',
-  		"category_image":'assets/images/eco living.jpg',
+  		"category_image":'https://greenlanetvdemo.imgix.net/eco+living.jpg?auto=compress&h=400',
   		"category_tag":'eco_living'
   	},
   		{
   		"category_name":'Entertainment and Art',
-  		"category_image":'assets/images/entertainment and art.png',
+  		"category_image":'https://greenlanetvdemo.imgix.net/entertainment+and+art.png?auto=compress&h=400',
   		"category_tag":'entertainment_and_art'
   	},
   		{
   		"category_name":'Farm to Fork',
-  		"category_image":'assets/images/farm to fork.jpg',
+  		"category_image":'https://greenlanetvdemo.imgix.net/farm+to+fork.jpg?auto=compress&h=400',
   		"category_tag":'farm_to_fork'
   	}
   	,
   		{
   		"category_name":'Future of Work',
-  		"category_image":'assets/images/future of work.jpg',
+  		"category_image":'https://greenlanetvdemo.imgix.net/future+of+work.jpg?auto=compress&h=400',
   		"category_tag":'future_of_work'
   	},
   		{
   		"category_name":'Holistic Wellness',
-  		"category_image":'assets/images/holistic wellness.png',
+  		"category_image":'https://greenlanetvdemo.imgix.net/holistic+wellness.png?auto=compress&h=400',
   		"category_tag":'holistic_wellnes'
   	},
   		{
   		"category_name":'Nature',
-  		"category_image":'assets/images/nature.jpg',
+  		"category_image":'https://greenlanetvdemo.imgix.net/nature.jpg?auto=compress&h=400',
   		"category_tag":'nature'
   	},
   		{
   		"category_name":'Responsible Travel',
-  		"category_image":'assets/images/responsible travel.jpg',
+  		"category_image":'https://greenlanetvdemo.imgix.net/responsible+travel.jpg?auto=compress&h=400',
   		"category_tag":'responsible_travel'
   	},
   		{
   		"category_name":'Green Policy',
-  		"category_image":'assets/images/green policy alt.jpg',
+  		"category_image":'https://greenlanetvdemo.imgix.net/green+policy.jpg?auto=compress&h=400',
   		"category_tag":'green_policy'
   	},
   		{
   		"category_name":'People',
-  		"category_image":'assets/images/people alt.jpg',
+  		"category_image":'https://greenlanetvdemo.imgix.net/people.jpg?auto=compressh=400',
   		"category_tag":'people'
   	},
   		{
   		"category_name":'Spiritual Sciences',
-  		"category_image":'assets/images/spiritual sciences.png',
+  		"category_image":'https://greenlanetvdemo.imgix.net/spiritual+sciences.png?auto=compressh=400',
   		"category_tag":'spiritual_sciences'
   	}
 

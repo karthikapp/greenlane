@@ -4,7 +4,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
-
+import * as CryptoJS from 'crypto-js';  
 
 
 @Injectable({
@@ -17,6 +17,11 @@ export class AuthService {
   {
   	this.user = _firebaseAuth.authState;
 
+  }
+
+
+  convertstring(stringval){
+    
   }
 
   goToiframewithinterests(email) {

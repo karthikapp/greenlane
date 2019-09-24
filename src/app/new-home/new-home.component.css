@@ -215,6 +215,22 @@
   color: white;
   font-family: 'courier-std';
 }
+/* Bottom left text */
+.bottom-left-text-upper {
+  position: absolute;
+  bottom: 22%;
+  left: 11px;
+  color: white;
+  font-family: 'courier-std';
+}
+/* Bottom left text */
+.bottom-left-text-upper-mobile {
+  position: absolute;
+  bottom: 30%;
+  left: 11px;
+  color: white;
+  font-family: 'courier-std';
+}
 
 .top-left-text-mob {
   position: absolute;
@@ -325,7 +341,7 @@
 .padded-multiline-new { 
   position: absolute;
   /*font-family: 'courier-std';*/
-  bottom: 10%;
+  bottom: 6%;
   left: 5px;
   line-height: 1.3; 
   padding: 2px 0;
@@ -358,7 +374,7 @@
 
 @media screen and (min-width: 320px){
   .band-text{
-    text-align: center;
+    text-align: left;
   }
 }
 
@@ -955,4 +971,69 @@
     padding: 0 30px;
   }
 }
-
+ .ui.grid1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    padding: 0;
+}
+.ui.grid {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+.ui.relaxed.grid {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+.ui[class*="very relaxed"].grid {
+    margin-left: -2.5rem;
+    margin-right: -2.5rem;
+}
+.ui.grid+.grid {
+    margin-top: 1rem;
+}
+.ui.grid>.column:not(.row), .ui.grid1>.row>.column {
+    position: relative;
+    display: inline-block;
+    width: 6.25%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    vertical-align: top;
+}
+.ui.grid>* {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.ui.grid>.row {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%!important;
+    padding: 0;
+  /*  padding-top: 1rem;*/
+    padding-bottom: 1rem;
+}

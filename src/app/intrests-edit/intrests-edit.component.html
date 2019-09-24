@@ -1,7 +1,7 @@
 
 <div class="topnav">
 	<a class="active" href="/newhome">
-		<img src="assets/images/icon.png" style="height: 40px;">
+		<img src="https://greenlanetvdemo.imgix.net/icon.png" style="height: 40px;">
 	</a>
 	<a style="margin: 14px;  text-align: left;color: black;font-family: Helvetica;letter-spacing: 0px;font-size: 14pt;width: 50%;"> Hi {{user.first_name}}, please select the topics you are interested in </a>
 	<button class="ui button" style="background-color: #37A773;float: right; margin: 14px;  text-align: center;color: white;font-family: Helvetica;letter-spacing: 1px;text-transform: uppercase;font-weight: 400;font-size: 10pt;" (click)="redirect_to_iframe(interests)">Next</button>
@@ -12,52 +12,9 @@
 <br>
 <br>
 <br>
-<!-- 	<div style="padding: 30px;width: 80%;" align="left">
-		<div class="chip" style="margin: 10px;">
-			<div class="chip-content">Businesses of the Future</div>
-			<div class="chip-close">
-				<svg class="chip-svg" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"></path></svg>
 
-			</div>
-		</div>
-		<div class="chip" style="margin: 10px;">
-			<div class="chip-content">Businesses of the Future</div>
-			<div class="chip-close">
-				<svg class="chip-svg" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"></path></svg>
-				
-			</div>
-		</div>
-		<div class="chip" style="margin: 10px;">
-			<div class="chip-content">Businesses of the Future</div>
-			<div class="chip-close">
-				<svg class="chip-svg" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"></path></svg>
-				
-			</div>
-		</div>
-				<div class="chip" style="margin: 10px;">
-			<div class="chip-content">Businesses of the Future</div>
-			<div class="chip-close">
-				<svg class="chip-svg" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"></path></svg>
-				
-			</div>
-		</div>
-				<div class="chip" style="margin: 10px;">
-			<div class="chip-content">Businesses of the Future</div>
-			<div class="chip-close">
-				<svg class="chip-svg" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"></path></svg>
-				
-			</div>
-		</div>
-				<div class="chip" style="margin: 10px;">
-			<div class="chip-content">Businesses of the Future</div>
-			<div class="chip-close">
-				<svg class="chip-svg" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"></path></svg>
-				
-			</div>
-		</div>
-	</div> -->
 
-	<div class="ui stackable four column grid" uk-grid="parallax: 150" style="margin: 20px;width: 80%;">
+	<div class="ui stackable four column grid" uk-grid="parallax: 150" style="margin: 20px;width: 90%;">
 
 
 
@@ -68,7 +25,7 @@
 						<div class="uk-card-body" align="left" style="padding: 10px 0px 0px 20px;margin: 10px;">
 							<div class="ui grid">
 								<div class="ten wide column" style="vertical-align: middle;">
-									<h3 class="uk-card-title" style="font-family: Helvetica;text-transform: uppercase;font-weight: 400;font-size: 10pt; letter-spacing: 2px;word-wrap: break-word;">{{category.category_name}}</h3>
+									<h3 class="uk-card-title" style="font-family: Helvetica;;font-weight: 900;font-size: 13pt; letter-spacing: 2px;word-wrap: break-word;">{{category.category_name}}</h3>
 								</div>
 								<div class="six wide column" align="right">
 									<button class="circular ui icon button" (click)="addinterests(category.category_tag)">

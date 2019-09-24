@@ -183,7 +183,7 @@ export class LoginComponent implements OnInit {
 	}
 
 	goToiframewithinterests(email) {
-		this.router.navigate(['/iframe_with_interests', {'email':email}]);
+		this.router.navigate(['/iframe_with_interests', {'identifier':email}]);
 	}
 	register_with_email_password(firstname, lastname, email,password)
 	{
