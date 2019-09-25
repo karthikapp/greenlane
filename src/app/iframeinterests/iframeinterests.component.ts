@@ -92,7 +92,7 @@ export class IframeinterestsComponent implements OnInit {
   		{
   		"category_name":'Holistic Wellness',
   		"category_image":'https://greenlanetvdemo.imgix.net/holistic+wellness.jpg?auto=compress&h=400&exp=-5',
-  		"category_tag":'holistic_wellnes',
+  		"category_tag":'holistic_wellness',
   		"category_iframe_url":'https://content.soulskill.com/#/playlist?category=Holistic%20Wellness'
   	},
   		{
@@ -241,10 +241,10 @@ export class IframeinterestsComponent implements OnInit {
   add_interest(category_tag)
   {
   	this.user_interests.push(category_tag)
-  	console.log("user interest", this.user_interests)
+  	// console.log("user interest", this.user_interests)
      this.refresh_userinterest_categories(this.user_interests)
   	let other_categories = this.all_categories.filter(x => !this.user_interests.includes(x));
-  	console.log(other_categories)
+  	// console.log(other_categories)
   	 this.refresh_other_categories(other_categories)
   	 var now_playing_category_tag = this.now_playing.category_tag
   	 this.refresh_userinterest_not_nowplaying_categories(now_playing_category_tag)

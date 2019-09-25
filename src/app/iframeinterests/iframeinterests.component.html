@@ -2,23 +2,31 @@
 <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar style="color: #202D71;background-color: #3fcf78">
 	<div class="uk-navbar-left" style="padding: 8px;margin: 10px;">
 		<ul class="uk-navbar-nav">
+
 			<li class="uk-active">
 				<span class="uk-margin-small-right uk-icon" uk-icon="icon: album; ratio: 2" uk-toggle="target: #my-id">	</span>
 			</li>
-
 		</ul>
 
 	</div>
+
+	<div class="uk-navbar-center">
+
+        <ul class="uk-navbar-nav">
+        	<li class="uk-active" style="padding-right: 20px;">
+			<img src="https://greenlanetvdemo.imgix.net/logo_white.png" style="height: 30px;">
+		</li>
+        </ul>
+    </div>
 
 	 <div class="uk-navbar-right">
 
         <ul class="uk-navbar-nav">
         	      <li>
-                        <a href="#" style="color: black"><span class="uk-margin-small-right uk-icon" uk-icon="icon: menu; ratio: 2">	</span></a>
+                        <a href="#" style="color: black">  <span class="uk-margin-small-right uk-icon" uk-icon="icon: menu; ratio: 2">	</span></a>
                         <div class="uk-navbar-dropdown" style="background-color: #202D71">
                             <ul class="uk-nav uk-navbar-dropdown-nav" style="color: white;">
                                 <li class="uk-active"><a href="/login" style="color: white;">Logout</a></li>
-
                             </ul>
                         </div>
                     </li>
@@ -53,7 +61,7 @@
 			</div>
 
 
-			<h4 style="font-family: 'Helvetica'; font-weight: 400;">Upcoming Playlists</h4>
+			<h4 style="font-family: 'Helvetica'; font-weight: 400;">Your Categories</h4>
 			<div>
 				<div class="ui middle aligned divided list invisible-scrollbar" style="height: 100px;
 				overflow: auto;">
@@ -72,7 +80,7 @@
 			</div>
 
 
-			<h4 style="font-family: 'Helvetica'; font-weight: 400;">Explore</h4>
+			<h4 style="font-family: 'Helvetica'; font-weight: 400;">Explore Categories</h4>
 			<div class="ui middle aligned divided list invisible-scrollbar" style="height: 100px;
 			overflow: auto;">
 			<div *ngFor="let other_category of user_other_categories" class="item">

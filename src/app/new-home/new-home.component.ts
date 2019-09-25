@@ -4,6 +4,7 @@ import { LazyLoadScriptService } from '../lazy-load-script.service';
 import { map, filter, take, switchMap } from 'rxjs/operators';
 import { EmbedVideoService } from 'ngx-embed-video';
 import { AuthService } from '../services/auth.service'
+import { Router } from '@angular/router';
 
 declare var $;
 @Component({
@@ -21,7 +22,7 @@ export class NewHomeComponent implements OnInit {
 
 
 
-  constructor(private auth: AuthService) {
+  constructor(private auth: AuthService,private router: Router) {
     this.categories = 
     [
     {
@@ -151,7 +152,12 @@ export class NewHomeComponent implements OnInit {
       })
     }
 
-
+    gotocategory(category_tag)  
+    { 
+      console.log("clicked")
+      var url = "/frame/"+ category_tag
+      this.router.navigateByUrl(url);
+    };
 
 
     getRef(fullPageRef) {

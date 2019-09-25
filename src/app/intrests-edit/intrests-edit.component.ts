@@ -68,7 +68,7 @@ export class IntrestsEditComponent implements OnInit {
   		{
   		"category_name":'Holistic Wellness',
   		"category_image":'https://greenlanetvdemo.imgix.net/holistic+wellness.png?auto=compress&h=400',
-  		"category_tag":'holistic_wellnes'
+  		"category_tag":'holistic_wellness'
   	},
   		{
   		"category_name":'Nature',

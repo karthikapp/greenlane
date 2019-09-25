@@ -35,7 +35,7 @@ const routes: Routes =
 },
 
 {
-  path: 'frame',
+  path: 'frame/:category_tag',
   component: FrameComponent,
 
 },
