@@ -36,8 +36,10 @@
 
 
 <!-- This is the modal -->
+<!-- This is the modal -->
+
 <div id="my-id" uk-modal style="z-index: 2;">
-	<div class="uk-modal-dialog uk-modal-body invisible-scrollbar" style="border-radius: 10px;height: 80vh;
+	<div class="uk-modal-dialog uk-modal-body invisible-scrollbar" style="border-radius: 10px;height: 90vh !important;
 	overflow: auto;">
 	<div>
 
@@ -59,65 +61,65 @@
 				bottom: 8px;
 				left: 16px;height: 20px;">
 			</div>
-
-
-			<h4 style="font-family: 'Helvetica'; font-weight: 400;">Your Categories</h4>
-			<div>
-				<div class="ui middle aligned divided list invisible-scrollbar" style="height: 100px;
-				overflow: auto;">
-				<div *ngFor="let category of user_interested_categories_except_playlist" class="item">
-					<div class="right floated content">
-						<div class="ui mini button" style="background-color: #3fcf78;color: white;" (click)="change_now_playing(category.category_tag)">Play</div>
+<br>
+			<div *ngIf="user_interested_categories_except_playlist.length != 0">
+				<h4 style="font-family: 'Helvetica'; font-weight: 400;">Your Categories</h4>
+				<div>
+					<div class="ui middle aligned divided list invisible-scrollbar" style="height: 100px;
+					overflow: auto;">
+					<div *ngFor="let category of user_interested_categories_except_playlist" class="item">
+						<div class="right floated content">
+							<div class="ui mini button" style="background-color: #3fcf78;color: white;" (click)="change_now_playing(category.category_tag)">Play</div>
+						</div>
+						<img class="ui avatar image" src="{{category?.category_image}}">
+						<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;">
+							{{category?.category_name}}
+						</div>
 					</div>
-					<img class="ui avatar image" src="{{category?.category_image}}">
-					<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;">
-						{{category?.category_name}}
-					</div>
-				</div>
-				
-			
-	
-			</div>
 
-
-			<h4 style="font-family: 'Helvetica'; font-weight: 400;">Explore Categories</h4>
-			<div class="ui middle aligned divided list invisible-scrollbar" style="height: 100px;
-			overflow: auto;">
-			<div *ngFor="let other_category of user_other_categories" class="item">
-				<div class="right floated content">
-					<div class="ui mini button" style="background-color: #202D71;color: white;" (click)="add_interest(other_category.category_tag)">Add</div>
-				</div>
-				<img class="ui avatar image" src="{{other_category?.category_image}}">
-				<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;">
-					{{other_category?.category_name}}
 				</div>
 			</div>
-	
-
-	
 		</div>
 
+		<h4 style="font-family: 'Helvetica'; font-weight: 400;">Explore Categories</h4>
+		<div class="ui middle aligned divided list invisible-scrollbar" style="height: 100px;
+		overflow: auto;">
+		<div *ngFor="let other_category of user_other_categories" class="item">
+			<div class="right floated content">
+				<div class="ui mini button" style="background-color: #202D71;color: white;" (click)="add_interest(other_category.category_tag)">Add</div>
+			</div>
+			<img class="ui avatar image" src="{{other_category?.category_image}}">
+			<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;">
+				{{other_category?.category_name}}
+			</div>
+		</div>
+
+
+
 	</div>
+	<br><br>
+
+</div>
 
 
 
 
 
-
+<button class="uk-modal-close-default uk-button uk-button-danger" type="button" uk-close style="color: white;position: fixed;margin-top: 20px;margin-right: 20px;background-color: #3fcf78 ;border-radius: 5px;padding: 10px;"> Close &nbsp; </button>
 
 </div>
 </div>
 
- <button class="uk-modal-close-default" type="button" uk-close></button>
+
 </div>
-</div>
+
 
 <div align="center" style="padding: 40px;">
 
 
+	<div *ngIf="iframe_url !== ''" [innerHTML]="iframe_url | safe: 'html'"></div>
 
-<div *ngIf="iframe_url !== ''" [innerHTML]="iframe_url | safe: 'html'"></div>
+	<br>
 
-<br>
-
-<div #myDiv></div>
+	<div #myDiv></div>
+</div>

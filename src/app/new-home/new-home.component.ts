@@ -5,8 +5,11 @@ import { map, filter, take, switchMap } from 'rxjs/operators';
 import { EmbedVideoService } from 'ngx-embed-video';
 import { AuthService } from '../services/auth.service'
 import { Router } from '@angular/router';
-
+import { DeviceDetectorService } from 'ngx-device-detector';
+import { GoogleanalyticsService } from './../googleanalytics.service'
 declare var $;
+import { SegmentService } from 'ngx-segment-analytics';
+
 @Component({
   selector: 'app-new-home',
   templateUrl: './new-home.component.html',
@@ -18,11 +21,13 @@ export class NewHomeComponent implements OnInit {
   public youtubeUrl = 'https://www.youtube.com/embed/ijjbnjBtqwU';
   public categories: any;
   public email: any;
+  public deviceInfo: any;
 
 
 
 
-  constructor(private auth: AuthService,private router: Router) {
+  constructor(private segment: SegmentService,private auth: AuthService, public googleAnalyticsEventsService: GoogleanalyticsService, private router: Router,private deviceService: DeviceDetectorService) {
+    this.epicFunction();
     this.categories = 
     [
     {
@@ -152,9 +157,15 @@ export class NewHomeComponent implements OnInit {
       })
     }
 
+// send click event to google analytics
+
+   sendstartwatchingEvent() {
+   }
+
     gotocategory(category_tag)  
     { 
       console.log("clicked")
+
       var url = "/frame/"+ category_tag
       this.router.navigateByUrl(url);
     };
@@ -164,13 +175,68 @@ export class NewHomeComponent implements OnInit {
       this.fullpage_api = fullPageRef;
 
     }
-
-
+      epicFunction() {
+      console.log('hello `Home` component');
+      this.deviceInfo = this.deviceService.getDeviceInfo();
+      const isMobile = this.deviceService.isMobile();
+      const isTablet = this.deviceService.isTablet();
+      const isDesktopDevice = this.deviceService.isDesktop();
+      console.log(this.deviceInfo);
+      console.log(isMobile);  // returns if the device is a mobile device (android / iPhone / windows-phone etc)
+      console.log(isTablet);  // returns if the device us a tablet (iPad etc)
+      console.log(isDesktopDevice); // returns if the app is running on a Desktop browser.
+    }
 
     ngOnInit() 
     {
+        // this.segment.track('home Page')
+        //     .then(() => console.log("Event sended"));
 
+
+        //     this.segment.page('newhome').then(() => console.log("page Load added"))
     }
+      // event tracking codes from segment 
+    start_watching_event_submission()
+    {
+        this.segment.track('Start Watching')
+            .then(() => console.log(" Start Watching Event sended"));
+    }
+     // Desktop interaction category selectiom
+      Desktop_event_submission(page)
+    {
+       var page = page
+       var submission_text = page + " Desktop"
+        this.segment.track(submission_text)
+            .then(() => console.log("Desktop Event sended"));
+    }
+      // Mobile interaction category selectiom
+      Mobile_event_submission(page)
+    {
+       var page = page
+       var submission_text = page + " Mobile"
+        this.segment.track(submission_text)
+            .then(() => console.log("Mobile Event sended"));
+    }
+
+      // Mobile interaction curator selectiom
+      Mobile_curator_event_submission(curator)
+    {
+      console.log("called curator")
+       var curator = curator
+       var submission_text = curator + " Mobile"
+        this.segment.track(submission_text)
+            .then(() => console.log("Mobile Curator Event sended"));
+    }
+      // Desktop interaction curator selectiom
+      Desktop_curator_event_submission(curator)
+    {
+      console.log("called curator desktop")
+       var curator = curator
+       var submission_text = curator + " Desktop"
+        this.segment.track(submission_text)
+            .then(() => console.log("Desktop Curator Event sended"));
+    }
+
   }
 
 

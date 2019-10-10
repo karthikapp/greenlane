@@ -188,6 +188,10 @@ export class LoginComponent implements OnInit {
 			{
 				alert("Oops, This user doesn not exist. Please register as an user. ")
 			}
+			else if (signinerror.message == "The email address is badly formatted.")
+			{
+				alert("Oops, The email address is badly formatted.")
+			}
 		})
 	}
 

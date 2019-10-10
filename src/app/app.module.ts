@@ -31,59 +31,71 @@ import * as firebase from 'firebase';
 import 'firebase/firestore';
 import { IframeinterestsComponent } from './iframeinterests/iframeinterests.component';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { DeviceDetectorModule } from 'ngx-device-detector';
+import { GoogleanalyticsService } from './googleanalytics.service';
+import { ButtonDirective } from './button.directive'
+import { SegmentModule } from 'ngx-segment-analytics';
 
 // Configs 
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
-      [
-        {
-          id: FacebookLoginProvider.PROVIDER_ID,
-          provider: new FacebookLoginProvider("2204403309683197")
-        },
-        {
-          id: GoogleLoginProvider.PROVIDER_ID,
-          provider: new GoogleLoginProvider("742845928827-0qhkig2pl172fas0us88kmqcdc7i0g33.apps.googleusercontent.com")
-        }
-      ]
-  )
+    [
+    {
+      id: FacebookLoginProvider.PROVIDER_ID,
+      provider: new FacebookLoginProvider("2204403309683197")
+    },
+    {
+      id: GoogleLoginProvider.PROVIDER_ID,
+      provider: new GoogleLoginProvider("742845928827-0qhkig2pl172fas0us88kmqcdc7i0g33.apps.googleusercontent.com")
+    }
+    ]
+    )
   return config;
 }
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    NotfoundComponent,
-    InterestsComponent,
-    InterestsKarComponent,
-    AboutusComponent,
-    FrameComponent,
-    SafePipe,
-    NewHomeComponent,
-    LoginComponent,
-    IntrestsEditComponent,
-    IframeinterestsComponent
+  AppComponent,
+  HomeComponent,
+  NotfoundComponent,
+  InterestsComponent,
+  InterestsKarComponent,
+  AboutusComponent,
+  FrameComponent,
+  SafePipe,
+  NewHomeComponent,
+  LoginComponent,
+  IntrestsEditComponent,
+  IframeinterestsComponent,
+  ButtonDirective
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    SocialLoginModule,
-    FormsModule,
-    CoreModule,
-    AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
-    NgxTypedJsModule,
-    AngularFireDatabaseModule,
-    AngularFullpageModule,
-    AngularFireAuthModule,
-    BrowserAnimationsModule,
-    ReactiveFormsModule,
-    HttpClientModule, EmbedVideo.forRoot()
+  BrowserModule,
+  AppRoutingModule,
+  SocialLoginModule,
+  FormsModule,
+  CoreModule,
+  AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
+  NgxTypedJsModule,
+  AngularFireDatabaseModule,
+  AngularFullpageModule,
+  AngularFireAuthModule,
+  BrowserAnimationsModule,
+  ReactiveFormsModule,
+  HttpModule,
+  DeviceDetectorModule.forRoot(),
+  HttpClientModule, EmbedVideo.forRoot(),
+  SegmentModule.forRoot({ apiKey: 'vfmPVEG2MP1uwNhgsDh4qOfkBt59zzUg', debug: true, loadOnInitialization: true })
   ],
   providers: [AuthService,{
-      
-      provide: AuthServiceConfig,
-      useFactory: getAuthServiceConfigs
-    },LazyLoadScriptService,AngularFirestore],
+
+    provide: AuthServiceConfig,
+    useFactory: getAuthServiceConfigs
+  },LazyLoadScriptService,AngularFirestore,GoogleanalyticsService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(protected _googleAnalyticsService: GoogleanalyticsService) { }
+
+}

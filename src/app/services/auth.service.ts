@@ -23,7 +23,7 @@ export class AuthService {
 
 
   goToiframewithinterests(email) {
-    this.router.navigate(['/iframe_with_interests', {'email':email}]);
+    this.router.navigate(['/iframe_with_interests', {'identifier':email}]);
   }
 
   add_to_subscribers(email)

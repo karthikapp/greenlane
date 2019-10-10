@@ -20,12 +20,12 @@ export class IntrestsEditComponent implements OnInit {
   	[
   	{
   		"category_name":'Businesses of the Future',
-  		"category_image":'https://greenlanetvdemo.imgix.net/businesses+of+the+future.jpg?auto=compress&h=400',
+  		"category_image":'https://greenlanetvdemo.imgix.net/businesses+of+the+future+new.jpg?auto=compress&h=400',
   		"category_tag":'business_of_the_future'
   	},
   		{
   		"category_name":'Slow Fashion',
-  		"category_image":'https://greenlanetvdemo.imgix.net/slow+fashion.jpg?auto=compress&h=400',
+  		"category_image":'https://greenlanetvdemo.imgix.net/slow+fashion+edited.jpg?auto=compress&h=400',
   		"category_tag":'slow_fashion'
   	},
   		{
@@ -35,7 +35,7 @@ export class IntrestsEditComponent implements OnInit {
   	},
   		{
   		"category_name":'Clean Foods',
-  		"category_image":'https://greenlanetvdemo.imgix.net/clean+foods.png?auto=compress&h=400',
+  		"category_image":'https://greenlanetvdemo.imgix.net/clean+foods.jpg?auto=compress&h=400',
   		"category_tag":'clean_foods'
   	}
   	,
@@ -51,7 +51,7 @@ export class IntrestsEditComponent implements OnInit {
   	},
   		{
   		"category_name":'Entertainment and Art',
-  		"category_image":'https://greenlanetvdemo.imgix.net/entertainment+and+art.png?auto=compress&h=400',
+  		"category_image":'https://greenlanetvdemo.imgix.net/entertainment+and+art.jpg?auto=compress&h=400',
   		"category_tag":'entertainment_and_art'
   	},
   		{
@@ -67,7 +67,7 @@ export class IntrestsEditComponent implements OnInit {
   	},
   		{
   		"category_name":'Holistic Wellness',
-  		"category_image":'https://greenlanetvdemo.imgix.net/holistic+wellness.png?auto=compress&h=400',
+  		"category_image":'https://greenlanetvdemo.imgix.net/holistic+wellness.jpg?auto=compress&h=400',
   		"category_tag":'holistic_wellness'
   	},
   		{
@@ -82,7 +82,7 @@ export class IntrestsEditComponent implements OnInit {
   	},
   		{
   		"category_name":'Green Policy',
-  		"category_image":'https://greenlanetvdemo.imgix.net/green+policy.jpg?auto=compress&h=400',
+  		"category_image":'https://greenlanetvdemo.imgix.net/green+policy+new.jpg?auto=compress&h=400',
   		"category_tag":'green_policy'
   	},
   		{
@@ -92,7 +92,7 @@ export class IntrestsEditComponent implements OnInit {
   	},
   		{
   		"category_name":'Spiritual Sciences',
-  		"category_image":'https://greenlanetvdemo.imgix.net/spiritual+sciences.png?auto=compressh=400',
+  		"category_image":'https://greenlanetvdemo.imgix.net/spiritual+sciences.jpg?auto=compressh=400',
   		"category_tag":'spiritual_sciences'
   	}
 
@@ -124,7 +124,17 @@ export class IntrestsEditComponent implements OnInit {
       "email": u.email,
       "interests": interests
     }
-    this.auth.add_interests(this.user.email, interests)
+
+    if (interests.length == 0)
+    {
+      alert("Please select atleast one category !")
+    }
+    else
+    {
+      this.auth.add_interests(this.user.email, interests)
+
+    }
+    
 
 
   }

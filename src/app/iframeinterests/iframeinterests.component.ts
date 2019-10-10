@@ -35,13 +35,13 @@ export class IframeinterestsComponent implements OnInit {
   	[
   	{
   		"category_name":'Businesses of the Future',
-  		"category_image":'https://greenlanetvdemo.imgix.net/businesses+of+the+future.jpg?auto=compress&h=400&exp=-5',
+  		"category_image":'https://greenlanetvdemo.imgix.net/businesses+of+the+future+new.jpg?auto=compress&h=400&exp=-5',
   		"category_tag":'business_of_the_future',
   		"category_iframe_url":'https://content.soulskill.com/#/playlist?category=Businesses%20of%20the%20future'
   	},
   		{
   		"category_name":'Slow Fashion',
-  		"category_image":'https://greenlanetvdemo.imgix.net/slow+fashion.jpg?auto=compress&h=400&exp=-5',
+  		"category_image":'https://greenlanetvdemo.imgix.net/slow+fashion+edited.jpg?auto=compress&h=400&exp=-5',
   		"category_tag":'slow_fashion',
   		"category_iframe_url":'https://content.soulskill.com/#/playlist?category=Slow%20Fashion'
   	},
@@ -109,7 +109,7 @@ export class IframeinterestsComponent implements OnInit {
   	},
   		{
   		"category_name":'Green Policy',
-  		"category_image":'https://greenlanetvdemo.imgix.net/green+policy.jpg?auto=compress&h=400&exp=-5',
+  		"category_image":'https://greenlanetvdemo.imgix.net/green+policy+new.jpg?auto=compress&h=400&exp=-5',
   		"category_tag":'green_policy',
   		"category_iframe_url":'https://content.soulskill.com/#/playlist?category=Green%20Policy'
   	},
@@ -190,7 +190,7 @@ export class IframeinterestsComponent implements OnInit {
 
   ngOnInit() {
   	this.user_interests = []
-  	this.all_categories = ["business_of_the_future","slow_fashion","adrenaline_and_fitness","clean_foods","culture","eco_living","entertainment_and_art","farm_to_fork","future_of_work","holistic_wellnes","nature","responsible_travel","green_policy","people","spiritual_sciences"]	
+  	this.all_categories = ["business_of_the_future","slow_fashion","adrenaline_and_fitness","clean_foods","culture","eco_living","entertainment_and_art","farm_to_fork","future_of_work","holistic_wellness","nature","responsible_travel","green_policy","people","spiritual_sciences"]	
   	this.user_other_categories = []
   	this.iframe_url = ''
   	this.user_interested_categories = []

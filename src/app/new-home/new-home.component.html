@@ -8,7 +8,7 @@
   };height: 100vh;">
 
   <div style="background-color: rgba(0,0,0,0.4);height: 100vh;">
-    <div class="header" style="padding-right: 40px;padding-left: 40px;padding-top: 30px;">
+    <div class="header header-position" style="">
       <a class="logo"><img src="https://greenlanetvdemo.imgix.net/logo_white.png" style="height: 36px;"></a>
       <input type="checkbox" id="chk">
       <label for="chk" class="show-menu-btn" style="color: white;">
@@ -29,14 +29,19 @@
 
     <div class="content">
       <div class="center">
-        <br>
-        <br>
 
         <div align="center">
           <div style="height: 50px;">
-            <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="max-width: 10%;height: auto;display:block">
-          </div><br><br>
-          <h1 style="color: white;font-family: Helvetica;font-weight: bold;font-size: 5vw;" align="center">Live Consciously
+            <br>
+            <br>
+            <br>
+            <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="max-width: 15%;height: auto;display:block" >
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h1 style=""  class="central-image-logo-text" align="center">Live Consciously
           </h1>
           <!-- <a class="btn btn-1">Hover me</a> -->
         </div>
@@ -46,37 +51,22 @@
 <br>
 <br>
 
-<ngx-typed-js [strings]="['You always have a choice to make and what you choose is who you become. ','Be the change you want to see in the world']" [shuffle]="true" [typeSpeed]="40" [loop]="true">
+<ngx-typed-js [strings]="['You always have a choice to make and what you choose is who you become. ','Be the change you want to see in the world']" [shuffle]="false" [typeSpeed]="40" [loop]="true">
  <span class="typing typed-text" style="color: white;font-family: 'courier-std', sans-serif;line-height: 1.2em; height: 200px;"></span>
 </ngx-typed-js>
+<br>
+<br>
 <br>
 <br>
 <div style="width: 75%;
 position: fixed;
 left: 50%;
-margin-left: -37.5%;bottom: 25%;">
-<div class="ui centered grid">
-  <div class="mobile only row">
-   <div  style="margin: 10px;">
-    <a href="/frame/eco_living" class="massive ui button" style="color: white;background-color: #3fcf78;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 3px;font-weight: 400;white-space: normal !important ;
-    ;font-size: 8pt;"> &nbsp;&nbsp; Start Watching &nbsp; &nbsp;
-  </a>
-</div>
+margin-left: -37.5%;bottom: 10%;">
 
-<div  style="margin: 10px;">
-  <button class="massive ui button" style="color: white;background-color: #202D71;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 3px;font-weight: 400;
-  ;font-size: 8pt;"> &nbsp;&nbsp; Signup &nbsp; &nbsp;
-</button>
-</div>
-</div>
+<a href="/frame/eco_living" class="ui button" style="padding:20px;color: white;background-color: #3fcf78;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 2px;font-weight: 400;
+;font-size: 10pt;" (click)="start_watching_event_submission()" > &nbsp;&nbsp; Start Watching &nbsp; &nbsp;</a>
 
-<div class="computer tablet only row">
-  <div class="row">
-    <a href="/frame/eco_living" class="ui button" style="padding:20px;color: white;background-color: #3fcf78;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 3px;font-weight: 400;
-    ;font-size: 10pt;" > &nbsp;&nbsp; Start Watching &nbsp; &nbsp;</a>
-  </div>
-</div>
-</div>
+
 </div>
 </div>
 </div>
@@ -94,94 +84,37 @@ margin-left: -37.5%;bottom: 25%;">
 
   <div class="ui grid" style="height: 100vh !important;padding-top: 0px !important;">
     <div class="mobile only row" style="margin: 20px; background-color: #3fcf78;">
+     <br>
 
+     <!-- <h1 style="font-family: 'courier-std' ;padding-left: 15px;margin-left: 15px;font-size: 16pt;background-color: white;color: black;" > <span class="uk-margin-small-right uk-icon" uk-icon="album" style="color: black;"></span> Browse Categories &nbsp;</h1>
+     <p style="font-family: 'courier-std' ;padding-left: 10px;margin: 5px;color: black;"> Swipe through categories and click to start watching.</p> -->
 
-      <h1 style="font-family: 'courier-std' ;padding-left: 15px;margin-left: 15px;font-size: 16pt;background-color: white;color: black;" > <span class="uk-margin-small-right uk-icon" uk-icon="album" style="color: black;"></span> Browse Categories &nbsp;</h1>
-      <p style="font-family: 'courier-std' ;padding-left: 10px;margin: 5px;color: black;"> Swipe through categories and click to start watching.</p>
+     <div class="slide" align="center" style="padding: 2px !important; display: flex;
+     align-items: center;
+     justify-content: center;" >
+     <div>
+      <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">01/15</p>
 
-      <div class="slide" align="center" style="padding: 2px !important; display: flex;
-      align-items: center;
-      justify-content: center;" >
-      <div>
-        <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">01/15</p>
-
-        <div class="card">
-          <div class="image" style="min-height: 200px;">
-            <img src="https://greenlanetvdemo.imgix.net/eco+living.jpg?auto=compress&h=400&exp=-5" width="100%">
-            <div class="padded-multiline" style="position: absolute;">
-              <h3 style="font-family: courier-std;"> &nbsp; <strong>Eco Living</strong></h3>
-            </div>
-            <!-- <div class="bottom-left" style="color: black;">Business of the Future</div> -->
-            <div class="top-left" style="color: white;">01</div>
-
-            <div class="vl"></div>
-          </div>
-          <div class="text" style="min-height: 300px;">
-            <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
-            <p style="font-family: courier-std, monospace;color: white;" align="left">
-              <br>The climate crisis is real! To combat this complex problem, we all need to contribute by lowering our own carbon footprint and making greener choices. Explore how we can incorporate some of natures beautiful design systems into our lives.</p>
-              <br>
-              <div align="left">
-                <a class="uk-button uk-button-default" href="/frame/eco_living" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="slide" align="center" style="padding: 2px; display: flex;
-      align-items: center;
-      justify-content: center;">
-      <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">02/15</p>
       <div class="card">
         <div class="image" style="min-height: 200px;">
-          <img src="https://greenlanetvdemo.imgix.net/clean+foods.jpg?auto=compress&h=400&exp=-5" width="100%">
-          <div class="padded-multiline">
-            <h3 style="font-family: courier-std;"> &nbsp; <strong>Clean Foods</strong></h3>
+          <img src="https://greenlanetvdemo.imgix.net/eco+living.jpg?auto=compress&h=400&exp=-5" width="100%">
+          <div class="padded-multiline" style="position: absolute;">
+            <h3 style="font-family: courier-std;"> &nbsp; <strong>Eco Living</strong></h3>
           </div>
           <!-- <div class="bottom-left" style="color: black;">Business of the Future</div> -->
-          <div class="top-left" style="color: white;">02</div>
+          <div class="top-left" style="color: white;">01</div>
+
           <div class="vl"></div>
         </div>
         <div class="text" style="min-height: 300px;">
           <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
           <p style="font-family: courier-std, monospace;color: white;" align="left">
-            <br>Whether you eat to live, or live to eat it you can’t deny that food is our life force. Animals have used plants as medicine since the beginning of time. Dive head first into this extraordinary world where plants and people quite simply just meant for each other.
-          </p>
-          <br>
-          <div align="left">
-            <a class="uk-button uk-button-default" href="/frame/clean_foods" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
-          </div>
-        </div>
-      </div>
-    </div>
+            <br>The climate crisis is real! To combat this complex problem, we all need to contribute by lowering our own carbon footprint and making greener choices. Explore how we can incorporate some of natures beautiful design systems into our lives.</p>
+            <br>
+            <div align="left">
+              <a class="uk-button uk-button-default" href="/frame/eco_living" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('Eco Living')">Start Watching</a>
+            </div>
 
-
-
-
-    <div class="slide" align="center" style="padding: 2px; display: flex;
-    align-items: center;
-    justify-content: center;">
-    <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">03/15</p>
-    <div class="card">
-      <div class="image" style="min-height: 200px;">
-        <img src="https://greenlanetvdemo.imgix.net/farm+to+fork.jpg?auto=compress&h=400&exp=-5" width="100%">
-        <div class="padded-multiline">
-          <h3 style="font-family: courier-std;"> &nbsp;  <strong>Farm to Fork</strong></h3>
-        </div>
-        <!-- <div class="bottom-left" style="color: black;">Business of the Future</div> -->
-        <div class="top-left" style="color: white;">03</div>
-        <div class="vl"></div>
-      </div>
-      <div class="text" style="min-height: 300px;">
-        <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
-        <p style="font-family: courier-std, monospace;color: white;" align="left">
-          <br>Do you know who grows your food? How it was grown? Did it travel from miles away to reach your plate? Let’s start asking ourselves these questions. Let’s start seeking answers. Maybe together, we can start to save the world one bite at a time.</p>
-          <br>
-          <div align="left">
-            <a class="uk-button uk-button-default" href="/frame/farm_to_fork" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
           </div>
         </div>
       </div>
@@ -191,55 +124,112 @@ margin-left: -37.5%;bottom: 25%;">
     <div class="slide" align="center" style="padding: 2px; display: flex;
     align-items: center;
     justify-content: center;">
-    <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">04/15</p>
+    <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">02/15</p>
     <div class="card">
       <div class="image" style="min-height: 200px;">
-        <img src="https://greenlanetvdemo.imgix.net/holistic+wellness.jpg?auto=compress&h=400&exp=-5" width="100%">
+        <img src="https://greenlanetvdemo.imgix.net/clean+foods.jpg?auto=compress&h=400&exp=-5" width="100%">
         <div class="padded-multiline">
-          <h3 style="font-family: courier-std;"> &nbsp;  <strong>Holistic Wellness</strong></h3>
+          <h3 style="font-family: courier-std;"> &nbsp; <strong>Clean Foods</strong></h3>
         </div>
         <!-- <div class="bottom-left" style="color: black;">Business of the Future</div> -->
-        <div class="top-left" style="color: white;">04</div>
+        <div class="top-left" style="color: white;">02</div>
         <div class="vl"></div>
       </div>
       <div class="text" style="min-height: 300px;">
         <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
         <p style="font-family: courier-std, monospace;color: white;" align="left">
-          <br>Integrated wellness is a lifestyle that focuses on cultivating good food & sleep habits, and practices like yoga & meditation to reduce stress levels. Let's explore ‘shifts' in our lifestyle to achieve our health goals.
+          <br>Whether you eat to live, or live to eat it; you can’t deny that food is our life force. Animals have used plants as medicine since the beginning of time. Dive head first into this extraordinary world where plants and people quite simply just meant for each other.
         </p>
         <br>
         <div align="left">
-          <a class="uk-button uk-button-default" href="/frame/holistic_wellness" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
+          <a class="uk-button uk-button-default" href="/frame/clean_foods" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('Clean Foods')">Start Watching</a>
         </div>
       </div>
     </div>
   </div>
 
+
+
+
   <div class="slide" align="center" style="padding: 2px; display: flex;
   align-items: center;
   justify-content: center;">
-  <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">05/15</p>
+  <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">03/15</p>
   <div class="card">
     <div class="image" style="min-height: 200px;">
-      <img src="https://greenlanetvdemo.imgix.net/adrenaline+and+fitness.jpg?auto=compress&h=400&exp=-5" width="100%">
+      <img src="https://greenlanetvdemo.imgix.net/farm+to+fork.jpg?auto=compress&h=400&exp=-5" width="100%">
       <div class="padded-multiline">
-        <h3 style="font-family: courier-std;"> &nbsp;  <strong>Adrenaline and Fitness</strong></h3>
+        <h3 style="font-family: courier-std;"> &nbsp;  <strong>Farm to Fork</strong></h3>
       </div>
       <!-- <div class="bottom-left" style="color: black;">Business of the Future</div> -->
-      <div class="top-left" style="color: white;padding-bottom: 2px;">05</div>
+      <div class="top-left" style="color: white;">03</div>
       <div class="vl"></div>
     </div>
     <div class="text" style="min-height: 300px;">
       <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
       <p style="font-family: courier-std, monospace;color: white;" align="left">
-        <br>Dancing on waves, gliding through the wind, flying through the sky, breathing underwater - we can do anything. Let’s play in a world that longs to be celebrated. Explore natural techniques to keep your mind and body in top form.
+        <br>Do you know who grows your food? How it was grown? Did it travel from miles away to reach your plate? Let’s start asking ourselves these questions. Let’s start seeking answers. Maybe together, we can start to save the world one bite at a time.</p>
+        <br>
+        <div align="left">
+          <a class="uk-button uk-button-default" href="/frame/farm_to_fork" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('Farm to Fork')">Start Watching</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="slide" align="center" style="padding: 2px; display: flex;
+  align-items: center;
+  justify-content: center;">
+  <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">04/15</p>
+  <div class="card">
+    <div class="image" style="min-height: 200px;">
+      <img src="https://greenlanetvdemo.imgix.net/holistic+wellness.jpg?auto=compress&h=400&exp=-5" width="100%">
+      <div class="padded-multiline">
+        <h3 style="font-family: courier-std;"> &nbsp;  <strong>Holistic Wellness</strong></h3>
+      </div>
+      <!-- <div class="bottom-left" style="color: black;">Business of the Future</div> -->
+      <div class="top-left" style="color: white;">04</div>
+      <div class="vl"></div>
+    </div>
+    <div class="text" style="min-height: 300px;">
+      <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
+      <p style="font-family: courier-std, monospace;color: white;" align="left">
+        <br>Integrated wellness is a lifestyle that focuses on cultivating good food & sleep habits, and practices like yoga & meditation to reduce stress levels. Let's explore ‘shifts' in our lifestyle to achieve our health goals.
       </p>
       <br>
       <div align="left">
-        <a class="uk-button uk-button-default" href="/frame/adrenaline_and_fitness" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
+        <a class="uk-button uk-button-default" href="/frame/holistic_wellness" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('Holistic Wellness')">Start Watching</a>
       </div>
     </div>
-  </div> 
+  </div>
+</div>
+
+<div class="slide" align="center" style="padding: 2px; display: flex;
+align-items: center;
+justify-content: center;">
+<p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">05/15</p>
+<div class="card">
+  <div class="image" style="min-height: 200px;">
+    <img src="https://greenlanetvdemo.imgix.net/adrenaline+and+fitness.jpg?auto=compress&h=400&exp=-5" width="100%">
+    <div class="padded-multiline">
+      <h3 style="font-family: courier-std;"> &nbsp;  <strong>Adrenaline and Fitness</strong></h3>
+    </div>
+    <!-- <div class="bottom-left" style="color: black;">Business of the Future</div> -->
+    <div class="top-left" style="color: white;padding-bottom: 2px;">05</div>
+    <div class="vl"></div>
+  </div>
+  <div class="text" style="min-height: 300px;">
+    <div class="fab"><img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 70%"></div>
+    <p style="font-family: courier-std, monospace;color: white;" align="left">
+      <br>Dancing on waves, gliding through the wind, flying through the sky, breathing underwater - we can do anything. Let’s play in a world that longs to be celebrated. Explore natural techniques to keep your mind and body in top form.
+    </p>
+    <br>
+    <div align="left">
+      <a class="uk-button uk-button-default" href="/frame/adrenaline_and_fitness" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('Adrenaline and Fitness')">Start Watching</a>
+    </div>
+  </div>
+</div> 
 </div>
 
 <div class="slide" align="center" style="padding: 2px; display: flex;
@@ -248,7 +238,7 @@ justify-content: center;">
 <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">06/15</p>
 <div class="card">
   <div class="image">
-    <img src="https://greenlanetvdemo.imgix.net/slow+fashion.jpg?auto=compress&h=400&exp=-5" width="100%">
+    <img src="https://greenlanetvdemo.imgix.net/slow+fashion+edited.jpg?auto=compress&h=400&exp=-5" width="100%">
     <div class="padded-multiline">
       <h3 style="font-family: courier-std;"> &nbsp;  <strong>Slow Fashion</strong></h3>
     </div>
@@ -263,7 +253,7 @@ justify-content: center;">
     </p>
     <br>
     <div align="left">
-      <a class="uk-button uk-button-default" href="/frame/slow_fashion" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
+      <a class="uk-button uk-button-default" href="/frame/slow_fashion" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('Slow Fashion')">Start Watching</a>
     </div>
   </div>
 </div> 
@@ -291,7 +281,7 @@ justify-content: center;">
     </p>
     <br>
     <div align="left">
-      <a class="uk-button uk-button-default" href="/frame/responsible_travel" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
+      <a class="uk-button uk-button-default" href="/frame/responsible_travel" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('Responsible Travel')">Start Watching</a>
     </div>
   </div>
 </div> 
@@ -318,7 +308,7 @@ justify-content: center;">
     </p>
     <br>
     <div align="left">
-      <a class="uk-button uk-button-default" href="/frame/nature" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
+      <a class="uk-button uk-button-default" href="/frame/nature" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('Nature')">Start Watching</a>
     </div>
   </div>
 </div> 
@@ -345,7 +335,7 @@ justify-content: center;">
       <br>Folklore and traditions have essentially advocated well-being for ourselves and the environment. Let's learn from ancient communities across the world and inculcate their top practices into our lives.
     </p>      <br>
     <div align="left">
-      <a class="uk-button uk-button-default" href="/frame/culture" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
+      <a class="uk-button uk-button-default" href="/frame/culture" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('Culture')">Start Watching</a>
     </div>
   </div>
 </div> 
@@ -372,7 +362,7 @@ justify-content: center;">
     </p>
     <br>
     <div align="left">
-      <a class="uk-button uk-button-default" href="/frame/people" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
+      <a class="uk-button uk-button-default" href="/frame/people" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('People')">Start Watching</a>
     </div>
   </div>
 </div> 
@@ -399,7 +389,7 @@ justify-content: center;">
     </p>
     <br>
     <div align="left">
-      <a class="uk-button uk-button-default" href="/frame/future_of_work" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
+      <a class="uk-button uk-button-default" href="/frame/future_of_work" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('Future of Work')">Start Watching</a>
     </div>
   </div>
 </div> 
@@ -411,7 +401,7 @@ justify-content: center;">
 <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">12/15</p>
 <div class="card">
   <div class="image">
-    <img src="https://greenlanetvdemo.imgix.net/businesses+of+the+future.jpg?auto=compress&h=400&exp=-5" width="100%">
+    <img src="https://greenlanetvdemo.imgix.net/businesses+of+the+future+new.jpg?auto=compress&h=400&exp=-5" width="100%">
     <div class="padded-multiline">
       <h3 style="font-family: courier-std;"> &nbsp;  <strong>Businesses of the Future</strong></h3>
     </div>
@@ -426,7 +416,7 @@ justify-content: center;">
     </p>
     <br>
     <div align="left">
-      <a class="uk-button uk-button-default" href="/frame/business_of_the_future" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
+      <a class="uk-button uk-button-default" href="/frame/business_of_the_future" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('Businesses of the Future')">Start Watching</a>
     </div>
   </div>
 </div> 
@@ -438,7 +428,7 @@ justify-content: center;">
 <p style="color: black;padding-right: 20px;font-family: courier-std;font-weight: bold;" align="right">13/15</p>
 <div class="card">
   <div class="image" style="max-height: 300px;">
-    <img src="https://greenlanetvdemo.imgix.net/green+policy.jpg?auto=compress&h=400&exp=-5&fp-x=.12&fp-y=.55&fp-z=2" width="100%">
+    <img src="https://greenlanetvdemo.imgix.net/green+policy+new.jpg?auto=compress&h=400&exp=-5&fp-x=.12&fp-y=.55&fp-z=2" width="100%">
     <div class="padded-multiline">
       <h3 style="font-family: courier-std;"> &nbsp;  <strong>Green Policy</strong></h3>
     </div>
@@ -453,7 +443,7 @@ justify-content: center;">
     </p>
     <br>
     <div align="left">
-      <a class="uk-button uk-button-default" href="/frame/green_policy" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
+      <a class="uk-button uk-button-default" href="/frame/green_policy" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('Green Policy')">Start Watching</a>
     </div>
   </div>
 </div> 
@@ -481,7 +471,7 @@ justify-content: center;">
     </p>
     <br>
     <div align="left">
-      <a class="uk-button uk-button-default" href="/frame/entertainment_and_art" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
+      <a class="uk-button uk-button-default" href="/frame/entertainment_and_art" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('Entertainment & Arts')">Start Watching</a>
     </div>
   </div>
 </div> 
@@ -509,7 +499,7 @@ justify-content: center;">
     </p>
     <br>
     <div align="left">
-      <a class="uk-button uk-button-default" href="/frame/spiritual_sciences" style="color: white;font-family: courier-std;padding: 8px;">Start Watching</a>
+      <a class="uk-button uk-button-default" href="/frame/spiritual_sciences" style="color: white;font-family: courier-std;padding: 8px;" (click)=" Mobile_event_submission('Spiritual Sciences')">Start Watching</a>
     </div>
   </div>
 </div> 
@@ -616,7 +606,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('Eco Living')">
                         Start Watching
                       </p>
                     </div>
@@ -684,7 +674,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('Clean Foods')">
                         Start Watching
                       </p>
                     </div>
@@ -699,7 +689,7 @@ justify-content: center;">
                <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">
              </div>
              <p style="top:15%;position: absolute;font-family: courier-std;font-size: 18pt;color: white;width: 80%;font-weight: 100;" align="left" >
-              Whether you eat to live, or live to eat it you can’t deny that food is our life force. Animals have used plants as medicine since the beginning of time. Dive head first into this extraordinary world where plants and people quite simply just meant for each other.
+              Whether you eat to live, or live to eat it; you can’t deny that food is our life force. Animals have used plants as medicine since the beginning of time. Dive head first into this extraordinary world where plants and people quite simply just meant for each other.
             </p>
           </div>
         </div>
@@ -732,7 +722,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('Farm to Fork')">
                         Start Watching
                       </p>
                     </div>
@@ -777,7 +767,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('Holistic Wellness')">
                         Start Watching
                       </p>
                     </div>
@@ -822,7 +812,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('Adrenaline and Fitness')">
                         Start Watching
                       </p>
                     </div>
@@ -846,7 +836,7 @@ justify-content: center;">
 
        <div class="slider slide6">
         <div class="ui grid" style="width: 100vw;">
-          <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/slow+fashion.jpg?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
+          <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/slow+fashion+edited.jpg?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
            <!--    <div style="bottom: 40%;position: absolute;">
                <img src="assets/images/icon-white.png" style="height: 40px;">
              </div> -->
@@ -866,7 +856,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('Slow Fashion')">
                         Start Watching
                       </p>
                     </div>
@@ -911,7 +901,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('Responsible Travel')">
                         Start Watching
                       </p>
                     </div>
@@ -957,7 +947,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('Nature')">
                         Start Watching
                       </p>
                     </div>
@@ -1002,7 +992,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('Culture')">
                         Start Watching
                       </p>
                     </div>
@@ -1047,7 +1037,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('People')">
                         Start Watching
                       </p>
                     </div>
@@ -1092,7 +1082,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('Future of Work')">
                         Start Watching
                       </p>
                     </div>
@@ -1118,7 +1108,7 @@ justify-content: center;">
 
        <div class="slider slide12">
         <div class="ui grid" style="width: 100vw;">
-          <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/businesses+of+the+future.jpg?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
+          <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/businesses+of+the+future+new.jpg?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
            <!--    <div style="bottom: 40%;position: absolute;">    
                <img src="assets/images/icon-white.png" style="height: 40px;">
              </div> -->
@@ -1138,7 +1128,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('Businesses of the Future')">
                         Start Watching
                       </p>
                     </div>
@@ -1163,7 +1153,7 @@ justify-content: center;">
 
        <div class="slider slide13">
         <div class="ui grid" style="width: 100vw;">
-          <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/green+policy.jpg?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
+          <div class="twelve wide column" style="position: relative;height: 100vh;width: 60%;background-repeat: no-repeat, repeat;background-size: cover;background-image: url('https://greenlanetvdemo.imgix.net/green+policy+new.jpg?auto=compress&h=700&exp=-10');background-color: rgba(0,0,0,0.4);">
            <!--    <div style="bottom: 40%;position: absolute;">    
                <img src="assets/images/icon-white.png" style="height: 40px;">
              </div> -->
@@ -1183,7 +1173,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('Green Policy')">
                         Start Watching
                       </p>
                     </div>
@@ -1228,7 +1218,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('Entertainment & Arts')">
                         Start Watching
                       </p>
                     </div>
@@ -1273,7 +1263,7 @@ justify-content: center;">
 
                     <div style=" text-align: center;padding-left: 5px;">
                       <br>
-                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;">
+                      <p style="font-family: 'Helvetica'; letter-spacing: 2px;text-transform: uppercase;font-weight: 200;font-size: 18px;" (click)="Desktop_event_submission('Spiritual Sciences')">
                         Start Watching
                       </p>
                     </div>
@@ -1314,121 +1304,121 @@ background-blend-mode: multiply;padding: 0px;margin: 0px;">
   <div class="ui grid">
     <div class="two column mobile only row" style="padding: 0px;margin: 15px;width:100vw;height: 100vh;">
       <a href="/frame/farm_to_fork">
-      <div style="width: 50vw;height: 33.3vh; background-image: url('https://greenlanetvdemo.imgix.net/farm+to+fork.jpg?auto=compress&h=300&exp=-5'); border-style: solid;
-      border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
-      <div class="top-left-text-mob" style="color: white;line-height: 0.9em;" >Farm to Fork</div>
+        <div style="width: 50vw;height: 33.3vh; background-image: url('https://greenlanetvdemo.imgix.net/farm+to+fork.jpg?auto=compress&h=300&exp=-5'); border-style: solid;
+        border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+        <div class="top-left-text-mob" style="color: white;line-height: 0.9em;" >Farm to Fork</div>
 
-      <div class="top-left-text" style="color: white; margin-top:-50px;
-      margin-left:0px;font-family: courier-std;font-size: 14pt;">03</div>
-      <div class="bottom-left-text-mob">
-        <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Kiri Meili </strong></h3>
-      </div>
+        <div class="top-left-text" style="color: white; margin-top:-50px;
+        margin-left:0px;font-family: courier-std;font-size: 14pt;">03</div>
+        <div class="bottom-left-text-mob">
+          <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Kiri Meili </strong></h3>
+        </div>
 
-      <div class="bottomright" (click)="gotocategory('farm_to_fork')">
-       <img src="https://greenlanetvdemo.imgix.net/kiri.png?auto=compress" width="100%">
+        <div class="bottomright" (click)="gotocategory('farm_to_fork');Mobile_curator_event_submission('Kiri Meili')">
+         <img src="https://greenlanetvdemo.imgix.net/kiri.png?auto=compress" width="100%">
+       </div>
+       <div class="bottom-left-text" (click)="gotocategory('farm_to_fork');  Mobile_curator_event_submission('Kiri Meili')" style="background-color: white;color: black;padding:  .2px;">Ananas</div>
+       <div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding: .2px;"> Curator:
+       </div>
+
+
      </div>
-     <div class="bottom-left-text" (click)="gotocategory('farm_to_fork')" style="background-color: white;color: black;padding: 2px;">Ananas</div>
-     <div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding: 2px;"> Curator:
-     </div>
+   </a>
 
+   <a href="/frame/nature">
+     <div style="background-color: blue;width: 50vw;height: 33.3vh;background-image: url('https://greenlanetvdemo.imgix.net/nature.jpg?auto=compress&h=300&exp=-5');border-style: solid;
+     border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+     <div class="top-left-text-mob" style="color: white;">Nature</div>
 
+     <div class="top-left-text" style="color: white; margin-top:-50px;
+     margin-left:0px;font-family: courier-std;font-size: 14pt;">08</div>
+     <div class="bottom-left-text-mob">
+      <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Umeed Mistry</strong></h3>
+    </div>
+
+    <div class="bottomright" (click)="gotocategory('Nature');Mobile_curator_event_submission('Umeed Mistry')" >
+     <img src="https://greenlanetvdemo.imgix.net/umeed.png?auto=compress" width="100%">
    </div>
- </a>
-
-  <a href="/frame/nature">
-   <div style="background-color: blue;width: 50vw;height: 33.3vh;background-image: url('https://greenlanetvdemo.imgix.net/nature.jpg?auto=compress&h=300&exp=-5');border-style: solid;
-   border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
-   <div class="top-left-text-mob" style="color: white;">Nature</div>
-
-   <div class="top-left-text" style="color: white; margin-top:-50px;
-   margin-left:0px;font-family: courier-std;font-size: 14pt;">08</div>
-   <div class="bottom-left-text-mob">
-    <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Umeed Mistry</strong></h3>
-  </div>
-
-  <div class="bottomright">
-   <img src="https://greenlanetvdemo.imgix.net/umeed.png?auto=compress" width="100%">
+   <div class="bottom-left-text" style="background-color: white;color: black;padding:  .2px;">Earth Co-Lab</div>
+   <div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding:  .2px;"> Curator:
+   </div>
  </div>
- <div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Earth Co-Lab</div>
- <div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding: 2px;"> Curator:
- </div>
-</div>
 </a>
 
 <a href="/frame/eco_living">
-<div style="background-color: green;width: 50vw;height: 33.3vh;background-image: url('https://greenlanetvdemo.imgix.net/eco+living.jpg?auto=compress&h=300&exp=-5');border-style: solid;
-border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
-<div class="top-left-text-mob" style="color: white;">Eco Living</div>
+  <div style="background-color: green;width: 50vw;height: 33.3vh;background-image: url('https://greenlanetvdemo.imgix.net/eco+living.jpg?auto=compress&h=300&exp=-5');border-style: solid;
+  border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+  <div class="top-left-text-mob" style="color: white;">Eco Living</div>
 
-<div class="top-left-text" style="color: white; margin-top:-50px;
-margin-left:0px;font-family: courier-std;font-size: 14pt;">01</div>
-<div class="bottom-left-text-mob">
-  <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Jill Ferguson</strong></h3>
-</div>
+  <div class="top-left-text" style="color: white; margin-top:-50px;
+  margin-left:0px;font-family: courier-std;font-size: 14pt;">01</div>
+  <div class="bottom-left-text-mob">
+    <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Jill Ferguson</strong></h3>
+  </div>
 
-<div class="bottomright">
- <img src="https://greenlanetvdemo.imgix.net/jill.png?auto=compress" width="100%">
-</div>
-<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Vaayu Vision</div>
-<div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding: 2px;"> Curator:
-</div>
+  <div class="bottomright" (click)="gotocategory('eco_living');Mobile_curator_event_submission('Jill Ferguson')">
+   <img src="https://greenlanetvdemo.imgix.net/jill.png?auto=compress" width="100%">
+ </div>
+ <div class="bottom-left-text" style="background-color: white;color: black;padding:  .2px;">Vaayu Vision</div>
+ <div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding:  .2px;"> Curator:
+ </div>
 </div>
 </a>
 <a href="/frame/culture">
-<div style="background-color: black;width: 50vw;height: 33.3vh;background-image: url('https://greenlanetvdemo.imgix.net/culture.jpg?auto=compress&h=300&exp=-5');border-style: solid;
-border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
-<div class="top-left-text-mob" style="color: white;">Cutlure</div>
+  <div style="background-color: black;width: 50vw;height: 33.3vh;background-image: url('https://greenlanetvdemo.imgix.net/culture.jpg?auto=compress&h=300&exp=-5');border-style: solid;
+  border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+  <div class="top-left-text-mob" style="color: white;">Culture</div>
 
-<div class="top-left-text" style="color: white; margin-top:-50px;
-margin-left:0px;font-family: courier-std;font-size: 14pt;">07</div>
-<div class="bottom-left-text-mob">
-  <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Anchal Kaushal</strong></h3>
-</div>
+  <div class="top-left-text" style="color: white; margin-top:-50px;
+  margin-left:0px;font-family: courier-std;font-size: 14pt;">07</div>
+  <div class="bottom-left-text-mob">
+    <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Anchal Kaushal</strong></h3>
+  </div>
 
-<div class="bottomright">
- <img src="https://greenlanetvdemo.imgix.net/anchal.png?auto=compress" width="100%">
-</div>
-<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Borderless </div>
-<div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding: 2px;"> Curator:
-</div>
+  <div class="bottomright" (click)="gotocategory('culture');Mobile_curator_event_submission('Anchal Kaushal')">
+   <img src="https://greenlanetvdemo.imgix.net/anchal.png?auto=compress" width="100%">
+ </div>
+ <div class="bottom-left-text" style="background-color: white;color: black;padding:  .2px;">Borderless </div>
+ <div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding:  .2px;"> Curator:
+ </div>
 </div>
 </a>
 <a href="/frame/holistic_wellness">
-<div style="background-color: purple;width: 50vw;height: 33.3vh;background-image: url('https://greenlanetvdemo.imgix.net/holistic+wellness.png?auto=compress&h=300&exp=-5');border-style: solid;
-border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
-<div class="top-left-text-mob" style="color: white;">Holistic Wellness</div>
+  <div style="background-color: purple;width: 50vw;height: 33.3vh;background-image: url('https://greenlanetvdemo.imgix.net/holistic+wellness.png?auto=compress&h=300&exp=-5');border-style: solid;
+  border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+  <div class="top-left-text-mob" style="color: white;">Holistic Wellness</div>
 
-<div class="top-left-text" style="color: white; margin-top:-50px;
-margin-left:0px;font-family: courier-std;font-size: 14pt;">04</div>
-<div class="bottom-left-text-mob">
-  <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Luke Coutinho</strong></h3>
-</div>
+  <div class="top-left-text" style="color: white; margin-top:-50px;
+  margin-left:0px;font-family: courier-std;font-size: 14pt;">04</div>
+  <div class="bottom-left-text-mob">
+    <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Luke Coutinho</strong></h3>
+  </div>
 
-<div class="bottomright">
- <img src="https://greenlanetvdemo.imgix.net/luke.png?auto=compress" width="100%">
-</div>
-<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Reset</div>
-<div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding: 2px;"> Curator:
-</div>
+  <div class="bottomright" (click)="gotocategory('holistic_wellness');Mobile_curator_event_submission('Luke Coutinho')">
+   <img src="https://greenlanetvdemo.imgix.net/luke.png?auto=compress" width="100%">
+ </div>
+ <div class="bottom-left-text" style="background-color: white;color: black;padding:  .2px;">Reset</div>
+ <div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding:  .2px;"> Curator:
+ </div>
 </div>
 </a>
 <a href="/frame/slow_fashion">
-<div style="background-color: red;width: 50vw;height: 33.3vh;background-image: url('https://greenlanetvdemo.imgix.net/slow+fashion+alt.jpg?auto=compress&h=300&exp=-5');border-style: solid;
-border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
-<div class="top-left-text-mob" style="color: white;">Slow Fashion</div>
+  <div style="background-color: red;width: 50vw;height: 33.3vh;background-image: url('https://greenlanetvdemo.imgix.net/slow+fashion+alt.jpg?auto=compress&h=300&exp=-5');border-style: solid;
+  border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+  <div class="top-left-text-mob" style="color: white;">Slow Fashion</div>
 
-<div class="top-left-text" style="color: white; margin-top:-50px;
-margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
-<div class="bottom-left-text-mob">
-  <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Darshana Gajare</strong></h3>
-</div>
+  <div class="top-left-text" style="color: white; margin-top:-50px;
+  margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
+  <div class="bottom-left-text-mob">
+    <h3 style="font-family: Helvetica;padding: 5px;"> &nbsp;<strong>Darshana Gajare</strong></h3>
+  </div>
 
-<div class="bottomright">
- <img src="https://greenlanetvdemo.imgix.net/darshana.png?auto=compress" width="100%">
-</div>
-<div class="bottom-left-text" style="background-color: white;color: black;padding: 2px;">Fairtrunk</div>
-<div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding: 2px;"> Curator:
-</div>
+  <div class="bottomright" (click)="gotocategory('slow_fashion');Mobile_curator_event_submission('Darshana Gajare')">
+   <img src="https://greenlanetvdemo.imgix.net/darshana.png?auto=compress" width="100%">
+ </div>
+ <div class="bottom-left-text" style="background-color: white;color: black;padding:  .2px;">Fairtrunk</div>
+ <div class="bottom-left-text-upper-mobile" style="background-color: white;color: black;padding:  .2px;"> Curator:
+ </div>
 </div>
 </a>
 
@@ -1441,119 +1431,119 @@ margin-left:0px;font-family: courier-std;font-size: 14pt;">14</div>
 
 
 <div class=" ui stackable column tablet computer only row" style="padding: 0px;margin: 15px;width:100vw;">
-  <a href="/frame/farm_to_fork">
-  <div style="width: 33.4vw;height: 50vh; background-image: url('https://greenlanetvdemo.imgix.net/farm+to+fork.jpg?auto=compress&h=400&exp=-5'); border-style: solid;
-  border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
-  <div class="top-left-text" style="color: white;">Farm to Fork</div>
+  <a href="/frame/farm_to_fork" (click)="Desktop_curator_event_submission('Keiri Meili')">
+    <div style="width: 33.4vw;height: 50vh; background-image: url('https://greenlanetvdemo.imgix.net/farm+to+fork.jpg?auto=compress&h=400&exp=-5'); border-style: solid;
+    border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+    <div class="top-left-text" style="color: white;">Farm to Fork</div>
+
+    <div class="top-left-text" style="color: white; margin-top:-50px;
+    margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">03</div>
+    <div class="padded-multiline-new">
+      <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Keiri Meili</strong></h3>
+    </div>
+
+    <div class="bottomright">
+     <img src="https://greenlanetvdemo.imgix.net/kiri.png?auto=compress" width="100%">
+   </div>
+   <div class="bottom-left-text" style="background-color: white;color: black;padding:  .2px;"> Ananas </div>
+   <div class="bottom-left-text-upper" style="background-color: white;color: black;padding:  .2px;"> Curator:
+   </div>
+ </div>
+</a>
+<a href="/frame/nature" (click)="Desktop_curator_event_submission('Umeed Mistry')">
+  <div style="background-color: blue;width: 33.3vw;height: 50vh;background-image: url('https://greenlanetvdemo.imgix.net/nature.jpg?auto=compress&h=400&exp=-5');border-style: solid;
+  border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+  <div class="top-left-text" style="color: white;">Nature</div>
 
   <div class="top-left-text" style="color: white; margin-top:-50px;
-  margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">03</div>
+  margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">08</div>
   <div class="padded-multiline-new">
-    <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Keiri Meili</strong></h3>
+    <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Umeed Mistry</strong></h3>
   </div>
 
   <div class="bottomright">
-   <img src="https://greenlanetvdemo.imgix.net/kiri.png?auto=compress" width="100%">
+   <img src="https://greenlanetvdemo.imgix.net/umeed.png?auto=compress&h=400" width="100%">
  </div>
- <div class="bottom-left-text" style="background-color: white;color: black;padding: 1px;"> Ananas </div>
- <div class="bottom-left-text-upper" style="background-color: white;color: black;padding: 2px;"> Curator:
+ <div class="bottom-left-text" style="background-color: white;color: black;padding:  .2px;"> Earth Co-Lab </div>
+ <div class="bottom-left-text-upper" style="background-color: white;color: black;padding:  .2px;"> Curator:
  </div>
 </div>
 </a>
-  <a href="/frame/nature">
-<div style="background-color: blue;width: 33.3vw;height: 50vh;background-image: url('https://greenlanetvdemo.imgix.net/nature.jpg?auto=compress&h=400&exp=-5');border-style: solid;
-border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
-<div class="top-left-text" style="color: white;">Nature</div>
 
-<div class="top-left-text" style="color: white; margin-top:-50px;
-margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">08</div>
-<div class="padded-multiline-new">
-  <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Umeed Mistry</strong></h3>
-</div>
+<a href="/frame/eco_living" (click)="Desktop_curator_event_submission('Jill Ferguson')">
+  <div style="background-color: green;width: 33.4vw;height: 50vh;background-image: url('https://greenlanetvdemo.imgix.net/eco+living.jpg?auto=compress&h=400&exp=-5');border-style: solid;
+  border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+  <div class="top-left-text" style="color: white;">Eco Living</div>
 
-<div class="bottomright">
- <img src="https://greenlanetvdemo.imgix.net/umeed.png?auto=compress&h=400" width="100%">
-</div>
-<div class="bottom-left-text" style="background-color: white;color: black;padding: 1px;"> Earth Co-Lab </div>
-<div class="bottom-left-text-upper" style="background-color: white;color: black;padding: 2px;"> Curator:
-</div>
+  <div class="top-left-text" style="color: white; margin-top:-50px;
+  margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">01</div>
+  <div class="padded-multiline-new">
+    <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Jill Ferguson</strong></h3>
+  </div>
+
+  <div class="bottomright">
+   <img src="https://greenlanetvdemo.imgix.net/jill.png?auto=compress" width="100%">
+ </div>
+ <div class="bottom-left-text" style="background-color: white;color: black;padding:  .2px;"> Vaayu Vision </div>
+ <div class="bottom-left-text-upper" style="background-color: white;color: black;padding:  .2px;"> Curator:
+ </div>
 </div>
 </a>
+<a href="/frame/culture" (click)="Desktop_curator_event_submission('Anchal Kaushal')">
+  <div style="background-color: black;width: 33.4vw;height: 50vh;background-image: url('https://greenlanetvdemo.imgix.net/culture.jpg?auto=compress&h=400&exp=-5');border-style: solid;
+  border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+  <div class="top-left-text" style="color: white;">Culture</div>
 
-  <a href="/frame/eco_living">
-<div style="background-color: green;width: 33.4vw;height: 50vh;background-image: url('https://greenlanetvdemo.imgix.net/eco+living.jpg?auto=compress&h=400&exp=-5');border-style: solid;
-border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
-<div class="top-left-text" style="color: white;">Eco Living</div>
+  <div class="top-left-text" style="color: white; margin-top:-50px;
+  margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">07</div>
+  <div class="padded-multiline-new">
+    <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Anchal Kaushal</strong></h3>
+  </div>
 
-<div class="top-left-text" style="color: white; margin-top:-50px;
-margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">01</div>
-<div class="padded-multiline-new">
-  <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Jill Ferguson</strong></h3>
-</div>
-
-<div class="bottomright">
- <img src="https://greenlanetvdemo.imgix.net/jill.png?auto=compress" width="100%">
-</div>
-<div class="bottom-left-text" style="background-color: white;color: black;padding: 1px;"> Vaayu Vision </div>
-<div class="bottom-left-text-upper" style="background-color: white;color: black;padding: 2px;"> Curator:
-</div>
+  <div class="bottomright">
+   <img src="https://greenlanetvdemo.imgix.net/anchal.png?auto=compress" width="100%">
+ </div>
+ <div class="bottom-left-text" style="background-color: white;color: black;padding:  .2px;"> Borderless </div>
+ <div class="bottom-left-text-upper" style="background-color: white;color: black;padding:  .2px;"> Curator:
+ </div>
 </div>
 </a>
-  <a href="/frame/culture">
-<div style="background-color: black;width: 33.4vw;height: 50vh;background-image: url('https://greenlanetvdemo.imgix.net/culture.jpg?auto=compress&h=400&exp=-5');border-style: solid;
-border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
-<div class="top-left-text" style="color: white;">Culture</div>
+<a href="/frame/holistic_wellness" (click)="Desktop_curator_event_submission('Luke Coutinho')">
+  <div style="background-color: purple;width: 33.3vw;height: 50vh;background-image: url('https://greenlanetvdemo.imgix.net/holistic+wellness.png?auto=compress&h=400&exp=-5');border-style: solid;
+  border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+  <div class="top-left-text" style="color: white;">Holistic Wellness</div>
 
-<div class="top-left-text" style="color: white; margin-top:-50px;
-margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">07</div>
-<div class="padded-multiline-new">
-  <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Anchal Kaushal</strong></h3>
-</div>
+  <div class="top-left-text" style="color: white; margin-top:-50px;
+  margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">04</div>
+  <div class="padded-multiline-new">
+    <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Luke Coutinho</strong></h3>
+  </div>
 
-<div class="bottomright">
- <img src="https://greenlanetvdemo.imgix.net/anchal.png?auto=compress" width="100%">
-</div>
-<div class="bottom-left-text" style="background-color: white;color: black;padding: 1px;"> Borderless </div>
-<div class="bottom-left-text-upper" style="background-color: white;color: black;padding: 2px;"> Curator:
-</div>
+  <div class="bottomright">
+   <img src="https://greenlanetvdemo.imgix.net/luke.png?auto=compress" width="100%">
+ </div>
+ <div class="bottom-left-text" style="background-color: white;color: black;padding:  .2px;"> Reset</div>
+ <div class="bottom-left-text-upper" style="background-color: white;color: black;padding:  .2px;"> Curator:
+ </div>
 </div>
 </a>
-  <a href="/frame/holistic_wellness">
-<div style="background-color: purple;width: 33.3vw;height: 50vh;background-image: url('https://greenlanetvdemo.imgix.net/holistic+wellness.png?auto=compress&h=400&exp=-5');border-style: solid;
-border-color: #3fcf78;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
-<div class="top-left-text" style="color: white;">Holistic Wellness</div>
+<a href="/frame/slow_fashion" (click)="Desktop_curator_event_submission('Darshana Gajare')">
+  <div style="background-color: red;width: 33.4vw;height: 50vh;background-image: url('https://greenlanetvdemo.imgix.net/slow+fashion alt.jpg?auto=compress&h=400&exp=-5');border-style: solid;
+  border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
+  <div class="top-left-text" style="color: white;">Slow Fashion</div>
 
-<div class="top-left-text" style="color: white; margin-top:-50px;
-margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">04</div>
-<div class="padded-multiline-new">
-  <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Luke Coutinho</strong></h3>
-</div>
+  <div class="top-left-text" style="color: white; margin-top:-50px;
+  margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">14</div>
+  <div class="padded-multiline-new">
+    <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Darshana Gajare</strong></h3>
+  </div>
 
-<div class="bottomright">
- <img src="https://greenlanetvdemo.imgix.net/luke.png?auto=compress" width="100%">
-</div>
-<div class="bottom-left-text" style="background-color: white;color: black;padding: 1px;"> Reset</div>
-<div class="bottom-left-text-upper" style="background-color: white;color: black;padding: 2px;"> Curator:
-</div>
-</div>
-</a>
-  <a href="/frame/slow_fashion">
-<div style="background-color: red;width: 33.4vw;height: 50vh;background-image: url('https://greenlanetvdemo.imgix.net/slow+fashion alt.jpg?auto=compress&h=400&exp=-5');border-style: solid;
-border-color: #202D71;border-width: 50px 15px 15px 15px;position: relative;background-repeat: no-repeat, repeat;background-size: cover;">
-<div class="top-left-text" style="color: white;">Slow Fashion</div>
-
-<div class="top-left-text" style="color: white; margin-top:-50px;
-margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">14</div>
-<div class="padded-multiline-new">
-  <h3 style="font-family: Helvetica;"> &nbsp;  <strong>Darshana Gajare</strong></h3>
-</div>
-
-<div class="bottomright">
- <img src="https://greenlanetvdemo.imgix.net/darshana.png?auto=compress" width="100%">
-</div>
-<div class="bottom-left-text" style="background-color: white;color: black;padding: 1px;"> Fairtrunk </div>
-<div class="bottom-left-text-upper" style="background-color: white;color: black;padding: 2px;"> Curator:
-</div>
+  <div class="bottomright">
+   <img src="https://greenlanetvdemo.imgix.net/darshana.png?auto=compress" width="100%">
+ </div>
+ <div class="bottom-left-text" style="background-color: white;color: black;padding:  .2px;"> Fairtrunk </div>
+ <div class="bottom-left-text-upper" style="background-color: white;color: black;padding:  .2px;"> Curator:
+ </div>
 </div>
 </a>
 
@@ -1576,29 +1566,29 @@ margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">14</
 
 <div class="section" style="padding: 10px;margin: 0px;">
   <div class="uk-child-width-expand@s uk-text-center" uk-grid>
-    <div class="resp-container" style="padding: 10px;">
+    <div class="resp-container" style="padding: 1px;">
       <br>
       <iframe
       src="https://www.youtube.com/embed/ijjbnjBtqwU"
       frameborder="0"
       allowfullscreen
-      style="padding: 0px;width:100%;height: 300px;"></iframe>
+      style="padding: 0px;width:80%;height: 100%;"></iframe>
     </div>
     <div align="left">
       <h1 style="font-family: Helvetica;align-self: left;font-weight: bold;padding: 10px;8vw;" class="band-text">You're Here to Learn and Evolve</h1>
 
 
-      <div class="band-text" style="padding: 20px;font-size: 16pt;font-weight: 100;width: 100%;">
-        <p> Top videos and podcasts and personalised to your interests.</p>
-        <br>
+      <div class="band-text" style="padding: 10px;font-size: 14pt;font-weight: 100;width: 100%;font-family: Helvetica">
+        <p style="padding: 2px;"> <i class="circle icon" style="color:#3fcf78;font-size: 8pt; "></i>Top videos & podcasts personalised to your interests</p>
+   
 
-        <p>Hand-picked experiences to help you live a cleaner, greener life.</p>
-        <br>
+        <p style="padding: 2px;"> <i class="circle icon" style="color:#3fcf78;font-size: 8pt; "></i> Hand-picked experiences to help you live a cleaner, greener life.</p>
+     
 
-        <p>Save your progress and continue learning where you left off.</p>
+        <p style="padding: 2px;"> <i class="circle icon" style="color:#3fcf78;font-size: 8pt; "></i> Save your progress and continue learning where you left off.</p>
       </div>
-      <div style="padding: 10px;" align="left">
-        <button class="uk-button uk-button-primary" style="padding: 15px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%); border-radius: 10px 10px;font-family: 'Helvetica';text-transform: uppercase;font-weight: bold;letter-spacing: 2px;font-weight: 400;"> Signup for Free</button>
+      <div style="padding: 5px;" align="left">
+        <a href="/login" class="uk-button uk-button-primary" style="padding: 8px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%); border-radius: 10px 10px;font-family: 'Helvetica';text-transform: uppercase;font-weight: bold;letter-spacing: 2px;font-weight: 400;"> Signup for Free</a>
       </div>
     </div>
   </div>
@@ -1609,50 +1599,93 @@ margin-left:0px;font-family: courier-std;font-size: 18pt;font-weight: 100;">14</
     <div>
       <div>
         <img src="https://greenlanetvdemo.imgix.net/gradient.png?auto=compress" style="width: 100vw;height: 100vh">
-        <div class="centered" style="color: white;">
-          <h1 style="font-family: 'Helvetica'; font-weight: bold;color: white" align="center">
-            Stay Fresh
-          </h1>
-          <br>
-          <h3 style="background-color: white;color: black;font-family:'courier-std';margin: auto; line-height: 1.2; text-align: right !important;margin-left: 5%;font-size: 12pt;" class="padded-multi-line-tag" > We track powerful stories by inspiring creators across the internet. Get a weekly email update tredning videos, podcasts and experiences that help you lead a cleaner, greener life.</h3>
-          <br>
-          <br>
+        <div class="centered" style="color: white;width: 70%;">
+  <!--              <img src="https://greenlanetvdemo.imgix.net/logo_white.png?auto=compress" style="max-height: 5vh;left:50px;">
+                <br>
+                <br>
+                <br>
+              -->
 
-          <div class="" style="padding: 5px;background-color: color|transparent|initial|inherit !important;">
-            <div class="ui grid">
-              <div class="sixteen wide column" align="center">
-                <div class="ui input" style="width: 60%;">
-                  <input type="email" placeholder="Please share your Email" style="padding: 5px;font-family:'courier-std';width: 60% !important;height: 40px;" [(ngModel)]="email">
+              <h1 style="font-family: 'Helvetica'; font-weight: bold;color: white" align="center">
+               <div style="padding: 10px;" align="center">
+                <a (click)="fullpage_api.moveTo('firstPage')" class="ui button" style="padding:20px;color: white;background-color: #202D71;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 2px;font-weight: 100;
+                ;font-size: 10pt;" > &nbsp;&nbsp; Back to Top &nbsp; &nbsp;</a>
+              </div>
+
+              <img src="https://greenlanetvdemo.imgix.net/icon-white.png" style="height: 40px;">  Newsletter
+            </h1>
+            <br>
+
+            <h3 style="background-color: white;color: black;font-family:'courier-std';margin: auto; line-height: 1.2; text-align: right !important;margin-left: 5%;width: 70%;" class="padded-multi-line-tag tag-font" > Stay fresh with our weekly update on top videos, podcasts and experiences to help you lead a cleaner , greener life.</h3>
+            <br>
+            <br>
+
+            <div class="" style="padding: 5px;background-color: color|transparent|initial|inherit !important;">
+              <div class="ui grid" align="center">
+                <div class="sixteen wide column" align="center">
+                  <div class="ui action input" style="width: 60%;">
+                    <input type="email" placeholder="Please share your Email" style="padding: 5px;font-family:'courier-std';width: 90% !important;height: 40px;" [(ngModel)]="email">
+                    <button class="ui button" style="padding: 10px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);font-family: 'Helvetica';font-weight: 200;color: white;" (click)="addsubscriber(email)"> Subscribe</button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div style="padding: 10px;" align="center">
-              <button class="uk-button uk-button-primary" style="padding: 10px;background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%); border-radius: 10px 10px;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 2px;font-weight: 400;" (click)="addsubscriber(email)"> Subscribe</button>
-            </div>
-          </div>
-        </div>
-        <div class="bottom" style="width: 100vw;padding: 30px;">
-          <div class="ui four column grid">
-            <div class="row" >
-              <div class="column">
-               <img src="https://greenlanetvdemo.imgix.net/logo_white.png?auto=compress" style="
-               top: 8px;
-               left: 20px;max-height: 40px;">
-             </div>
-             <div class="column" align="center" style="padding: 0px;">
+              <br>
 
-              <a href="" style="color: white;font-family: 'Helvetica';font-size: 12pt;" >About Us</a>
-              &nbsp;
-              <a href="" style="color: white;font-family: 'Helvetica';font-size: 12pt;">Collaborate</a>
+
             </div>
-            <div class="column" align="center" style="padding-right: 40px;">
-              <i class="instagram icon" style="color: white;font-size: 14pt;padding-left: 20px;"></i>
-              <i class="facebook icon" style="color: white;font-size: 14pt;padding-left: 20px;"></i>
-              <i class="medium m icon" style="color: white;font-size: 14pt;padding-left: 20px;"></i>
+          </div>
+          <br>
+          <br>
+
+
+          <div class="bottom" style="width: 100vw;padding: 10px;bottom: 
+          2.5%;">
+
+          <div class="row" >
+           <div >
+      <!--        <div class="column" align="center" style="padding: 0px;" >
+              <br>
+              <br>
+              <a href="/aboutus" style="color: black;font-family: 'courier-std';font-size: 10pt;background-color: white;padding: 3px;margin: 2px;" >About Us</a>
+              <br>
+              <br>
+              <a href="https://medium.com/greenlaneapp/we-feature-conscious-living-initiatives-c4c0febb73e5" style="color: black;font-family: 'courier-std';font-size: 10pt;background-color: white;padding: 3px;margin:2px;">Collaborate</a>
+            </div> -->
+
+
+
+
+            <div  align="center" style="padding-top: 10px;">
+<br>
+<br>
+                            <a href="/aboutus" style="color: black;font-family: 'courier-std';font-size: 10pt;background-color: white;padding: 3px;margin: 2px;" >About Us</a>
+              <br>
+              <br>
+              <a href="https://medium.com/greenlaneapp/we-feature-conscious-living-initiatives-c4c0febb73e5" style="color: black;font-family: 'courier-std';font-size: 10pt;background-color: white;padding: 3px;margin:2px;">Collaborate</a>
+              <br>
+              <br>
+
+              <img src="https://greenlanetvdemo.imgix.net/logo_white.png?auto=compress" style="max-height: 5vh;">
+              <p style="color: white;font-size: 10pt;width: 100%;" align="center"><i class="creative commons icon" style="color: white;"></i> 2019,Greenlane Media.</p>
+              <br>
+              <br>
+
+              <a href="https://www.instagram.com/greenlane.tv/">
+                <i class="instagram icon" style="color: white;font-size: 20pt;margin: 10px;"></i>
+              </a>
+              <a href="https://www.facebook.com/Greenlane.tv/">
+                <i class="facebook icon" style="color: white;font-size: 20pt;margin: 10px;"></i>
+              </a>
+
             </div>
           </div>
         </div>
+
+
       </div> 
+
+
+
     </div>
   </div>
 </div>

@@ -12,32 +12,33 @@
 
 	<div class="uk-navbar-center">
 
-        <ul class="uk-navbar-nav">
-        	<li class="uk-active" style="padding-right: 20px;">
-			<img src="https://greenlanetvdemo.imgix.net/logo_white.png" style="height: 30px;">
-		</li>
-        </ul>
-    </div>
+		<ul class="uk-navbar-nav">
+			<li class="uk-active" style="padding-right: 20px;">
+				<img src="https://greenlanetvdemo.imgix.net/logo_white.png" style="height: 30px;">
+			</li>
+		</ul>
+	</div>
 
-	 <div class="uk-navbar-right">
+	<div class="uk-navbar-right">
 
-        <ul class="uk-navbar-nav">
-        	      <li>
-                        <a href="#" style="color: black">  <span class="uk-margin-small-right uk-icon" uk-icon="icon: menu; ratio: 2">	</span></a>
-                        <div class="uk-navbar-dropdown" style="background-color: #202D71">
-                            <ul class="uk-nav uk-navbar-dropdown-nav" style="color: white;">
-                                <li class="uk-active"><a href="/login" style="color: white;">Signup</a></li>
-                            </ul>
-                        </div>
-                    </li>
-        </ul>
-    </div>
+		<ul class="uk-navbar-nav">
+			<li>
+				<a href="#" style="color: black">  <span class="uk-margin-small-right uk-icon" uk-icon="icon: menu; ratio: 2">	</span></a>
+				<div class="uk-navbar-dropdown" style="background-color: #202D71">
+					<ul class="uk-nav uk-navbar-dropdown-nav" style="color: white;">
+						<li class="uk-active"><a href="/login" style="color: white;">Signup</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
 </nav>
 
 
 <!-- This is the modal -->
+
 <div id="my-id" uk-modal style="z-index: 2;">
-	<div class="uk-modal-dialog uk-modal-body invisible-scrollbar" style="border-radius: 10px;height: 80vh;
+	<div class="uk-modal-dialog uk-modal-body invisible-scrollbar" style="border-radius: 10px;height: 95vh;
 	overflow: auto;">
 	<div>
 
@@ -59,64 +60,64 @@
 				bottom: 8px;
 				left: 16px;height: 20px;">
 			</div>
-
-
-			<h4 style="font-family: 'Helvetica'; font-weight: 400;">Your Categories</h4>
-			<div>
-				<div class="ui middle aligned divided list invisible-scrollbar" style="height: 100px;
-				overflow: auto;">
-				<div *ngFor="let category of user_interested_categories_except_playlist" class="item">
-					<div class="right floated content">
-						<div class="ui mini button" style="background-color: #3fcf78;color: white;" (click)="change_now_playing(category.category_tag)">Play</div>
+<br>
+			<div *ngIf="user_interested_categories_except_playlist.length != 0">
+				<h4 style="font-family: 'Helvetica'; font-weight: 400;">Your Categories</h4>
+				<div>
+					<div class="ui middle aligned divided list invisible-scrollbar" style="height: 110px;
+					overflow: auto;">
+					<div *ngFor="let category of user_interested_categories_except_playlist" class="item">
+						<div class="right floated content">
+							<div class="ui mini button" style="background-color: #3fcf78;color: white;" (click)="change_now_playing(category.category_tag)">Play</div>
+						</div>
+						<img class="ui avatar image" src="{{category?.category_image}}">
+						<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;">
+							{{category?.category_name}}
+						</div>
 					</div>
-					<img class="ui avatar image" src="{{category?.category_image}}">
-					<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;">
-						{{category?.category_name}}
-					</div>
-				</div>
-				
-			
-	
-			</div>
 
-
-			<h4 style="font-family: 'Helvetica'; font-weight: 400;">Explore Categories</h4>
-			<div class="ui middle aligned divided list invisible-scrollbar" style="height: 100px;
-			overflow: auto;">
-			<div *ngFor="let other_category of user_other_categories" class="item">
-				<div class="right floated content">
-					<div class="ui mini button" style="background-color: #202D71;color: white;" (click)="add_interest(other_category.category_tag)">Add</div>
-				</div>
-				<img class="ui avatar image" src="{{other_category?.category_image}}">
-				<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;">
-					{{other_category?.category_name}}
 				</div>
 			</div>
-	
-
-	
 		</div>
+
+		<h4 style="font-family: 'Helvetica'; font-weight: 400;">Explore Categories</h4>
+		<div class="ui middle aligned divided list invisible-scrollbar" style="height: 110px;
+		overflow: auto;">
+		<div *ngFor="let other_category of user_other_categories" class="item">
+			<div class="right floated content">
+				<div class="ui mini button" style="background-color: #202D71;color: white;" (click)="add_interest(other_category.category_tag)">Add</div>
+			</div>
+			<img class="ui avatar image" src="{{other_category?.category_image}}">
+			<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;">
+				{{other_category?.category_name}}
+			</div>
+		</div>
+
+
 
 	</div>
 
+</div>
 
 
 
 
 
+<button class="uk-modal-close-default uk-button uk-button-danger" type="button" uk-close style="color: white;position: fixed;margin-top: 20px;margin-right: 20px;background-color: #3fcf78 ;border-radius: 5px;padding: 10px;"> Close &nbsp; </button>
 
 </div>
 </div>
 
- <button class="uk-modal-close-default" type="button" uk-close></button>
+
 </div>
-</div>
+
 
 <div align="center" style="padding: 40px;">
 
 
-<div *ngIf="iframe_url !== ''" [innerHTML]="iframe_url | safe: 'html'"></div>
+	<div *ngIf="iframe_url !== ''" [innerHTML]="iframe_url | safe: 'html'"></div>
 
-<br>
+	<br>
 
-<div #myDiv></div>
+	<div #myDiv></div>
+</div>

@@ -3,7 +3,7 @@
 
 <div class="ui centered grid">
 	<div class="mobile only row">
-		<div class="sixteen wide column" style="background: url(https://greenlanetvdemo.imgix.net/hero.png) no-repeat center center fixed; 
+		<div class="sixteen wide column" style="background: url(https://greenlanetvdemo.imgix.net/hero.png?auto=compress) no-repeat center center fixed; 
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
@@ -15,7 +15,9 @@
 
 				<div class="ui segment" style="width: 90%;">
 					<div style="top: 15%;align-items: center;left: 10%;" >
-						<img src="https://greenlanetvdemo.imgix.net/logo-new.png" style="height: 80px;"> 
+						<a href="/newhome">
+						<img src="https://greenlanetvdemo.imgix.net/logo-new.png?auto=compress" style="height: 80px;"> 
+					</a>
 						<h2 style="align-self: center;font-family: 'Helvetica';font-weight: bold;padding: 0px;margin: 1px;">Welcome to Greenlane!</h2>
 						<h2 style="align-self: center;font-family: 'Helvetica';font-weight: bold;padding: 0px;margin: 1px;">Sign In to get access</h2>
 						<br>
@@ -45,10 +47,10 @@
 										Password is required.
 									</div>
 									<div *ngIf="LoginForm.controls['password'].errors?.minlength">
-										Password must be minimum 8 charectors long, Please enter a new password.
+										Password must be minimum 8 charactors long, Please enter a new password.
 									</div>
 									<div *ngIf="LoginForm.controls['password'].errors?.maxlength">
-										Password must be Maximum of 24 charectors long, Please enter a new password.
+										Password must be Maximum of 24 charactors long, Please enter a new password.
 									</div>
 								</div>
 								<div align="center">
@@ -136,10 +138,10 @@
 										Password is required.
 									</div>
 									<div *ngIf="RegisterForm.controls['password'].errors?.minlength">
-										Password must be minimum 8 charectors long, Please enter a new password.
+										Password must be minimum 8 charactors long, Please enter a new password.
 									</div>
 									<div *ngIf="RegisterForm.controls['password'].errors?.maxlength">
-										Password must be Maximum of 24 charectors long, Please enter a new password.
+										Password must be Maximum of 24 charactors long, Please enter a new password.
 									</div>
 								</div>
 								<div *ngIf="user_already_exists">
@@ -392,13 +394,15 @@
 
 	<div>
 		<div style="background-color: rgba(0,0,0,0.4);height: 100vh;width: 100%;">
+			<a href="/newhome">
 			<img src="https://greenlanetvdemo.imgix.net/logo_white.png" style="top: 20%;position: absolute;height: 65px;left: 10%;">
+		</a>
 			<p style="top: 30%;position: absolute;left: 10%;font-family: Helvetica;font-weight: 700;font-size: 1.3vw;background: -webkit-linear-gradient(#38ef7d, #38ef7d);
 			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;">Sustainable living platform for millenial</p>
-			<p style="color: white;top: 35%;position: absolute;left: 10%;font-family: Helvetica;font-size: 1.3vw;width: 70%;font-weight: 100;">GreenlaneTV is a lifestyle internet channel that helps conscious consumers discover and engage with responsible brands.</p>
+			-webkit-text-fill-color: transparent;">Cleaner Greener Living</p>
+			<p style="color: white;top: 35%;position: absolute;left: 10%;font-family: Helvetica;font-size: 1.3vw;width: 70%;font-weight: 100;">Greenlane is a media platform that inspires you to live consciously and engage with brands that are leading the way.</p>
 			<div style="bottom: 3%;position: absolute;right: 5%;color: white;font-family: 'Helvetica';">
-				<div class="ui grid">
+	<!-- 			<div class="ui grid">
 					<div class="four wide column">
 						<i class="instagram icon" style="color: white;font-size: 14pt;"></i>
 					</div>
@@ -408,7 +412,19 @@
 					<div class="four wide column">
 						<i class="medium m icon" style="color: white;font-size: 14pt;"></i>
 					</div>
+				</div> -->
+
+
+					<div class="column" align="center" style="padding-right: 40px;width: 100%;">
+					<a href="https://www.instagram.com/greenlane.tv/" align="center">
+						<i class="instagram icon" style="color: white;font-size: 18pt;padding-right: 80px;"></i>
+					</a>
+					<a href="https://www.facebook.com/Greenlane.tv/" align="center">
+						<i class="facebook icon" style="color: white;font-size: 18pt;padding-right: 80px;"></i>
+					</a>
+					
 				</div>
+
 			</div>
 
 
