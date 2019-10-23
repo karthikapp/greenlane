@@ -24,14 +24,14 @@
 
 .menu{
   float: right;
-  line-height: 10px;
-  font-size: 11pt;
+  line-height: 5px;
+  font-size: 8pt;
 }
 .menu a{
   color: white;
   /*text-transform: uppercase;*/
   text-decoration: none;
-  padding: 0 10px;
+  padding: 0 5px;
   transition: 0.4s;
 
 }
@@ -432,9 +432,11 @@
 .card {
   display: inline-block;
   box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
-  margin: 20px;
+  margin-top: 20px;
+   margin-left: 20px;
+   margin-right: 20px;
+  margin-bottom: 0px;
   position: relative;
-  margin-bottom: 50px;
   transition: all .2s ease-in-out;
   background-color: #000F01;
   border: 0px;
@@ -521,6 +523,10 @@
     {
       max-width: 460px;
     }
+    .hide-content
+    {
+      display: all
+    }
     .typed-text
     {
       font-size:12pt;
@@ -549,6 +555,10 @@
     {
       max-width: 640px;
     }
+     .hide-content
+    {
+      display: all
+    }
     .typed-text
     {
       font-size:14pt;
@@ -574,6 +584,10 @@
     {
       max-width: 640px;
     }
+     .hide-content
+    {
+      display: all
+    }
     .typed-text
     {
       font-size:14pt;
@@ -598,6 +612,10 @@
     .card-min-width
     {
       max-width: 310px;
+    }
+     .hide-content
+    {
+      display: all
     }
 
     .typed-text
@@ -630,6 +648,10 @@
     {
       font-size:14pt;
     }
+     .hide-content
+    {
+      display: all
+    }
      .header-position
     {
       padding-right: 40px;padding-left: 40px;padding-top: 40px;
@@ -651,7 +673,10 @@
     {
       max-width: 375px;
     }
-
+     .hide-content
+    {
+      display: all
+    }
     .typed-text
     {
       font-size:14pt;
@@ -677,7 +702,10 @@
     {
       max-width: 375px;
     }
-
+     .hide-content
+    {
+      display: all
+    }
     .typed-text
     {
       font-size:14pt;
@@ -706,7 +734,10 @@ and (-webkit-min-device-pixel-ratio: 2)
     {
       max-width: 375px;
     }
-
+     .hide-content
+    {
+      display: all
+    }
     .typed-text
     {
       font-size:14pt;
@@ -731,6 +762,10 @@ and (-webkit-min-device-pixel-ratio: 2)
     .card-min-width
     {
       max-width: 500px;
+    }
+     .hide-content
+    {
+      display: none;
     }
 
     .typed-text
@@ -761,7 +796,10 @@ and (orientation : portrait)
     {
       max-width: 500px;
     }
-
+       .hide-content
+    {
+      display: none;
+    }
     .typed-text
     {
       font-size:14pt;
@@ -1279,4 +1317,56 @@ and (orientation : portrait)
 { 
        /* some CSS here */
     img.ri { max-width: 15%; }
+}
+
+.arrowd{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.arrowd span{
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+.arrowd span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrowd span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes animate {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+
+
+
+@-webkit-keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+.blink{
+  text-decoration: blink;
+
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 0.6s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:ease-in-out;
+  -webkit-animation-direction: alternate;
 }

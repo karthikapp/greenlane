@@ -10,6 +10,7 @@ import { NewHomeComponent } from './new-home/new-home.component'
 import { LoginComponent } from './login/login.component';
 import { IntrestsEditComponent } from './intrests-edit/intrests-edit.component';
 import { IframeinterestsComponent } from './iframeinterests/iframeinterests.component';
+import { CategorymobileComponent } from './categorymobile/categorymobile.component';
 
 const routes: Routes = 
 [
@@ -57,6 +58,12 @@ const routes: Routes =
 {
   path: 'iframe_with_interests',
   component: IframeinterestsComponent,
+
+}
+,
+{
+  path: 'category_mobile',
+  component: CategorymobileComponent,
 
 }
 ,

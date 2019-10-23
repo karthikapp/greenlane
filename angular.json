@@ -41,6 +41,7 @@
               "node_modules/uikit/dist/js/uikit.min.js",
               "node_modules/uikit/dist/js/uikit-icons.min.js",
               "node_modules/swiper/dist/js/swiper.js"
+
             ]
           },
           "configurations": {

@@ -2,7 +2,9 @@ import { Component, OnInit ,ViewChild, ElementRef, Renderer2 } from '@angular/co
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service'
+import { SegmentService } from 'ngx-segment-analytics';
 
+declare var UIkit: any;
 
 @Component({
   selector: 'app-iframeinterests',
@@ -29,7 +31,7 @@ export class IframeinterestsComponent implements OnInit {
 
 
    @ViewChild('myDiv') myDiv: ElementRef;
-  constructor(private renderer: Renderer2,private route: ActivatedRoute, private auth: AuthService) 
+  constructor(private segment: SegmentService,private renderer: Renderer2,private route: ActivatedRoute, private auth: AuthService) 
   {
   	this.categories = 
   	[
@@ -179,6 +181,10 @@ export class IframeinterestsComponent implements OnInit {
      		this.iframe_url = '<iframe  src=' + '"' + this.now_playing.category_iframe_url +'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:fixed; top:10%; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;"></iframe>';
      		var now_playing_category_tag = this.now_playing.category_tag
      		this.refresh_userinterest_not_nowplaying_categories(now_playing_category_tag)
+                var stringtoplay = "Category Played " + category_tag + "signed In"
+          this.segment.track(stringtoplay)
+            .then(() => console.log("category played sended"));
+             UIkit.modal('#my-id').hide();
      	}
      })
 
@@ -202,6 +208,11 @@ export class IframeinterestsComponent implements OnInit {
       // console.log("email", this.useremail)
       this.auth.query_user_email(this.useremail).valueChanges().subscribe((user:any) => {
       	   this.user_interests =  user[0].interests
+       
+            if (this.user_interests.length == undefined)
+           {
+             this.user_other_categories = this.categories
+           }
            if (this.user_interests.length == 0)
            {
            	this.user_other_categories = this.categories
@@ -237,6 +248,11 @@ export class IframeinterestsComponent implements OnInit {
      
     });
   }
+      add_category()
+    {
+        this.segment.track('Add Category sign In')
+            .then(() => console.log(" sended"));
+    }
 
   add_interest(category_tag)
   {
@@ -249,6 +265,9 @@ export class IframeinterestsComponent implements OnInit {
   	 var now_playing_category_tag = this.now_playing.category_tag
   	 this.refresh_userinterest_not_nowplaying_categories(now_playing_category_tag)
   	 this.auth.update_interests(this.useremail, this.user_interests)
+     var stringtoadd = "Category Added " + category_tag + "signed In"
+     this.segment.track(stringtoadd)
+            .then(() => console.log("category added sended"));
   	       	// this.user_interests.forEach((interest)=> {
            // 		this.categories.forEach((category) => {
            // 			if (category.category_tag == interest)

@@ -36,6 +36,7 @@ import { DeviceDetectorModule } from 'ngx-device-detector';
 import { GoogleanalyticsService } from './googleanalytics.service';
 import { ButtonDirective } from './button.directive'
 import { SegmentModule } from 'ngx-segment-analytics';
+import { CategorymobileComponent } from './categorymobile/categorymobile.component';
 
 // Configs 
 export function getAuthServiceConfigs() {
@@ -68,7 +69,8 @@ export function getAuthServiceConfigs() {
   LoginComponent,
   IntrestsEditComponent,
   IframeinterestsComponent,
-  ButtonDirective
+  ButtonDirective,
+  CategorymobileComponent
   ],
   imports: [
   BrowserModule,

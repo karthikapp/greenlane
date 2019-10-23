@@ -1,10 +1,17 @@
 <!-- This is a button toggling the modal -->
 <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar style="color: #202D71;background-color: #3fcf78">
-	<div class="uk-navbar-left" style="padding: 8px;margin: 10px;">
+	<div class="uk-navbar-left" style="padding: 0px;margin: 0px;">
 		<ul class="uk-navbar-nav">
 
-			<li class="uk-active">
+		<!-- 	<li class="uk-active">
 				<span class="uk-margin-small-right uk-icon" uk-icon="icon: album; ratio: 2" uk-toggle="target: #my-id">	</span>
+			</li> -->
+					<li class="uk-active">
+			<span class="uk-margin-small-right uk-icon" uk-icon="icon: album; ratio: 1.2" uk-toggle="target: #my-id" style="padding-left: 35px;" (click)="add_category()"></span>
+				<br>
+				<span class="uk-margin-small-left" style="font-family: 'Helvetica';margin-left: 0px;margin-top: 5px;text-transform: uppercase;" uk-toggle="target: #my-id" (click)="add_category()">Channels</span>
+
+
 			</li>
 		</ul>
 
@@ -12,9 +19,9 @@
 
 	<div class="uk-navbar-center">
 
-        <ul class="uk-navbar-nav">
-        	<li class="uk-active" style="padding-right: 20px;">
-			<img src="https://greenlanetvdemo.imgix.net/logo_white.png" style="height: 30px;">
+        <ul class="uk-navbar-nav" style="z-index: -1;">
+        	<li style="padding-right: 20px;">
+			<img src="https://greenlanetvdemo.imgix.net/logo_white.png" style="height: 25px;">
 		</li>
         </ul>
     </div>
@@ -72,7 +79,9 @@
 							<div class="ui mini button" style="background-color: #3fcf78;color: white;" (click)="change_now_playing(category.category_tag)">Play</div>
 						</div>
 						<img class="ui avatar image" src="{{category?.category_image}}">
-						<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;">
+						<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;width: 100px; 
+  overflow: hidden;
+  text-overflow: ellipsis; ">
 							{{category?.category_name}}
 						</div>
 					</div>
@@ -89,7 +98,9 @@
 				<div class="ui mini button" style="background-color: #202D71;color: white;" (click)="add_interest(other_category.category_tag)">Add</div>
 			</div>
 			<img class="ui avatar image" src="{{other_category?.category_image}}">
-			<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;">
+			<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;width: 100px; 
+  overflow: hidden;
+  text-overflow: ellipsis;">
 				{{other_category?.category_name}}
 			</div>
 		</div>

@@ -1,20 +1,20 @@
 <!-- This is a button toggling the modal -->
 <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar style="color: #202D71;background-color: #3fcf78">
-	<div class="uk-navbar-left" style="padding: 8px;margin: 10px;">
+	<div class="uk-navbar-left" style="padding: 0px;margin-left: 0px;">
 		<ul class="uk-navbar-nav">
-
 			<li class="uk-active">
-				<span class="uk-margin-small-right uk-icon" uk-icon="icon: album; ratio: 2" uk-toggle="target: #my-id">	</span>
+				<span class="uk-margin-small-right uk-icon" uk-icon="icon: album; ratio: 1.2" uk-toggle="target: #my-id" style="padding-left: 35px;" (click)="add_category()"></span>
+				<br>
+				<span class="uk-margin-small-left" style="font-family: 'Helvetica';margin-left: 0px;margin-top: 5px;text-transform: uppercase;" uk-toggle="target: #my-id" (click)="add_category()">Channels</span>
 			</li>
 		</ul>
 
 	</div>
 
 	<div class="uk-navbar-center">
-
 		<ul class="uk-navbar-nav">
 			<li class="uk-active" style="padding-right: 20px;">
-				<img src="https://greenlanetvdemo.imgix.net/logo_white.png" style="height: 30px;">
+				<img src="https://greenlanetvdemo.imgix.net/logo_white.png" style="height: 25px;">
 			</li>
 		</ul>
 	</div>
@@ -23,10 +23,15 @@
 
 		<ul class="uk-navbar-nav">
 			<li>
-				<a href="#" style="color: black">  <span class="uk-margin-small-right uk-icon" uk-icon="icon: menu; ratio: 2">	</span></a>
+				<a href="#" style="color: black">  
+					<span class="uk-margin-small-right uk-icon" uk-icon="icon: menu; ratio: 2"></span>
+				<!-- 	<br>
+					<span class="uk-margin-small-right" style="font-family: 'Helvetica';margin-left: 0px;margin-top: 5px;text-transform: uppercase;">Menu</span> -->
+				</a>
 				<div class="uk-navbar-dropdown" style="background-color: #202D71">
 					<ul class="uk-nav uk-navbar-dropdown-nav" style="color: white;">
-						<li class="uk-active"><a href="/login" style="color: white;">Signup</a></li>
+						<li class="uk-active"><a href="/login" style="color: white;">Signup</a>
+						</li>
 					</ul>
 				</div>
 			</li>
@@ -34,6 +39,45 @@
 	</div>
 </nav>
 
+<div id="modal-login" uk-modal="bg-close: false;" style="padding: 0px;">
+	<div class="uk-modal-dialog uk-margin-auto-vertical" style="width: 80%;height: 50%;border-radius: 5px;">
+		<div class="ui centered grid" style="margin: 0px;">
+			<div class="computer tablet only row" style="margin: 0px;padding: 0px;">
+
+				<div align="center">
+					<br>
+					<h1 style="font-family: 'Helvetica'; color:#3fcf78;font-weight: 600;">  Extend  your stay.
+					</h1>
+				
+					<p style="width: 50%;font-size: 12pt;"> Sign up to get weekly newsletters, hand-picked videos / playlists from your favorite curators and get unlimited access to Greenalne TV original content.  </p>
+					<br>
+					<a href="/login" class="ui button" style="padding:20px;color: white;background-color: #3fcf78;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 2px;font-weight: 400;
+					;font-size: 10pt;"  (click)="sign_up_intent()"> &nbsp;&nbsp; Signup &nbsp; &nbsp;</a>
+				</div>
+
+			</div>
+
+			<div class="mobile only row">
+				<div class="column">
+					<div align="center">
+						<h3 style="font-family: 'Helvetica'; color:#3fcf78;">  Extend  your stay.
+						</h3>
+						<br>
+						<p> Sign up to get weekly newsletters, hand-picked videos / playlists from your favorite curators and get unlimited access to Greenalne TV original content.  </p>
+						<br>
+						<a href="/login" class="ui button" style="padding:20px;color: white;background-color: #3fcf78;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 2px;font-weight: 400;
+						;font-size: 10pt;" (click)="sign_up_intent()"> &nbsp;&nbsp; Signup &nbsp; &nbsp;</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+<!-- <p class="uk-text-right">
+	<button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+	<button class="uk-button uk-button-primary" type="button">Save</button>
+</p> -->
+</div>
+</div>
 
 <!-- This is the modal -->
 
@@ -60,7 +104,7 @@
 				bottom: 8px;
 				left: 16px;height: 20px;">
 			</div>
-<br>
+			<br>
 			<div *ngIf="user_interested_categories_except_playlist.length != 0">
 				<h4 style="font-family: 'Helvetica'; font-weight: 400;">Your Categories</h4>
 				<div>
@@ -71,31 +115,35 @@
 							<div class="ui mini button" style="background-color: #3fcf78;color: white;" (click)="change_now_playing(category.category_tag)">Play</div>
 						</div>
 						<img class="ui avatar image" src="{{category?.category_image}}">
-						<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;">
-							{{category?.category_name}}
-						</div>
+						<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;width: 100px; 
+						overflow: hidden;
+						text-overflow: ellipsis;">
+						{{category?.category_name}}
 					</div>
-
 				</div>
+
 			</div>
 		</div>
-
-		<h4 style="font-family: 'Helvetica'; font-weight: 400;">Explore Categories</h4>
-		<div class="ui middle aligned divided list invisible-scrollbar" style="height: 110px;
-		overflow: auto;">
-		<div *ngFor="let other_category of user_other_categories" class="item">
-			<div class="right floated content">
-				<div class="ui mini button" style="background-color: #202D71;color: white;" (click)="add_interest(other_category.category_tag)">Add</div>
-			</div>
-			<img class="ui avatar image" src="{{other_category?.category_image}}">
-			<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;">
-				{{other_category?.category_name}}
-			</div>
-		</div>
-
-
-
 	</div>
+
+	<h4 style="font-family: 'Helvetica'; font-weight: 400;">Explore Categories</h4>
+	<div class="ui middle aligned divided list invisible-scrollbar" style="height: 110px;
+	overflow: auto;">
+	<div *ngFor="let other_category of user_other_categories" class="item">
+		<div class="right floated content">
+			<div class="ui mini button" style="background-color: #202D71;color: white;" (click)="add_interest(other_category.category_tag)">Add</div>
+		</div>
+		<img class="ui avatar image" src="{{other_category?.category_image}}">
+		<div class="content" style="font-family: 'Helvetica'; font-size: 12pt;align-content: center;width: 100px; 
+		overflow: hidden;
+		text-overflow: ellipsis;">
+		{{other_category?.category_name}}
+	</div>
+</div>
+
+
+
+</div>
 
 </div>
 
@@ -113,6 +161,7 @@
 
 
 <div align="center" style="padding: 40px;">
+
 
 
 	<div *ngIf="iframe_url !== ''" [innerHTML]="iframe_url | safe: 'html'"></div>

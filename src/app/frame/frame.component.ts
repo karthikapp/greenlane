@@ -1,12 +1,16 @@
 import { Component, OnInit ,ViewChild, ElementRef, Renderer2} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import { SegmentService } from 'ngx-segment-analytics';
+
+declare var UIkit: any;
+
 @Component({
   selector: 'app-frame',
   templateUrl: './frame.component.html',
   styleUrls: ['./frame.component.css']
 })
 export class FrameComponent implements OnInit {
-   yt = '<iframe  src="https://content.soulskill.com/#/playlist?category=Future%20of%20Work" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:fixed; top:10%; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;"></iframe>';
+   yt = '<iframe  src="https://content.soulskill.com/#/playlist?category=Future%20of%20Work" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:fixed; top:12%; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;"></iframe>';
    editable = true;
      content = `<button 
     (click)="onClick()">
@@ -24,8 +28,10 @@ export class FrameComponent implements OnInit {
 
 
   @ViewChild('myDiv') myDiv: ElementRef;
-  constructor(private renderer: Renderer2,private route: ActivatedRoute) 
+  constructor(private renderer: Renderer2,private route: ActivatedRoute,private segment: SegmentService) 
   {
+
+    
     this.categories = 
       [
     {
@@ -163,6 +169,11 @@ export class FrameComponent implements OnInit {
       })
   }
 
+  show_login()
+  {
+      UIkit.modal('#modal-login').show();
+  }
+
   change_now_playing(category_tag)
   {
     // console.log("console", category_tag)
@@ -173,6 +184,10 @@ export class FrameComponent implements OnInit {
          this.iframe_url = '<iframe  src=' + '"' + this.now_playing.category_iframe_url +'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position:fixed; top:10%; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:1;"></iframe>';
          var now_playing_category_tag = this.now_playing.category_tag
          this.refresh_userinterest_not_nowplaying_categories(now_playing_category_tag)
+          var stringtoplay = "Category Played " + category_tag
+          this.segment.track(stringtoplay)
+            .then(() => console.log("category played sended"));
+             UIkit.modal('#my-id').hide();
        }
      })
 
@@ -189,6 +204,10 @@ export class FrameComponent implements OnInit {
      this.refresh_other_categories(other_categories)
      var now_playing_category_tag = this.now_playing.category_tag
      this.refresh_userinterest_not_nowplaying_categories(now_playing_category_tag)
+     var stringtoadd = "Category Added " + category_tag
+     this.segment.track(stringtoadd)
+            .then(() => console.log("category added sended"));
+
      // this.auth.update_interests(this.useremail, this.user_interests)
              // this.user_interests.forEach((interest)=> {
            //     this.categories.forEach((category) => {
@@ -204,9 +223,26 @@ export class FrameComponent implements OnInit {
            //   })
   }
 
+    add_category()
+    {
+        this.segment.track('Add Category No sign In')
+            .then(() => console.log(" sended"));
+    }
+
+     sign_up_intent()
+    {
+        this.segment.track('Sign up Intent')
+            .then(() => console.log(" signup sended"));
+    }
+
+
 
   ngOnInit() 
-  { this.user_interests = []
+  {     setTimeout(() => {
+        this.show_login()
+    }, 180000);
+    
+    this.user_interests = []
     this.all_categories = ["business_of_the_future","slow_fashion","adrenaline_and_fitness","clean_foods","culture","eco_living","entertainment_and_art","farm_to_fork","future_of_work","holistic_wellness","nature","responsible_travel","green_policy","people","spiritual_sciences"]  
     this.user_other_categories = []
     this.iframe_url = ''
