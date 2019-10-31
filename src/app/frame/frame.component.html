@@ -39,39 +39,83 @@
 	</div>
 </nav>
 
-<div id="modal-login" uk-modal="bg-close: false;" style="padding: 0px;">
-	<div class="uk-modal-dialog uk-margin-auto-vertical" style="width: 80%;height: 50%;border-radius: 5px;">
+<!-- <div id="modal-login">
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+    </div>
+</div> -->
+
+<div id="modal-login" uk-modal="bg-close: true;" style="padding: 0px;">
+
+	<div class="uk-modal-dialog uk-margin-auto-vertical" style="border-radius: 5px;width: 70%;">
+		<button class="uk-modal-close-outside" type="button" uk-close></button>
 		<div class="ui centered grid" style="margin: 0px;">
+
 			<div class="computer tablet only row" style="margin: 0px;padding: 0px;">
+				<div class="ui grid" style="margin: 0px;" >
+					<div class="eight wide column" style="padding: 0px;">
+						<img src="https://greenlanetvdemo.imgix.net/without_box_small.png?auto=compress" style="object-fit: contain'">
+					</div>
+					<div class="eight wide column">
+						<div align="left" style="padding-right: 30px;">
+							<br>
+							<h1 style="font-family: 'Helvetica'; color:#3fcf78;font-weight: 600;">  Extend  your stay.
+							</h1>
 
-				<div align="center">
-					<br>
-					<h1 style="font-family: 'Helvetica'; color:#3fcf78;font-weight: 600;">  Extend  your stay.
-					</h1>
-				
-					<p style="width: 50%;font-size: 12pt;"> Sign up to get weekly newsletters, hand-picked videos / playlists from your favorite curators and get unlimited access to Greenalne TV original content.  </p>
-					<br>
-					<a href="/login" class="ui button" style="padding:20px;color: white;background-color: #3fcf78;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 2px;font-weight: 400;
-					;font-size: 10pt;"  (click)="sign_up_intent()"> &nbsp;&nbsp; Signup &nbsp; &nbsp;</a>
-				</div>
-
-			</div>
-
-			<div class="mobile only row">
-				<div class="column">
-					<div align="center">
-						<h3 style="font-family: 'Helvetica'; color:#3fcf78;">  Extend  your stay.
-						</h3>
-						<br>
-						<p> Sign up to get weekly newsletters, hand-picked videos / playlists from your favorite curators and get unlimited access to Greenalne TV original content.  </p>
-						<br>
-						<a href="/login" class="ui button" style="padding:20px;color: white;background-color: #3fcf78;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 2px;font-weight: 400;
-						;font-size: 10pt;" (click)="sign_up_intent()"> &nbsp;&nbsp; Signup &nbsp; &nbsp;</a>
+							<p style="width: 100%;font-size: 14pt;font-family: 'courier-std'"> Signup to get our weekly newsletter with top videos hand-picked by your favourite curators.
+								<br>
+								<br>
+							 Get unlimited access to GreenlaneTV original content and recommended events around you.  </p>
+							<br>
+							<a href="/login" class="ui button" style="padding:20px;color: white;background-color: #3fcf78;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 2px;font-weight: 400;
+							;font-size: 10pt;"  (click)="sign_up_intent()"> &nbsp;&nbsp; Signup &nbsp; &nbsp;</a>
+						</div>
 					</div>
 				</div>
 			</div>
 
+		<!-- 	<div class="computer tablet only row" style="margin: 0px;padding: 0px;background: url(https://greenlanetvdemo.imgix.net/without_box.png?auto=compress&h=400) no-repeat ; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		};height: 100%;">
+
+
+
+		<div align="right" style="padding-right: 30px;">
+			<br>
+			<h1 style="font-family: 'Helvetica'; color:#3fcf78;font-weight: 600;">  Extend  your stay.
+			</h1>
+
+			<p style="width: 50%;font-size: 12pt;font-family: 'courier-std';"> Signup to get our weekly newsletter with top videos hand-picked by your favourite curators. Get unlimited access to GreenlaneTV original content and recommended events around you.  </p>
+			<br>
+			<a href="/login" class="ui button" style="padding:20px;color: white;background-color: #3fcf78;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 2px;font-weight: 400;
+			;font-size: 10pt;"  (click)="sign_up_intent()"> &nbsp;&nbsp; Signup &nbsp; &nbsp;</a>
 		</div>
+
+	</div> -->
+
+	<div class="mobile only row">
+		<div class="column">
+			<div align="center">
+				<img src="https://greenlanetvdemo.imgix.net/without_box_small.png?auto=compress&h=150" style="object-fit: contain'">
+
+				<h3 style="font-family: 'Helvetica'; color:#3fcf78;font-weight: 600;">  Extend  your stay.
+				</h3>
+		
+				<p style="font-family:'courier-std'; "> Signup to get our weekly newsletter with top videos hand-picked by your favourite curators. 
+					<br>
+					<br>
+				Get unlimited access to GreenlaneTV original content and recommended events around you.  </p>
+				<br>
+				<a href="/login" class="ui button" style="padding:20px;color: white;background-color: #3fcf78;font-family: 'Helvetica';text-transform: uppercase;letter-spacing: 2px;font-weight: 400;
+				;font-size: 10pt;" (click)="sign_up_intent()"> &nbsp;&nbsp; Signup &nbsp; &nbsp;</a>
+			</div>
+		</div>
+	</div>
+
+</div>
 <!-- <p class="uk-text-right">
 	<button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
 	<button class="uk-button uk-button-primary" type="button">Save</button>
@@ -127,7 +171,7 @@
 	</div>
 
 	<h4 style="font-family: 'Helvetica'; font-weight: 400;">Explore Categories</h4>
-	<div class="ui middle aligned divided list invisible-scrollbar" style="height: 110px;
+	<div class="ui middle aligned divided list invisible-scrollbar" style="
 	overflow: auto;">
 	<div *ngFor="let other_category of user_other_categories" class="item">
 		<div class="right floated content">

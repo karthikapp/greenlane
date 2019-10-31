@@ -240,7 +240,7 @@ export class FrameComponent implements OnInit {
   ngOnInit() 
   {     setTimeout(() => {
         this.show_login()
-    }, 180000);
+    }, 360000);
     
     this.user_interests = []
     this.all_categories = ["business_of_the_future","slow_fashion","adrenaline_and_fitness","clean_foods","culture","eco_living","entertainment_and_art","farm_to_fork","future_of_work","holistic_wellness","nature","responsible_travel","green_policy","people","spiritual_sciences"]  
